@@ -20,6 +20,10 @@ export default function IntroSection() {
         </h1>
         
         <div className="max-w-3xl mx-auto">
+          <p className={`${bodyFont.className} text-xl text-center font-medium text-[#333333] leading-relaxed mb-6`}>
+            Novus Apartments distinguishes itself in Downtown Durham with its exceptional sustainability features, high-end finishes, and unmatched leasing incentives, catering specifically to discerning renters seeking luxury and convenience.
+          </p>
+          
           <p className={`${bodyFont.className} text-lg text-[#666666] leading-relaxed mb-10`}>
             The Novus Blueprint is a comprehensive strategic framework designed to optimize the lease-up process, identify competitive advantages, and provide actionable recommendations to maximize occupancy and rental revenue for the Five Points District/Downtown Durham market.
           </p>

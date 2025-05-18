@@ -534,6 +534,165 @@ export default function PricingFramework() {
                 </p>
               </HighlightBox>
             </section>
+            
+            <section className="section-divider section">
+              <Heading level={2} className="mb-5">Detailed Pricing & Incentive Strategy</Heading>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                {/* Unit-level Pricing Strategy Card */}
+                <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden transition-all hover:shadow-md">
+                  <div className="bg-[#F9F8F4] border-b border-[#E5E2D9] p-4">
+                    <h3 className="text-xl font-semibold text-[#333333] mb-1">Initial Leasing Rates</h3>
+                    <p className="text-sm text-[#666666]">Base pricing for all unit types</p>
+                  </div>
+                  <div className="p-5">
+                    <ul className="space-y-4">
+                      <li>
+                        <div className="flex items-start">
+                          <span className="text-[#CAB06B] font-bold text-lg mr-2">•</span>
+                          <div>
+                            <p className="font-medium text-[#333333] mb-1">Studios</p>
+                            <p className="text-[#666666]">Starting at <span className="font-bold text-[#CAB06B]">$2,150/month</span></p>
+                            <p className="text-sm text-[#666666]">550-650 sq ft ($3.60-$3.90/sq ft)</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex items-start">
+                          <span className="text-[#CAB06B] font-bold text-lg mr-2">•</span>
+                          <div>
+                            <p className="font-medium text-[#333333] mb-1">One Bedrooms</p>
+                            <p className="text-[#666666]">Starting at <span className="font-bold text-[#CAB06B]">$2,850/month</span></p>
+                            <p className="text-sm text-[#666666]">750-950 sq ft ($3.30-$3.65/sq ft)</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex items-start">
+                          <span className="text-[#CAB06B] font-bold text-lg mr-2">•</span>
+                          <div>
+                            <p className="font-medium text-[#333333] mb-1">Two Bedrooms</p>
+                            <p className="text-[#666666]">Starting at <span className="font-bold text-[#CAB06B]">$3,800/month</span></p>
+                            <p className="text-sm text-[#666666]">1,100-1,400 sq ft ($3.10-$3.45/sq ft)</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div className="mt-4 pt-4 border-t border-[#E5E2D9]">
+                      <p className="text-sm text-[#666666] italic">
+                        Premium pricing reflects The Novus's superior height, views, and luxury finishes compared to downtown competitors.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Short-Term Incentives Card */}
+                <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden transition-all hover:shadow-md">
+                  <div className="bg-[#F9F8F4] border-b border-[#E5E2D9] p-4">
+                    <h3 className="text-xl font-semibold text-[#333333] mb-1">Short-Term Incentives</h3>
+                    <p className="text-sm text-[#666666]">Initial lease-up promotions</p>
+                  </div>
+                  <div className="p-5">
+                    <ul className="space-y-4">
+                      <li>
+                        <div className="flex items-start">
+                          <span className="text-[#CAB06B] font-bold text-lg mr-2">•</span>
+                          <div>
+                            <p className="font-medium text-[#333333] mb-1">Application Fee Waiver</p>
+                            <p className="text-[#666666]">$0 application fee ($50 value)</p>
+                            <p className="text-sm text-[#666666]">For all initial on-site applications</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex items-start">
+                          <span className="text-[#CAB06B] font-bold text-lg mr-2">•</span>
+                          <div>
+                            <p className="font-medium text-[#333333] mb-1">First Month Concessions</p>
+                            <p className="text-[#666666]">Up to <span className="font-bold text-[#CAB06B]">8 weeks free</span> rent</p>
+                            <p className="text-sm text-[#666666]">For 12+ month leases signed during launch phase</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex items-start">
+                          <span className="text-[#CAB06B] font-bold text-lg mr-2">•</span>
+                          <div>
+                            <p className="font-medium text-[#333333] mb-1">Look & Lease Bonus</p>
+                            <p className="text-[#666666]"><span className="font-bold text-[#CAB06B]">$750 rent credit</span> for same-day signing</p>
+                            <p className="text-sm text-[#666666]">Limited-time promotion for decision makers</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div className="mt-4 pt-4 border-t border-[#E5E2D9]">
+                      <p className="text-sm text-[#666666] italic">
+                        Incentives scaled by floor band and lease term length, with premium units (floors 20-27) receiving reduced concessions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Resident Retention Card */}
+                <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden transition-all hover:shadow-md">
+                  <div className="bg-[#F9F8F4] border-b border-[#E5E2D9] p-4">
+                    <h3 className="text-xl font-semibold text-[#333333] mb-1">Resident Retention</h3>
+                    <p className="text-sm text-[#666666]">Long-term loyalty incentives</p>
+                  </div>
+                  <div className="p-5">
+                    <ul className="space-y-4">
+                      <li>
+                        <div className="flex items-start">
+                          <span className="text-[#CAB06B] font-bold text-lg mr-2">•</span>
+                          <div>
+                            <p className="font-medium text-[#333333] mb-1">Renewal Discounts</p>
+                            <p className="text-[#666666]">Tiered increases from <span className="font-bold text-[#CAB06B]">0-6%</span></p>
+                            <p className="text-sm text-[#666666]">Based on payment history and lease term</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex items-start">
+                          <span className="text-[#CAB06B] font-bold text-lg mr-2">•</span>
+                          <div>
+                            <p className="font-medium text-[#333333] mb-1">Referral Bonuses</p>
+                            <p className="text-[#666666]">Up to <span className="font-bold text-[#CAB06B]">$1,500</span> for resident referrals</p>
+                            <p className="text-sm text-[#666666]">Split between referrer and new resident</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex items-start">
+                          <span className="text-[#CAB06B] font-bold text-lg mr-2">•</span>
+                          <div>
+                            <p className="font-medium text-[#333333] mb-1">Loyalty Benefits</p>
+                            <p className="text-[#666666]">Unit refresh and VIP amenity access</p>
+                            <p className="text-sm text-[#666666]">Anniversary gifts and priority maintenance</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div className="mt-4 pt-4 border-t border-[#E5E2D9]">
+                      <p className="text-sm text-[#666666] italic">
+                        Comprehensive strategy designed to maximize resident satisfaction and minimize turnover in a competitive market.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-[#F9F8F4] border border-l-4 border-[#CAB06B] p-6 mb-8">
+                <p className="text-lg font-medium text-[#333333] mb-2">
+                  Market Positioning Summary
+                </p>
+                <p className="text-[#666666] mb-4">
+                  The Novus's pricing strategy capitalizes on its unique position as Downtown Durham's premier 27-story high-rise, with a significant advantage in height, views, and luxury finishes compared to all competitors in the market.
+                </p>
+                <p className="text-[#666666]">
+                  The vertical stratification pricing model with floor-specific premiums creates a wide range of price points that maximize appeal to the target demographic of young professionals, executives, and empty nesters seeking luxury amenities and unmatched downtown views.
+                </p>
+              </div>
+            </section>
           </div>
         </div>
       </Layout>

@@ -31,6 +31,52 @@ export default function MarketIntelligence() {
             </p>
           </HighlightBox>
           
+          <div className="my-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-white border border-[#E5E2D9] rounded-md p-5 hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-full bg-[#F9F8F4] flex items-center justify-center mr-3">
+                  <TrendingUp className="text-[#CAB06B]" size={18} />
+                </div>
+                <h3 className="text-lg font-semibold">Vacancy Rate</h3>
+              </div>
+              <p className="text-2xl font-bold text-[#CAB06B] mb-2">~7%</p>
+              <p className="text-sm text-[#666666]">Decreasing year-over-year, reflecting strong market demand</p>
+            </div>
+            
+            <div className="bg-white border border-[#E5E2D9] rounded-md p-5 hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-full bg-[#F9F8F4] flex items-center justify-center mr-3">
+                  <LineChart className="text-[#CAB06B]" size={18} />
+                </div>
+                <h3 className="text-lg font-semibold">Absorption Rate</h3>
+              </div>
+              <p className="text-2xl font-bold text-[#CAB06B] mb-2">25 units/month</p>
+              <p className="text-sm text-[#666666]">Average leasing velocity in Downtown Durham</p>
+            </div>
+            
+            <div className="bg-white border border-[#E5E2D9] rounded-md p-5 hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-full bg-[#F9F8F4] flex items-center justify-center mr-3">
+                  <BarChart className="text-[#CAB06B]" size={18} />
+                </div>
+                <h3 className="text-lg font-semibold">Key Demographics</h3>
+              </div>
+              <p className="text-2xl font-bold text-[#CAB06B] mb-2">$80k-$120k</p>
+              <p className="text-sm text-[#666666]">Median renter income, primarily tech professionals and university affiliates</p>
+            </div>
+            
+            <div className="bg-white border border-[#E5E2D9] rounded-md p-5 hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-full bg-[#F9F8F4] flex items-center justify-center mr-3">
+                  <PieChart className="text-[#CAB06B]" size={18} />
+                </div>
+                <h3 className="text-lg font-semibold">Pipeline Projects</h3>
+              </div>
+              <p className="text-2xl font-bold text-[#CAB06B] mb-2">450 units</p>
+              <p className="text-sm text-[#666666]">New units expected within 18 months, potentially impacting market dynamics</p>
+            </div>
+          </div>
+          
           <div className="space-y-10">
             <section className="section">
               <Heading level={2} className="mb-5">Market Overview</Heading>

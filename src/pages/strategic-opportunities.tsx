@@ -23,6 +23,103 @@ export default function StrategicOpportunities() {
             </p>
           </HighlightBox>
           
+          <section className="my-10">
+            <Heading level={2} className="mb-5">Target Demographics and Local Partnerships</Heading>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+              <div className="bg-[#F9F8F4] border border-[#E5E2D9] rounded-md p-6">
+                <h3 className="text-xl font-semibold text-[#333333] mb-4">Target Niche Demographics</h3>
+                
+                <div className="space-y-5">
+                  <div className="flex items-start">
+                    <div className="mr-3 mt-1 min-w-[32px] h-8 rounded-full bg-[#F5F5E6] flex items-center justify-center">
+                      <span className="text-[#CAB06B] text-xl font-bold">1</span>
+                    </div>
+                    <div>
+                      <h4 className="text-[#333333] font-medium mb-1">Technology Professionals</h4>
+                      <p className="text-[#666666] text-sm">
+                        Senior software engineers, data scientists, and tech executives employed in Downtown Durham tech firms and startups. This demographic values high-end smart home features, premium connectivity, and proximity to the growing innovation district.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="mr-3 mt-1 min-w-[32px] h-8 rounded-full bg-[#F5F5E6] flex items-center justify-center">
+                      <span className="text-[#CAB06B] text-xl font-bold">2</span>
+                    </div>
+                    <div>
+                      <h4 className="text-[#333333] font-medium mb-1">Duke University Affiliates</h4>
+                      <p className="text-[#666666] text-sm">
+                        Faculty, researchers, administrators, and medical professionals from Duke University and Duke University Health System. This group prioritizes sophisticated living spaces, academic-friendly amenities, and convenient access to campus facilities.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="mr-3 mt-1 min-w-[32px] h-8 rounded-full bg-[#F5F5E6] flex items-center justify-center">
+                      <span className="text-[#CAB06B] text-xl font-bold">3</span>
+                    </div>
+                    <div>
+                      <h4 className="text-[#333333] font-medium mb-1">Young Urban Professionals</h4>
+                      <p className="text-[#666666] text-sm">
+                        High-earning professionals (28-42) seeking premium downtown living with unmatched views, walkability to entertainment and dining, and status-oriented amenities. This group has household incomes averaging $110K+ and values experiential living.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-[#F9F8F4] border border-[#E5E2D9] rounded-md p-6">
+                <h3 className="text-xl font-semibold text-[#333333] mb-4">Strategic Partnership Opportunities</h3>
+                
+                <div className="space-y-5">
+                  <div className="flex items-start">
+                    <div className="mr-3 mt-1 min-w-[32px] h-8 rounded-full bg-[#F5F5E6] flex items-center justify-center">
+                      <span className="text-[#CAB06B] text-xl font-bold">A</span>
+                    </div>
+                    <div>
+                      <h4 className="text-[#333333] font-medium mb-1">Durham Tech Companies</h4>
+                      <p className="text-[#666666] text-sm">
+                        Establish exclusive corporate housing agreements with leading Durham-based tech companies, offering preferred rates and custom lease terms for relocating employees. Create dedicated landing pages for each corporate partner with customized virtual tours.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="mr-3 mt-1 min-w-[32px] h-8 rounded-full bg-[#F5F5E6] flex items-center justify-center">
+                      <span className="text-[#CAB06B] text-xl font-bold">B</span>
+                    </div>
+                    <div>
+                      <h4 className="text-[#333333] font-medium mb-1">Duke University Housing Program</h4>
+                      <p className="text-[#666666] text-sm">
+                        Develop a preferred housing program for Duke University faculty, staff, and medical personnel, featuring academic-year lease alignments, dedicated shuttle service, and special incentives for long-term commitments. Establish presence at university hiring events.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="mr-3 mt-1 min-w-[32px] h-8 rounded-full bg-[#F5F5E6] flex items-center justify-center">
+                      <span className="text-[#CAB06B] text-xl font-bold">C</span>
+                    </div>
+                    <div>
+                      <h4 className="text-[#333333] font-medium mb-1">Healthcare Institutions</h4>
+                      <p className="text-[#666666] text-sm">
+                        Create strategic alliances with Duke University Health System and other local healthcare institutions to provide specialized housing options for medical professionals, featuring sound-isolation packages for night shift workers and flexible lease terms aligned with residency programs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white border border-l-4 border-[#CAB06B] p-6 mb-8">
+              <p className="text-[#333333] font-medium mb-2">Implementation Strategy</p>
+              <p className="text-[#666666] text-sm">
+                The Novus will implement a targeted outreach program for each demographic segment, with customized marketing materials and dedicated leasing specialists for each vertical. Partnership opportunities will be pursued through executive-level engagement with key decision-makers at target organizations, with formal agreements to be established 3-6 months prior to opening.
+              </p>
+            </div>
+          </section>
+          
           <GatedContent 
             title="Strategic Opportunities" 
             teaser="Our detailed analysis has identified multiple opportunities for competitive advantage in the Durham market, addressing gaps in current offerings and leveraging The Novus's distinctive vertical neighborhood concept. These opportunities span premium view units, amenity stratification across 27 floors, resident experience tailored to Durham professionals, and marketing positioning as Downtown Durham's premier high-rise residential tower."

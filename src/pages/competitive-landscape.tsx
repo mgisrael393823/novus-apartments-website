@@ -194,6 +194,220 @@ export default function CompetitiveLandscape() {
                   </table>
                 </div>
                 
+                {/* New Detailed Comparison Table */}
+                <h3 className={`${headingFont.className} text-xl uppercase tracking-wide text-[#333333] mb-6`}>
+                  Detailed Property Comparison
+                </h3>
+                
+                <p className={`${bodyFont.className} text-[#666666] leading-relaxed mb-6`}>
+                  The following side-by-side comparison highlights key differentiators between The Novus and its primary competitors, focusing on building attributes, amenities, finishes, and leasing incentives.
+                </p>
+                
+                <div className="overflow-x-auto mb-8">
+                  <table className="min-w-full bg-white border border-[#E5E2D9] rounded-sm">
+                    <thead>
+                      <tr className="bg-[#F9F8F4] border-b border-[#E5E2D9]">
+                        <th className="px-4 py-3 text-left text-xs font-medium text-[#333333] uppercase tracking-wider">Feature</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-[#333333] uppercase tracking-wider bg-[#F5F5E6]">The Novus</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-[#333333] uppercase tracking-wider">Van Alen</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-[#333333] uppercase tracking-wider">Atlas</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-[#333333] uppercase tracking-wider">Cortland Bull City</th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-[#333333] uppercase tracking-wider">Foster on the Park</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-[#E5E2D9]">
+                      <tr>
+                        <td className="px-4 py-3 text-sm font-medium text-[#333333]">Building Height</td>
+                        <td className="px-4 py-3 text-sm font-bold text-[#CAB06B] bg-[#F9F8F4]">27 stories</td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">6 stories</td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">22 stories</td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">5 stories</td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">7 stories</td>
+                      </tr>
+                      
+                      <tr className="bg-[#F9F8F4]">
+                        <td className="px-4 py-3 text-sm font-medium text-[#333333]">Pool</td>
+                        <td className="px-4 py-3 text-sm font-bold text-[#CAB06B] bg-[#F5F5E6]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Rooftop infinity pool with city views
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Saltwater pool
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Rooftop pool
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Resort-style pool
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Courtyard pool
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td className="px-4 py-3 text-sm font-medium text-[#333333]">Fitness Center</td>
+                        <td className="px-4 py-3 text-sm font-bold text-[#CAB06B] bg-[#F9F8F4]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> 3,500 sq ft center with Peloton bikes & yoga studio
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Standard fitness center
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Premium fitness center
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> 24-hour fitness center
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Basic gym equipment
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      <tr className="bg-[#F9F8F4]">
+                        <td className="px-4 py-3 text-sm font-medium text-[#333333]">Pet Amenities</td>
+                        <td className="px-4 py-3 text-sm font-bold text-[#CAB06B] bg-[#F5F5E6]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Dog park, wash station, 24/7 walking service
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Dog wash only
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Pet spa & walking area
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Dog park & wash station
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex items-center">
+                            <span className="mr-1">✓</span> Pet relief area
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td className="px-4 py-3 text-sm font-medium text-[#333333]">Unit Finishes</td>
+                        <td className="px-4 py-3 text-sm font-bold text-[#CAB06B] bg-[#F9F8F4]">
+                          <div className="flex flex-col">
+                            <span>• Quartz countertops</span>
+                            <span>• Italian tile backsplashes</span>
+                            <span>• High-end appliance package</span>
+                            <span>• Engineered hardwood floors</span>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex flex-col">
+                            <span>• Quartz countertops</span>
+                            <span>• Ceramic tile backsplashes</span>
+                            <span>• Stainless appliances</span>
+                            <span>• Vinyl plank flooring</span>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex flex-col">
+                            <span>• Granite countertops</span>
+                            <span>• Tile backsplashes</span>
+                            <span>• High-end appliances</span>
+                            <span>• Hardwood floors</span>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex flex-col">
+                            <span>• Quartz countertops</span>
+                            <span>• Subway tile backsplashes</span>
+                            <span>• Stainless appliances</span>
+                            <span>• Vinyl plank flooring</span>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex flex-col">
+                            <span>• Granite countertops</span>
+                            <span>• Ceramic tile backsplashes</span>
+                            <span>• Standard appliances</span>
+                            <span>• Carpet/vinyl flooring</span>
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      <tr className="bg-[#F9F8F4]">
+                        <td className="px-4 py-3 text-sm font-medium text-[#333333]">Monthly Price Range (1BR)</td>
+                        <td className="px-4 py-3 text-sm font-bold text-[#CAB06B] bg-[#F5F5E6]">$2,795-3,450</td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">$2,295-2,695</td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">$2,550-3,050</td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">$1,995-2,350</td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">$2,195-2,450</td>
+                      </tr>
+                      
+                      <tr>
+                        <td className="px-4 py-3 text-sm font-medium text-[#333333]">Leasing Incentives</td>
+                        <td className="px-4 py-3 text-sm font-bold text-[#CAB06B] bg-[#F9F8F4]">
+                          <div className="flex flex-col">
+                            <span>• 2 months free on 14+ month leases</span>
+                            <span>• $1,500 move-in credit</span>
+                            <span>• Waived admin & app fees</span>
+                            <span>• Free reserved parking (1st year)</span>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex flex-col">
+                            <span>• 1.5 months free</span>
+                            <span>• $750 move-in credit</span>
+                            <span>• Reduced admin fee</span>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex flex-col">
+                            <span>• 1 month free</span>
+                            <span>• Waived application fee</span>
+                            <span>• Reduced parking rate</span>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex flex-col">
+                            <span>• 1 month free</span>
+                            <span>• $500 gift card</span>
+                            <span>• Waived admin fee</span>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-[#666666]">
+                          <div className="flex flex-col">
+                            <span>• 6 weeks free</span>
+                            <span>• $250 gift card</span>
+                            <span>• Reduced security deposit</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
                 <h4 className={`${headingFont.className} text-lg text-[#333333] mb-4`}>Key Matrix Insights</h4>
                 
                 <ul className="space-y-3 mb-8">
