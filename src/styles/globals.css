@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    
+    /* Brand colors - The Novus */
+    --brand-primary: 43 42% 61%; /* #CAB06B (Muted gold) */
+    --brand-primary-hover: 43 42% 48%; /* #A38E53 (Darker gold) */
+    --brand-primary-light: 44 52% 83%; /* #E8DFC0 (Lighter gold) */
+    --brand-bg-light: 40 18% 97%; /* #F9F8F4 (Soft cream/white) */
+    --brand-border: 41 16% 87%; /* #E5E2D9 (Adjusted border) */
+    
+    /* Text colors */
+    --text-primary: 0 0% 20%; /* #333333 (Charcoal gray - unchanged) */
+    --text-secondary: 0 0% 40%; /* #666666 (Slightly darker secondary) */
+    --text-muted: 0 0% 60%; /* #999999 (Adjusted muted text) */
+    
+    /* UI colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    
+    /* Chart colors - The Novus */
+    --chart-1: 43 42% 61%; /* #CAB06B (Muted gold - primary) */
+    --chart-2: 210 25% 56%; /* #A8C0D1 (Subtle blue) */
+    --chart-3: 133 16% 56%; /* #B5C9B7 (Subtle green) */
+    --chart-4: 43 30% 75%; /* #D6CDB0 (Lighter variant of gold) */
+    --chart-5: 200 15% 40%; /* #5A6B76 (Darker blue-gray) */
+    
+    /* Border radius */
+    --radius: 0.25rem; /* 4px for rounded-sm */
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Spacing (in rems) */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+  }
+  
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Font sizes are now smaller and more consistent */
+  h1, .h1 {
+    @apply text-3xl md:text-4xl font-semibold text-[#333333] tracking-wide leading-tight;
+  }
+  
+  h2, .h2 {
+    @apply text-2xl md:text-3xl font-semibold text-[#333333] tracking-wide leading-tight;
+  }
+  
+  h3, .h3 {
+    @apply text-xl md:text-2xl font-semibold text-[#333333] leading-tight;
+  }
+  
+  h4, .h4 {
+    @apply text-base md:text-lg font-semibold text-[#333333] uppercase tracking-wide leading-tight;
+  }
+  
+  p {
+    @apply text-[#666666] text-sm md:text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Container and layout */
+  .container {
+    @apply mx-auto px-4 md:px-6 lg:px-8 max-w-6xl w-full;
+  }
+  
+  .section {
+    @apply py-8 md:py-12 mb-12 md:mb-16;
+  }
+  
+  .section-divider {
+    @apply border-t-2 border-[#E5E2D9] pt-6 mb-6;
+  }
+  
+  /* Typography classes */
+  .heading-1 {
+    @apply text-3xl md:text-4xl font-semibold text-[#333333] tracking-wide leading-tight;
+  }
+  
+  .heading-2 {
+    @apply text-2xl md:text-3xl font-semibold text-[#333333] tracking-wide leading-tight;
+  }
+  
+  .heading-3 {
+    @apply text-xl md:text-2xl font-semibold text-[#333333] leading-tight;
+  }
+  
+  .heading-4 {
+    @apply text-base md:text-lg font-semibold text-[#333333] uppercase tracking-wide leading-tight;
+  }
+  
+  .section-title {
+    @apply text-xs uppercase tracking-widest font-medium text-[#CAB06B] mb-1;
+  }
+  
+  .body-text {
+    @apply text-sm text-[#666666] leading-relaxed;
+  }
+  
+  .body-text-lg {
+    @apply text-base text-[#666666] leading-relaxed;
+  }
+  
+  .caption {
+    @apply text-xs text-[#999999];
+  }
+  
+  /* Component styles */
+  .content-box {
+    @apply border border-[#E5E2D9] rounded-sm bg-white p-5 md:p-6;
+  }
+  
+  .content-box-light {
+    @apply border border-[#E5E2D9] rounded-sm bg-[#F9F8F4] p-5 md:p-6 relative overflow-hidden;
+  }
+  
+  .highlight-box {
+    @apply bg-[#F9F8F4] border-l-4 border-[#333333] p-5 md:p-6 mb-6 rounded-sm;
+  }
+  
+  .premium-content-box {
+    @apply p-6 md:p-8 bg-white border border-[#E5E2D9] rounded-sm relative overflow-hidden mb-8;
+  }
+  
+  .premium-badge {
+    @apply bg-[#E8DFC0] px-3 py-1 rounded-sm text-xs text-[#A38E53] font-medium uppercase tracking-wider;
+  }
+  
+  .stat-box {
+    @apply bg-[#F9F8F4] border border-[#E5E2D9] rounded-sm p-4 md:p-5;
+  }
+  
+  .stat-label {
+    @apply text-xs uppercase tracking-wide text-[#666666] mb-1;
+  }
+  
+  .stat-value {
+    @apply text-2xl md:text-3xl font-bold text-[#333333];
+  }
+  
+  .stat-description {
+    @apply text-xs text-[#666666];
+  }
+  
+  /* Decorative elements */
+  .decorative-circle {
+    @apply absolute -right-8 -bottom-8 w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#CAB06B] opacity-5;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    @apply bg-[#CAB06B] hover:bg-[#A38E53] text-white font-medium px-4 py-2 md:px-6 md:py-3 rounded-sm tracking-wider uppercase text-xs transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-[#CAB06B] text-[#CAB06B] hover:bg-[#CAB06B] hover:bg-opacity-5 font-medium px-4 py-2 md:px-5 md:py-2.5 rounded-sm tracking-wide uppercase text-xs transition-colors;
+  }
+  
+  .btn-link {
+    @apply text-[#CAB06B] hover:underline font-medium text-xs uppercase tracking-wider flex items-center;
+  }
+  
+  /* List styles */
+  .bullet-list {
+    @apply space-y-2;
+  }
+  
+  .bullet-list-item {
+    @apply flex items-start;
+  }
+  
+  .bullet-marker {
+    @apply text-[#CAB06B] mr-2 flex-shrink-0;
+  }
+  
+  /* Consistent gated content blur */
+  .content-blur {
+    @apply blur-[3px] opacity-40;
+  }
+}
