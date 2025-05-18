@@ -558,32 +558,32 @@ export default function CompetitiveLandscape() {
                     </div>
                   </div>
                   
-                  <div className="bg-[#FCFAF5] p-4 rounded-sm border border-[#E8E3D9]">
+                  <div className="bg-[#F9F8F4] p-4 rounded-sm border border-[#E5E2D9]">
                     <p className="text-sm font-medium text-[#333333] mb-2">Competitive Positioning Recommendations</p>
                     <ul className="space-y-1">
                       <li className="flex items-start">
-                        <span className="text-[#E57161] mr-2 text-xs">•</span>
-                        <span className="text-sm text-[#777777]">Match or exceed technology offerings while emphasizing superior service model</span>
+                        <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                        <span className="text-sm text-[#666666]">Match or exceed technology offerings while emphasizing superior service model</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[#E57161] mr-2 text-xs">•</span>
-                        <span className="text-sm text-[#777777]">Develop significantly larger outdoor amenity spaces with multiple activity zones</span>
+                        <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                        <span className="text-sm text-[#666666]">Develop significantly larger outdoor amenity spaces with multiple activity zones</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[#E57161] mr-2 text-xs">•</span>
-                        <span className="text-sm text-[#777777]">Position in similar design-forward aesthetic with enhanced emphasis on quality</span>
+                        <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                        <span className="text-sm text-[#666666]">Position in similar design-forward aesthetic with enhanced emphasis on quality</span>
                       </li>
                     </ul>
                   </div>
                 </div>
                 
                 {/* ILuminate Analysis */}
-                <div className="bg-white border border-[#E8E3D9] rounded-sm p-6 mb-8">
+                <div className="bg-white border border-[#E5E2D9] rounded-sm p-6 mb-8">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 bg-[#F8F0EA] rounded-full flex items-center justify-center">
-                      <span className="text-[#E57161] font-semibold">5</span>
+                    <div className="w-8 h-8 bg-[#F9F8F4] rounded-full flex items-center justify-center">
+                      <span className="text-[#CAB06B] font-semibold">5</span>
                     </div>
-                    <h4 className={`${headingFont.className} text-lg text-[#333333]`}>ILuminate</h4>
+                    <h4 className={`${headingFont.className} text-lg text-[#333333]`}>Berkshire Ninth Street</h4>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -595,17 +595,17 @@ export default function CompetitiveLandscape() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-[#333333] mb-1">Pricing & Performance</p>
-                      <p className="text-sm text-[#777777]">Studio: $1,875-2,095</p>
-                      <p className="text-sm text-[#777777]">1BR: $2,195-2,450</p>
-                      <p className="text-sm text-[#777777]">2BR: $2,695-3,250</p>
-                      <p className="text-sm text-[#777777]">81% occupied • 8 weeks free</p>
+                      <p className="text-sm text-[#666666]">Studio: $1,875-2,095</p>
+                      <p className="text-sm text-[#666666]">1BR: $2,195-2,450</p>
+                      <p className="text-sm text-[#666666]">2BR: $2,695-3,250</p>
+                      <p className="text-sm text-[#666666]">81% occupied • 8 weeks free</p>
                     </div>
                     <div>
                       <p className="text-sm font-medium text-[#333333] mb-1">Resident Profile</p>
-                      <p className="text-sm text-[#777777]">Median Age: 31</p>
-                      <p className="text-sm text-[#777777]">Income: $85K-115K</p>
-                      <p className="text-sm text-[#777777]">48% work from home</p>
-                      <p className="text-sm text-[#777777]">62% singles, 28% couples</p>
+                      <p className="text-sm text-[#666666]">Median Age: 31</p>
+                      <p className="text-sm text-[#666666]">Income: $85K-115K</p>
+                      <p className="text-sm text-[#666666]">48% work from home</p>
+                      <p className="text-sm text-[#666666]">62% singles, 28% couples</p>
                     </div>
                   </div>
                   
@@ -614,16 +614,16 @@ export default function CompetitiveLandscape() {
                       <p className="text-sm font-medium text-[#333333] mb-2">Key Strengths</p>
                       <ul className="space-y-1">
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
                           <span className="text-sm text-[#666666]">Newest property in the Five Points District with modern finishes</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Innovative community programming with local business partnerships</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Innovative community programming with local business partnerships</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Wellness-focused amenities including meditation spaces and yoga studio</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Wellness-focused amenities including meditation spaces and yoga studio</span>
                         </li>
                       </ul>
                     </div>
@@ -631,47 +631,47 @@ export default function CompetitiveLandscape() {
                       <p className="text-sm font-medium text-[#333333] mb-2">Key Weaknesses</p>
                       <ul className="space-y-1">
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Struggling with lease-up velocity despite heavy concessions</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Struggling with lease-up velocity despite heavy concessions</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Limited unit sizes with most floorplans under 850 sq ft</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Limited unit sizes with most floorplans under 850 sq ft</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Resident complaints about street noise (poor sound insulation)</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Resident complaints about street noise (poor sound insulation)</span>
                         </li>
                       </ul>
                     </div>
                   </div>
                   
-                  <div className="bg-[#FCFAF5] p-4 rounded-sm border border-[#E8E3D9]">
+                  <div className="bg-[#F9F8F4] p-4 rounded-sm border border-[#E5E2D9]">
                     <p className="text-sm font-medium text-[#333333] mb-2">Competitive Positioning Recommendations</p>
                     <ul className="space-y-1">
                       <li className="flex items-start">
-                        <span className="text-[#E57161] mr-2 text-xs">•</span>
+                        <span className="text-[#CAB06B] mr-2 text-xs">•</span>
                         <span className="text-sm text-[#666666]">Emphasize The Novus's superior sound insulation technology as a key differentiator</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[#E57161] mr-2 text-xs">•</span>
-                        <span className="text-sm text-[#777777]">Highlight larger unit sizes and thoughtful layouts for work-from-home functionality</span>
+                        <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                        <span className="text-sm text-[#666666]">Highlight larger unit sizes and thoughtful layouts for work-from-home functionality</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[#E57161] mr-2 text-xs">•</span>
-                        <span className="text-sm text-[#777777]">Match wellness offerings while expanding with additional premium amenities</span>
+                        <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                        <span className="text-sm text-[#666666]">Match wellness offerings while expanding with additional premium amenities</span>
                       </li>
                     </ul>
                   </div>
                 </div>
                 
                 {/* Moontower Analysis */}
-                <div className="bg-white border border-[#E8E3D9] rounded-sm p-6 mb-8">
+                <div className="bg-white border border-[#E5E2D9] rounded-sm p-6 mb-8">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 bg-[#F8F0EA] rounded-full flex items-center justify-center">
-                      <span className="text-[#E57161] font-semibold">6</span>
+                    <div className="w-8 h-8 bg-[#F9F8F4] rounded-full flex items-center justify-center">
+                      <span className="text-[#CAB06B] font-semibold">6</span>
                     </div>
-                    <h4 className={`${headingFont.className} text-lg text-[#333333]`}>Moontower</h4>
+                    <h4 className={`${headingFont.className} text-lg text-[#333333]`}>Beckon Apartments</h4>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -683,17 +683,17 @@ export default function CompetitiveLandscape() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-[#333333] mb-1">Pricing & Performance</p>
-                      <p className="text-sm text-[#777777]">Studio: $1,795-2,025</p>
-                      <p className="text-sm text-[#777777]">1BR: $2,095-2,425</p>
-                      <p className="text-sm text-[#777777]">2BR: $2,650-3,250</p>
-                      <p className="text-sm text-[#777777]">89% occupied • 4 weeks free</p>
+                      <p className="text-sm text-[#666666]">Studio: $1,795-2,025</p>
+                      <p className="text-sm text-[#666666]">1BR: $2,095-2,425</p>
+                      <p className="text-sm text-[#666666]">2BR: $2,650-3,250</p>
+                      <p className="text-sm text-[#666666]">89% occupied • 4 weeks free</p>
                     </div>
                     <div>
                       <p className="text-sm font-medium text-[#333333] mb-1">Resident Profile</p>
-                      <p className="text-sm text-[#777777]">Median Age: 34</p>
-                      <p className="text-sm text-[#777777]">Income: $90K-120K</p>
-                      <p className="text-sm text-[#777777]">42% work from home</p>
-                      <p className="text-sm text-[#777777]">58% singles, 32% couples</p>
+                      <p className="text-sm text-[#666666]">Median Age: 34</p>
+                      <p className="text-sm text-[#666666]">Income: $90K-120K</p>
+                      <p className="text-sm text-[#666666]">42% work from home</p>
+                      <p className="text-sm text-[#666666]">58% singles, 32% couples</p>
                     </div>
                   </div>
                   
@@ -702,16 +702,16 @@ export default function CompetitiveLandscape() {
                       <p className="text-sm font-medium text-[#333333] mb-2">Key Strengths</p>
                       <ul className="space-y-1">
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Exceptional pool deck with resort-style cabanas and fire features</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Exceptional pool deck with resort-style cabanas and fire features</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Strong pet amenities including dog park, wash station, and walking service</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Strong pet amenities including dog park, wash station, and walking service</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Tech-forward building with app-controlled access and smart thermostats</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Tech-forward building with app-controlled access and smart thermostats</span>
                         </li>
                       </ul>
                     </div>
@@ -719,35 +719,35 @@ export default function CompetitiveLandscape() {
                       <p className="text-sm font-medium text-[#333333] mb-2">Key Weaknesses</p>
                       <ul className="space-y-1">
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Kitchen finishes less premium than competing properties</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Kitchen finishes less premium than competing properties</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Limited bike storage despite high cyclist resident population</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Limited bike storage despite high cyclist resident population</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-2 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Fitness center equipment frequently out of service/maintenance</span>
+                          <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Fitness center equipment frequently out of service/maintenance</span>
                         </li>
                       </ul>
                     </div>
                   </div>
                   
-                  <div className="bg-[#FCFAF5] p-4 rounded-sm border border-[#E8E3D9]">
+                  <div className="bg-[#F9F8F4] p-4 rounded-sm border border-[#E5E2D9]">
                     <p className="text-sm font-medium text-[#333333] mb-2">Competitive Positioning Recommendations</p>
                     <ul className="space-y-1">
                       <li className="flex items-start">
-                        <span className="text-[#E57161] mr-2 text-xs">•</span>
-                        <span className="text-sm text-[#777777]">Develop superior kitchen package with chef-inspired finishes and appliances</span>
+                        <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                        <span className="text-sm text-[#666666]">Develop superior kitchen package with chef-inspired finishes and appliances</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[#E57161] mr-2 text-xs">•</span>
-                        <span className="text-sm text-[#777777]">Create expanded pet amenities package with premium services and facilities</span>
+                        <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                        <span className="text-sm text-[#666666]">Create expanded pet amenities package with premium services and facilities</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[#E57161] mr-2 text-xs">•</span>
-                        <span className="text-sm text-[#777777]">Design expanded bicycle storage and maintenance facilities to appeal to urban cyclists</span>
+                        <span className="text-[#CAB06B] mr-2 text-xs">•</span>
+                        <span className="text-sm text-[#666666]">Design expanded bicycle storage and maintenance facilities to appeal to urban cyclists</span>
                       </li>
                     </ul>
                   </div>

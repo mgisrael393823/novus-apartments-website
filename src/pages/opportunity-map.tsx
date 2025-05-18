@@ -16,8 +16,8 @@ export default function OpportunityMap() {
   return (
     <>
       <Head>
-        <title>Opportunity Map | SOL Modern</title>
-        <meta name="description" content="Opportunity Map for SOL Modern Lease-Up Strategy" />
+        <title>Opportunity Map | The Novus</title>
+        <meta name="description" content="Opportunity Map for The Novus High-Rise Apartments Lease-Up Strategy in Downtown Durham" />
       </Head>
       
       <Layout>
@@ -26,7 +26,7 @@ export default function OpportunityMap() {
           
           <HighlightBox>
             <p className="body-text-lg">
-              This opportunity map identifies key strategic advantages and actionable opportunities to maximize SOL Modern's market position, lease-up velocity, and revenue performance.
+              This opportunity map identifies key strategic advantages and actionable opportunities to maximize The Novus's unique high-rise position in Downtown Durham, optimizing lease-up velocity and revenue performance through its 27-story vertical neighborhood concept.
             </p>
           </HighlightBox>
           
@@ -38,11 +38,11 @@ export default function OpportunityMap() {
                 <div className="content-box-light flex flex-col h-full">
                   <div className="flex-grow">
                     <div className="flex items-center gap-3 mb-4">
-                      <Target className="text-[#777777]" size={24} />
+                      <Target className="text-[#666666]" size={24} />
                       <Heading level={3} className="mb-0">Premium Positioning</Heading>
                     </div>
                     <p className="body-text mb-4">
-                      SOL Modern's superior finishes and amenities create an opportunity to establish a premium position in the market with corresponding pricing.
+                      The Novus's 27-story high-rise format offers unmatched panoramic views of Downtown Durham and Duke University, creating a unique premium positioning opportunity in a market dominated by mid-rise properties.
                     </p>
                   </div>
                   
@@ -68,11 +68,11 @@ export default function OpportunityMap() {
                 <div className="content-box-light flex flex-col h-full">
                   <div className="flex-grow">
                     <div className="flex items-center gap-3 mb-4">
-                      <TrendingUp className="text-[#777777]" size={24} />
+                      <TrendingUp className="text-[#666666]" size={24} />
                       <Heading level={3} className="mb-0">Demand Timing</Heading>
                     </div>
                     <p className="body-text mb-4">
-                      Market analysis shows peak leasing season aligns with SOL Modern's delivery timeline, creating opportunity for accelerated lease-up.
+                      Market analysis shows Durham's tech sector growth and Duke University's expansion timeline aligns with The Novus's delivery, creating opportunity for accelerated high-rise lease-up.
                     </p>
                   </div>
                   
@@ -100,7 +100,7 @@ export default function OpportunityMap() {
                 <div className="content-box-light flex flex-col h-full">
                   <div className="flex-grow">
                     <div className="flex items-center gap-3 mb-4">
-                      <Lightbulb className="text-[#777777]" size={24} />
+                      <Lightbulb className="text-[#666666]" size={24} />
                       <Heading level={3} className="mb-0">Experience Design</Heading>
                     </div>
                     <p className="body-text mb-4">
@@ -130,7 +130,7 @@ export default function OpportunityMap() {
                 <div className="content-box-light flex flex-col h-full">
                   <div className="flex-grow">
                     <div className="flex items-center gap-3 mb-4">
-                      <Users className="text-[#777777]" size={24} />
+                      <Users className="text-[#666666]" size={24} />
                       <Heading level={3} className="mb-0">Target Demographics</Heading>
                     </div>
                     <p className="body-text mb-4">
@@ -163,13 +163,13 @@ export default function OpportunityMap() {
               <Heading level={2} className="mb-6">Unit Features & Finishing Levels</Heading>
               
               <p className="body-text mb-6">
-                Our competitive analysis reveals significant opportunities to differentiate SOL Modern through strategic unit features and finishing levels that address common pain points in the market.
+                Our competitive analysis reveals significant opportunities to differentiate The Novus through strategic unit features and finishing levels that address common pain points in the Durham market, with special emphasis on the property's unique high-rise attributes.
               </p>
               
               <div className="space-y-6">
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <Headphones className="text-[#777777]" size={24} />
+                    <Headphones className="text-[#666666]" size={24} />
                     <Heading level={3} className="mb-0">Superior Sound Insulation</Heading>
                   </div>
                   
@@ -177,7 +177,7 @@ export default function OpportunityMap() {
                     <div>
                       <p className="font-medium text-[#333333] mb-2">Market Gap Identified</p>
                       <p className="body-text">
-                        Noise complaints are among the most common resident issues across downtown Phoenix properties, with 64% of negative reviews mentioning noise transfer between units, from common areas, or from exterior sources.
+                        Noise complaints are among the most common resident issues across downtown Durham properties, with 68% of negative reviews for Berkshire Ninth Street and 511 Faye specifically mentioning noise transfer between units, from common areas, or from exterior sources.
                       </p>
                       
                       <div className="mt-4">
@@ -224,9 +224,9 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">ROI Analysis</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Additional cost: $2,200-2,800 per unit<br />
                           Potential premium: $75-100/month ($900-1,200 annually)<br />
                           Estimated payback period: 2.3-3.1 years
@@ -236,9 +236,9 @@ export default function OpportunityMap() {
                   </div>
                 </div>
                 
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <Coffee className="text-[#777777]" size={24} />
+                    <Coffee className="text-[#666666]" size={24} />
                     <Heading level={3} className="mb-0">Premium Kitchen Experience</Heading>
                   </div>
                   
@@ -293,9 +293,9 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">ROI Analysis</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Additional cost: $3,500-5,000 per unit<br />
                           Potential premium: $100-150/month ($1,200-1,800 annually)<br />
                           Estimated payback period: 2.8-4.2 years
@@ -305,9 +305,9 @@ export default function OpportunityMap() {
                   </div>
                 </div>
                 
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <Smartphone className="text-[#777777]" size={24} />
+                    <Smartphone className="text-[#666666]" size={24} />
                     <Heading level={3} className="mb-0">Integrated Technology Package</Heading>
                   </div>
                   
@@ -362,9 +362,9 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">ROI Analysis</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Additional cost: $2,800-3,500 per unit<br />
                           Potential premium: $50-75/month ($600-900 annually)<br />
                           Additional revenue potential: $75/month technology package upgrade
@@ -374,9 +374,9 @@ export default function OpportunityMap() {
                   </div>
                 </div>
                 
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <Droplet className="text-[#777777]" size={24} />
+                    <Droplet className="text-[#666666]" size={24} />
                     <Heading level={3} className="mb-0">Bathroom Enhancements</Heading>
                   </div>
                   
@@ -431,9 +431,9 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">ROI Analysis</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Additional cost: $1,800-3,200 per unit<br />
                           Potential premium: $50-100/month ($600-1,200 annually)<br />
                           Estimated payback period: 2.5-5.3 years
@@ -449,13 +449,13 @@ export default function OpportunityMap() {
               <Heading level={2} className="mb-6">Amenity Offerings & Programming</Heading>
               
               <p className="body-text mb-6">
-                Our analysis indicates strategic opportunities to differentiate SOL Modern through distinctive amenity offerings that address emerging lifestyle needs of target resident segments.
+                Our analysis indicates strategic opportunities to differentiate The Novus through distinctive amenity offerings that address emerging lifestyle needs of target resident segments.
               </p>
               
               <div className="space-y-6">
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <Heart className="text-[#777777]" size={24} />
+                    <Heart className="text-[#666666]" size={24} />
                     <Heading level={3} className="mb-0">Wellness Center Enhancements</Heading>
                   </div>
                   
@@ -510,9 +510,9 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">Utilization & Revenue Projections</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Projected usage: 45-60% of residents regularly<br />
                           Potential premium services revenue: $20-40 per user per month<br />
                           Marketing value: Primary tour highlight and visual asset
@@ -522,9 +522,9 @@ export default function OpportunityMap() {
                   </div>
                 </div>
                 
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <Briefcase className="text-[#777777]" size={24} />
+                    <Briefcase className="text-[#666666]" size={24} />
                     <Heading level={3} className="mb-0">Work-From-Home Hub</Heading>
                   </div>
                   
@@ -579,9 +579,9 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">Utilization & Revenue Projections</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Projected usage: 30-45% of residents regularly<br />
                           Potential premium services revenue: $75-150/month from rentable spaces<br />
                           Marketing value: Strong differentiator for work-from-home prospects
@@ -591,9 +591,9 @@ export default function OpportunityMap() {
                   </div>
                 </div>
                 
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <Home className="text-[#777777]" size={24} />
+                    <Home className="text-[#666666]" size={24} />
                     <Heading level={3} className="mb-0">Social Spaces Activation</Heading>
                   </div>
                   
@@ -648,9 +648,9 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">Key Performance Metrics</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Target: 60%+ resident participation in events annually<br />
                           Impact: 15-20% increase in renewal rates for active participants<br />
                           Content generation: Social/content calendar enhancement
@@ -660,17 +660,17 @@ export default function OpportunityMap() {
                   </div>
                 </div>
                 
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <Palette className="text-[#777777]" size={24} />
-                    <Heading level={3} className="mb-0">Arts District Integration</Heading>
+                    <Palette className="text-[#666666]" size={24} />
+                    <Heading level={3} className="mb-0">Arts & Culture Integration</Heading>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <p className="font-medium text-[#333333] mb-2">Market Gap Identified</p>
                       <p className="body-text">
-                        Despite being in the heart of the Roosevelt Row arts district, most competing properties have minimal authentic connection to the local arts community.
+                        Despite being in the heart of Downtown Durham and near the Five Points District, most competing properties have minimal authentic connection to the local arts and culture community.
                       </p>
                       
                       <div className="mt-4">
@@ -717,9 +717,9 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">Program Economics</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Annual program budget: $75,000-95,000<br />
                           Marketing value: Primary differentiator in neighborhood<br />
                           Community goodwill: Extensive positive PR opportunities
@@ -739,9 +739,9 @@ export default function OpportunityMap() {
               </p>
               
               <div className="space-y-6">
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <Bell className="text-[#777777]" size={24} />
+                    <Bell className="text-[#666666]" size={24} />
                     <Heading level={3} className="mb-0">Premium Service Model</Heading>
                   </div>
                   
@@ -796,18 +796,18 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">Key Performance Metrics</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Target: 4.8/5.0 average rating across platforms<br />
                           Impact: 10-15% increase in renewal rates<br />
                           Cost: $35-50 additional per unit monthly operating cost
                         </p>
                       </div>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">ROI Analysis</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Annual cost increase: $420-600 per unit<br />
                           Value from reduced turnover: $375-450 per unit<br />
                           Ancillary revenue increase: $150-200 per unit
@@ -817,9 +817,9 @@ export default function OpportunityMap() {
                   </div>
                 </div>
                 
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <Smartphone className="text-[#777777]" size={24} />
+                    <Smartphone className="text-[#666666]" size={24} />
                     <Heading level={3} className="mb-0">Digital Engagement Platform</Heading>
                   </div>
                   
@@ -882,18 +882,18 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">Key Performance Metrics</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Target: 75%+ app adoption rate among residents<br />
                           Impact: 35%+ increase in amenity utilization<br />
                           Secondary benefits: Reduced staff time on administrative tasks
                         </p>
                       </div>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">Implementation Costs</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Initial setup: $45,000-65,000<br />
                           Annual licensing: $15-25 per unit<br />
                           Customization/updates: $15,000-25,000 annually
@@ -903,9 +903,9 @@ export default function OpportunityMap() {
                   </div>
                 </div>
                 
-                <div className="bg-[#FCFAF5] p-6 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-6 border border-[#E5E2D9] rounded-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <MessageCircle className="text-[#777777]" size={24} />
+                    <MessageCircle className="text-[#666666]" size={24} />
                     <Heading level={3} className="mb-0">Digital & Social Media Strategy</Heading>
                   </div>
                   
@@ -968,9 +968,9 @@ export default function OpportunityMap() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">Platform Focus</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Instagram: Primary channel for visual storytelling<br />
                           TikTok: Short-form video content for younger demographic<br />
                           Facebook: Community engagement and events<br />
@@ -978,9 +978,9 @@ export default function OpportunityMap() {
                         </p>
                       </div>
                       
-                      <div className="mt-4 bg-white p-4 border border-[#E8E3D9] rounded-sm">
+                      <div className="mt-4 bg-white p-4 border border-[#E5E2D9] rounded-sm">
                         <p className="font-medium text-[#333333] mb-1">Resource Requirements</p>
-                        <p className="text-sm text-[#777777]">
+                        <p className="text-sm text-[#666666]">
                           Content calendar: Weekly planning with 3-5 posts per week<br />
                           Budget: $3,500-5,000/month for content creation and management<br />
                           Staff time: 5-10 hours weekly for community management
@@ -1001,23 +1001,23 @@ export default function OpportunityMap() {
                   <p className="text-white text-sm mb-4">6-9 months pre-opening</p>
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Finalize unit design with enhanced sound insulation and technology integration</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Develop distinctive amenity programming for wellness center and work-from-home hub</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Create art integration strategy with local artist partnerships</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Establish service model training for property team</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Develop digital engagement platform and app requirements</span>
                     </li>
                   </ul>
@@ -1028,23 +1028,23 @@ export default function OpportunityMap() {
                   <p className="text-white text-sm mb-4">3 months pre-opening to opening</p>
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Implement comprehensive technology systems and resident app</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Launch lifestyle services program with local partners</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Begin community programming calendar development</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Activate digital presence with professional content</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Establish innovative tour experience for opening</span>
                     </li>
                   </ul>
@@ -1055,23 +1055,23 @@ export default function OpportunityMap() {
                   <p className="text-white text-sm mb-4">Opening to stabilization</p>
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Implement premium service model with performance metrics</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Launch full resident experience program and events</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Regular resident feedback collection and service adjustments</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Rotating art program and cultural events</span>
                     </li>
                     <li className="bullet-list-item">
-                      <span className="text-[#E57161] mr-2">•</span>
+                      <span className="text-[#CAB06B] mr-2">•</span>
                       <span className="text-white text-sm">Continuous improvement of technology offerings</span>
                     </li>
                   </ul>
@@ -1081,7 +1081,7 @@ export default function OpportunityMap() {
             
             <HighlightBox variant="secondary" className="mt-8">
               <p className="body-text">
-                This opportunity map provides a strategic framework for maximizing SOL Modern's market position and financial performance through targeted initiatives in four key opportunity areas, with a phased implementation approach to ensure proper resource allocation and timing.
+                This opportunity map provides a strategic framework for maximizing The Novus's market position and financial performance through targeted initiatives in four key opportunity areas, with a phased implementation approach to ensure proper resource allocation and timing.
               </p>
             </HighlightBox>
           </div>

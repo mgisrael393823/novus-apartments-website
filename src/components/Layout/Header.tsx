@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <Link href="/">
             <h1 className="text-2xl font-semibold tracking-tight">
-              SOL Modern
+              The Novus
             </h1>
           </Link>
         </div>

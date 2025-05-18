@@ -8,8 +8,8 @@ export default function PricingFramework() {
   return (
     <>
       <Head>
-        <title>Pricing & Incentive Framework - SOL Modern</title>
-        <meta name="description" content="Pricing and incentive framework for SOL Modern" />
+        <title>Pricing & Incentive Framework - The Novus</title>
+        <meta name="description" content="Pricing and incentive framework for The Novus high-rise apartments in Downtown Durham" />
       </Head>
       
       <Layout>
@@ -18,7 +18,7 @@ export default function PricingFramework() {
           
           <HighlightBox>
             <p className="text-lg">
-              Our strategic pricing model positions SOL Modern to balance competitive market rates with premium value, incorporating an optimized incentive structure to drive lease-up velocity while protecting long-term revenue.
+              Our strategic pricing model positions The Novus to capitalize on its unique 27-story high-rise format and premium amenities, with a multi-tiered approach based on floor level, view orientation, and unit features to maximize revenue potential in the Downtown Durham market.
             </p>
           </HighlightBox>
           
@@ -33,24 +33,24 @@ export default function PricingFramework() {
                   <li className="bullet-list-item">
                     <span className="bullet-marker">•</span>
                     <div>
-                      <p className="body-text mb-1"><strong>Studios (Estimated 500-600 sq ft):</strong> Position at $3.20-$3.35/sq ft</p>
-                      <p className="caption">Places SOL Modern approximately 3-5% below The Stewart but 4-6% above other competitors, reflecting superior finish levels while maintaining initial accessibility.</p>
+                      <p className="body-text mb-1"><strong>Studios (Estimated 550-650 sq ft):</strong> Position at $3.60-$3.90/sq ft</p>
+                      <p className="caption">Places The Novus approximately 8-10% above One City Center but 15-18% above other Durham competitors, reflecting superior views, height advantage, and premium finishes.</p>
                     </div>
                   </li>
                   
                   <li className="bullet-list-item">
                     <span className="bullet-marker">•</span>
                     <div>
-                      <p className="body-text mb-1"><strong>One Bedrooms (Estimated 700-850 sq ft):</strong> Target $2.95-$3.15/sq ft</p>
-                      <p className="caption">Establishes a 2-3% premium over Kenect Phoenix and The Ryan to reflect enhanced amenity offerings and unit features.</p>
+                      <p className="body-text mb-1"><strong>One Bedrooms (Estimated 750-950 sq ft):</strong> Target $3.30-$3.65/sq ft</p>
+                      <p className="caption">Establishes a 12-15% premium over Van Alen and 511 Faye to reflect The Novus's high-rise exclusivity, panoramic views, and superior amenity stratification across 27 floors.</p>
                     </div>
                   </li>
                   
                   <li className="bullet-list-item">
                     <span className="bullet-marker">•</span>
                     <div>
-                      <p className="body-text mb-1"><strong>Two Bedrooms (Estimated 1,000-1,200 sq ft):</strong> Place at $2.85-$3.00/sq ft</p>
-                      <p className="caption">Positioned at the upper tier of the competitive set while maintaining clear value differentiation from The Stewart through superior unit features and community amenities.</p>
+                      <p className="body-text mb-1"><strong>Two Bedrooms (Estimated 1,100-1,400 sq ft):</strong> Place at $3.10-$3.45/sq ft</p>
+                      <p className="caption">Positioned at the premium tier of the Durham market, reflecting the significant value proposition of The Novus's unique high-rise format, with a 10-12% premium over One City Center for equivalent floorplans.</p>
                     </div>
                   </li>
                 </ul>
@@ -67,19 +67,19 @@ export default function PricingFramework() {
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Downtown skyline/mountain views: $150-250 premium</span>
+                      <span className="body-text">Downtown Durham skyline views: $275-425 premium</span>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Roosevelt Row street views: $75-125 premium</span>
+                      <span className="body-text">Five Points District views: $175-275 premium</span>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Floor premium: $15 per floor starting from 4th floor</span>
+                      <span className="body-text">Floor premium: $35 per floor starting from 6th floor; $50 per floor above 15th floor</span>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Corner units: $100-150 additional premium</span>
+                      <span className="body-text">Corner units: $200-300 additional premium; $350-450 for premium corners on floors 20-27</span>
                     </li>
                   </ul>
                 </div>
@@ -166,22 +166,22 @@ export default function PricingFramework() {
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Phase 1 (0-30% occupied):</strong> 6-8 weeks free on 13+ month lease</p>
-                        <p className="caption">Position as "Grand Opening Special" with time-limited availability</p>
+                        <p className="body-text mb-1"><strong>Phase 1 (0-30% occupied):</strong> 6-8 weeks free on 13+ month lease, reduced to 4-6 weeks for premium view units (floors 20-27)</p>
+                        <p className="caption">Position as "Durham's Premier High-Rise Launch" with time-limited availability</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Phase 2 (31-45% occupied):</strong> 4-6 weeks free on 13+ month lease</p>
-                        <p className="caption">Adjust based on absorption velocity and competitor response</p>
+                        <p className="body-text mb-1"><strong>Phase 2 (31-45% occupied):</strong> 4-6 weeks free on 13+ month lease, reduced to 3-4 weeks for premium view units</p>
+                        <p className="caption">Adjust based on absorption velocity by floor band (floors 1-10, 11-19, 20-27)</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Phase 3 (46-60% occupied):</strong> 2-4 weeks free on 13+ month lease</p>
-                        <p className="caption">Apply selectively to slower-moving unit types</p>
+                        <p className="body-text mb-1"><strong>Phase 3 (46-60% occupied):</strong> 2-4 weeks free on 13+ month lease, potentially eliminated for highest demand premium units</p>
+                        <p className="caption">Apply selectively to slower-moving unit types with focus on floor bands rather than unit types</p>
                       </div>
                     </li>
                   </ul>
@@ -212,19 +212,19 @@ export default function PricingFramework() {
                     <ul className="bullet-list">
                       <li className="bullet-list-item">
                         <span className="bullet-marker">•</span>
-                        <span className="body-text"><strong>Resident Referral:</strong> $1,000 total ($500 to referrer, $500 to new resident)</span>
+                        <span className="body-text"><strong>Resident Referral:</strong> $1,500 total ($750 to referrer, $750 to new resident)</span>
                       </li>
                       <li className="bullet-list-item">
                         <span className="bullet-marker">•</span>
-                        <span className="body-text"><strong>Corporate Housing Partner:</strong> 1 week free rent per successful placement</span>
+                        <span className="body-text"><strong>Duke University/Medical Center Housing Partner:</strong> 2 weeks free rent per successful placement</span>
                       </li>
                       <li className="bullet-list-item">
                         <span className="bullet-marker">•</span>
-                        <span className="body-text"><strong>Real Estate Agent Program:</strong> $1,000 commission per lease</span>
+                        <span className="body-text"><strong>Real Estate Agent Program:</strong> $1,500 commission per lease; $2,000 for premium view units (floors 20-27)</span>
                       </li>
                       <li className="bullet-list-item">
                         <span className="bullet-marker">•</span>
-                        <span className="body-text"><strong>Local Business Partner:</strong> Reciprocal discount program with special rate</span>
+                        <span className="body-text"><strong>Research Triangle Tech Partner:</strong> Special corporate rate for partner company employees</span>
                       </li>
                     </ul>
                   </div>
@@ -234,7 +234,7 @@ export default function PricingFramework() {
                     <ul className="bullet-list">
                       <li className="bullet-list-item">
                         <span className="bullet-marker">•</span>
-                        <span className="body-text"><strong>Summer Lease Special:</strong> $500 gift card for move-ins during slower summer months</span>
+                        <span className="body-text"><strong>Duke Graduation Season:</strong> $750 gift card for May-June move-ins</span>
                       </li>
                       <li className="bullet-list-item">
                         <span className="bullet-marker">•</span>
@@ -242,7 +242,7 @@ export default function PricingFramework() {
                       </li>
                       <li className="bullet-list-item">
                         <span className="bullet-marker">•</span>
-                        <span className="body-text"><strong>Spring Forward:</strong> Reduced security deposit for March-April leases</span>
+                        <span className="body-text"><strong>Durham Innovation District:</strong> Technology package for March-April leases</span>
                       </li>
                       <li className="bullet-list-item">
                         <span className="bullet-marker">•</span>
@@ -356,7 +356,7 @@ export default function PricingFramework() {
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text"><strong>White Glove Moving:</strong> Complimentary moving service ($800 value)</span>
+                      <span className="body-text"><strong>White Glove Moving:</strong> Complimentary moving service ($1,200 value) with specialized high-rise logistics</span>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
@@ -364,7 +364,7 @@ export default function PricingFramework() {
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text"><strong>Welcome Package:</strong> Curated local products and restaurant gift cards ($250 value)</span>
+                      <span className="body-text"><strong>Durham Welcome Package:</strong> Curated local products, Durham Performing Arts Center tickets, and restaurant gift cards ($350 value)</span>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
@@ -491,37 +491,37 @@ export default function PricingFramework() {
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse">
                     <thead>
-                      <tr className="bg-[#FCFAF5]">
-                        <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Property</th>
-                        <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Studios</th>
-                        <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">1 Bedrooms</th>
-                        <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">2 Bedrooms</th>
+                      <tr className="bg-[#F9F8F4]">
+                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Property</th>
+                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Studios</th>
+                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">1 Bedrooms</th>
+                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">2 Bedrooms</th>
                       </tr>
                     </thead>
                     <tbody className="text-sm">
                       <tr>
-                        <td className="border border-[#E8E3D9] px-4 py-3 font-medium">The Stewart</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">-3-5%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">-4-6%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">-6-8%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">One City Center</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+8-10%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+10-12%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+10-12%</td>
                       </tr>
-                      <tr className="bg-[#FCFAF5]">
-                        <td className="border border-[#E8E3D9] px-4 py-3 font-medium">Kenect Phoenix</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">+2-4%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">+2-3%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">+3-5%</td>
+                      <tr className="bg-[#F9F8F4]">
+                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Van Alen</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+12-15%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+12-15%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+14-16%</td>
                       </tr>
                       <tr>
-                        <td className="border border-[#E8E3D9] px-4 py-3 font-medium">The Ryan</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">+3-5%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">+2-3%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">+2-4%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">511 Faye</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+14-17%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+15-18%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+15-18%</td>
                       </tr>
-                      <tr className="bg-[#FCFAF5]">
-                        <td className="border border-[#E8E3D9] px-4 py-3 font-medium">Highline</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">+4-6%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">+3-5%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">+3-5%</td>
+                      <tr className="bg-[#F9F8F4]">
+                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Cortland Bull City</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+18-22%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+16-20%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">+18-22%</td>
                       </tr>
                     </tbody>
                   </table>
@@ -530,7 +530,7 @@ export default function PricingFramework() {
               
               <HighlightBox variant="secondary">
                 <p className="body-text">
-                  This pricing and incentive framework provides SOL Modern with a comprehensive approach to revenue optimization while maintaining competitive position in the Roosevelt Row market. The strategy balances initial lease-up velocity needs with long-term revenue goals through strategic concession structuring and targeted premium allocation.
+                  This pricing and incentive framework provides The Novus with a premium positioning strategy that capitalizes on its unique high-rise format and 27-story height advantage in Downtown Durham. The vertical stratification approach maximizes revenue potential by floor band while ensuring competitive lease-up velocity for North Carolina's tallest residential tower.
                 </p>
               </HighlightBox>
             </section>

@@ -8,8 +8,8 @@ export default function GoToMarket() {
   return (
     <>
       <Head>
-        <title>Go-to-Market Roadmap - SOL Modern</title>
-        <meta name="description" content="Go-to-market roadmap for SOL Modern" />
+        <title>Go-to-Market Roadmap - The Novus</title>
+        <meta name="description" content="Go-to-market roadmap for The Novus, Durham's premier high-rise apartments" />
       </Head>
       
       <Layout>
@@ -18,7 +18,7 @@ export default function GoToMarket() {
           
           <HighlightBox>
             <p className="text-lg">
-              This roadmap outlines the phased implementation strategy for SOL Modern's market entry, with specific timelines, marketing channels, and targeting approaches to achieve optimal lease-up velocity.
+              This roadmap outlines the phased implementation strategy for The Novus's market entry in Downtown Durham, with specific timelines, marketing channels, and targeting approaches to achieve optimal lease-up velocity for North Carolina's tallest residential tower.
             </p>
           </HighlightBox>
           
@@ -44,7 +44,7 @@ export default function GoToMarket() {
                   <li className="bullet-list-item">
                     <span className="bullet-marker">•</span>
                     <div>
-                      <p className="body-text mb-1"><strong>4 Months Prior:</strong> Implement first round of pre-leasing incentives for early reservations. Launch local partnership initiatives with Roosevelt Row arts and business community.</p>
+                      <p className="body-text mb-1"><strong>4 Months Prior:</strong> Implement first round of pre-leasing incentives for early reservations. Launch local partnership initiatives with Durham arts district and business community, with special focus on Duke University and Research Triangle Park connections.</p>
                     </div>
                   </li>
                   <li className="bullet-list-item">
@@ -63,25 +63,25 @@ export default function GoToMarket() {
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Phoenix Urban Professionals (28-42):</strong> Working in downtown/midtown offices with household incomes $85K+, seeking walkable lifestyle and cultural amenities</p>
+                        <p className="body-text mb-1"><strong>Durham Urban Professionals (28-42):</strong> Working in downtown offices or Research Triangle Park with household incomes $110K+, seeking walkable lifestyle, views, and premium amenities</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Creative Industry Professionals:</strong> Designers, artists, and creative entrepreneurs connected to the Roosevelt Row arts district</p>
+                        <p className="body-text mb-1"><strong>Duke University Faculty & Staff:</strong> Academics, administrators, and researchers looking for premium housing with convenient access to campus</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Medical Professionals:</strong> Physicians, specialists, and healthcare administrators from nearby medical centers</p>
+                        <p className="body-text mb-1"><strong>Duke Medical Professionals:</strong> Physicians, specialists, and healthcare administrators from Duke University Medical Center seeking premium accommodations</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Downtown Renters Looking to Upgrade:</strong> Current residents of Class B downtown properties seeking elevated amenities and services</p>
+                        <p className="body-text mb-1"><strong>Downtown Renters Looking to Upgrade:</strong> Current residents of mid-rise downtown properties seeking true high-rise living with panoramic views</p>
                       </div>
                     </li>
                   </ul>
@@ -93,19 +93,19 @@ export default function GoToMarket() {
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Empty Nesters (50-65):</strong> Downsizing from suburban homes, seeking vibrant urban lifestyle</p>
+                        <p className="body-text mb-1"><strong>Empty Nesters (50-65):</strong> Downsizing from Chapel Hill and North Raleigh homes, seeking vibrant urban lifestyle with views</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Tech Industry Transplants:</strong> Relocating professionals drawn to Phoenix's growing tech scene</p>
+                        <p className="body-text mb-1"><strong>Research Triangle Tech Executives:</strong> Senior professionals from RTP companies seeking premium downtown housing options</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Young Urban Couples:</strong> Dual-income households without children seeking prime urban location</p>
+                        <p className="body-text mb-1"><strong>Young Urban Couples:</strong> Dual-income professional households without children seeking premium high-rise living</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
@@ -131,7 +131,7 @@ export default function GoToMarket() {
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Geo-Targeted Paid Search:</strong> Focus on high-intent keywords related to Phoenix luxury apartments, Roosevelt Row living, and downtown Phoenix rentals</p>
+                        <p className="body-text mb-1"><strong>Geo-Targeted Paid Search:</strong> Focus on high-intent keywords related to Durham luxury apartments, Duke University housing, and downtown Durham high-rise rentals</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
@@ -143,7 +143,7 @@ export default function GoToMarket() {
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Local Business & Arts District Partnerships:</strong> Collaborative content and cross-promotion with Roosevelt Row businesses, galleries, and cultural venues</p>
+                        <p className="body-text mb-1"><strong>Local Business & Cultural Partnerships:</strong> Collaborative content and cross-promotion with Durham Performing Arts Center, American Tobacco Campus, and other Five Points District establishments</p>
                       </div>
                     </li>
                   </ul>
@@ -155,7 +155,7 @@ export default function GoToMarket() {
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Neighborhood Storytelling:</strong> Video series highlighting Roosevelt Row arts scene, dining experiences, and community vibe</p>
+                        <p className="body-text mb-1"><strong>Neighborhood Storytelling:</strong> Video series highlighting Downtown Durham's renaissance, dining experiences, and cultural attractions</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
@@ -167,7 +167,7 @@ export default function GoToMarket() {
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
                       <div>
-                        <p className="body-text mb-1"><strong>Lifestyle Visualization:</strong> Content depicting the SOL Modern living experience through day-in-the-life narratives</p>
+                        <p className="body-text mb-1"><strong>Lifestyle Visualization:</strong> Content depicting The Novus living experience through day-in-the-life narratives that emphasize panoramic views and vertical living</p>
                       </div>
                     </li>
                     <li className="bullet-list-item">
@@ -190,11 +190,11 @@ export default function GoToMarket() {
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Pre-opening reservations: 25-30% of total units</span>
+                      <span className="body-text">Pre-opening reservations: 30-35% of total units</span>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Month 1 after opening: Additional 15-20% of total units</span>
+                      <span className="body-text">Month 1 after opening: Additional 15-20% of total units, with focus on premium view units (floors 20-27)</span>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
@@ -244,7 +244,7 @@ export default function GoToMarket() {
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text"><strong>First Friday Art Walks:</strong> Featured property in monthly Roosevelt Row art walk with rotating exhibitions in lobby/amenity spaces</span>
+                      <span className="body-text"><strong>Third Friday Art Walks:</strong> Featured property in monthly Durham art walks with rotating exhibitions in lobby and amenity spaces</span>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
@@ -312,7 +312,7 @@ export default function GoToMarket() {
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text"><strong>Local Arts Patronage:</strong> Ongoing sponsorship of Roosevelt Row cultural events and artists</span>
+                      <span className="body-text"><strong>Local Arts Patronage:</strong> Ongoing sponsorship of Durham Performing Arts Center events and local artists</span>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
@@ -320,7 +320,7 @@ export default function GoToMarket() {
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text"><strong>Seasonal Programming:</strong> Public-facing events that position SOL Modern as a neighborhood cultural hub</span>
+                      <span className="body-text"><strong>Seasonal Programming:</strong> Public-facing events that position The Novus as Downtown Durham's premier vertical neighborhood</span>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
@@ -383,49 +383,49 @@ export default function GoToMarket() {
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse">
                     <thead>
-                      <tr className="bg-[#FCFAF5]">
-                        <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Channel</th>
-                        <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Pre-Leasing</th>
-                        <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Initial Lease-Up</th>
-                        <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Stabilization</th>
+                      <tr className="bg-[#F9F8F4]">
+                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Channel</th>
+                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Pre-Leasing</th>
+                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Initial Lease-Up</th>
+                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Stabilization</th>
                       </tr>
                     </thead>
                     <tbody className="text-sm">
                       <tr>
-                        <td className="border border-[#E8E3D9] px-4 py-3 font-medium">Paid Search/SEO</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">20%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">15%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">10%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Paid Search/SEO</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">20%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">10%</td>
                       </tr>
-                      <tr className="bg-[#FCFAF5]">
-                        <td className="border border-[#E8E3D9] px-4 py-3 font-medium">Social Media</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">25%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">20%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">15%</td>
-                      </tr>
-                      <tr>
-                        <td className="border border-[#E8E3D9] px-4 py-3 font-medium">ILS Platforms</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">15%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">25%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">30%</td>
-                      </tr>
-                      <tr className="bg-[#FCFAF5]">
-                        <td className="border border-[#E8E3D9] px-4 py-3 font-medium">Events/Experiential</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">20%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">25%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">15%</td>
+                      <tr className="bg-[#F9F8F4]">
+                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Social Media</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">25%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">20%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
                       </tr>
                       <tr>
-                        <td className="border border-[#E8E3D9] px-4 py-3 font-medium">Content Production</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">15%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">10%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">15%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">ILS Platforms</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">25%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">30%</td>
                       </tr>
-                      <tr className="bg-[#FCFAF5]">
-                        <td className="border border-[#E8E3D9] px-4 py-3 font-medium">Local Partnerships</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">5%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">5%</td>
-                        <td className="border border-[#E8E3D9] px-4 py-3">15%</td>
+                      <tr className="bg-[#F9F8F4]">
+                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Events/Experiential</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">20%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">25%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Content Production</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">10%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
+                      </tr>
+                      <tr className="bg-[#F9F8F4]">
+                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Local Partnerships</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">5%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">5%</td>
+                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
                       </tr>
                     </tbody>
                   </table>
@@ -433,29 +433,29 @@ export default function GoToMarket() {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-                <div className="bg-[#151617] text-white p-6 rounded-sm">
+                <div className="bg-[#333333] text-white p-6 rounded-sm">
                   <h3 className="text-white mb-3">Team Structure</h3>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Dedicated Leasing Director (full-time)</li>
-                    <li>2 Leasing Consultants (full-time)</li>
+                    <li>1 Leasing Consultant (full-time)</li>
+                    <li>1 High-Rise Experience Specialist (full-time)</li>
                     <li>Digital Marketing Specialist (part-time/agency)</li>
-                    <li>Community Relations Coordinator (part-time)</li>
                     <li>Administrative Support (shared resource)</li>
                   </ul>
                 </div>
                 
-                <div className="bg-[#151617] text-white p-6 rounded-sm">
+                <div className="bg-[#333333] text-white p-6 rounded-sm">
                   <h3 className="text-white mb-3">Key Partners</h3>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Digital Marketing Agency (local with multifamily expertise)</li>
+                    <li>Digital Marketing Agency (local with high-rise expertise)</li>
                     <li>Branding & Content Production Studio</li>
-                    <li>Virtual Tour Technology Provider</li>
-                    <li>Local Event Production Partner</li>
-                    <li>Roosevelt Row Business Association</li>
+                    <li>Virtual Tour & Drone Photography Provider</li>
+                    <li>Duke University Housing Office</li>
+                    <li>Downtown Durham Inc. & Chamber of Commerce</li>
                   </ul>
                 </div>
                 
-                <div className="bg-[#151617] text-white p-6 rounded-sm">
+                <div className="bg-[#333333] text-white p-6 rounded-sm">
                   <h3 className="text-white mb-3">Technology Stack</h3>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Property Management/CRM System</li>
@@ -513,7 +513,7 @@ export default function GoToMarket() {
               
               <HighlightBox variant="secondary">
                 <p className="text-sm">
-                  This go-to-market roadmap provides SOL Modern with a comprehensive, phased approach to achieve optimal lease-up velocity while establishing long-term brand positioning in the Roosevelt Row market. The strategy balances digital marketing innovations with targeted experiential initiatives, supported by data-driven optimization throughout the leasing lifecycle.
+                  This go-to-market roadmap provides The Novus with a comprehensive, phased approach to achieve optimal lease-up velocity while establishing a unique high-rise positioning in the Downtown Durham market. The strategy emphasizes the property's distinctive 27-story format and panoramic views while targeting Durham's professional demographic with specific focus on Duke University and Research Triangle Park connections.
                 </p>
               </HighlightBox>
             </section>

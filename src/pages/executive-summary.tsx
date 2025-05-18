@@ -361,8 +361,8 @@ export default function ExecutiveSummary() {
             </div>
             
             {/* Detailed SWOT Analysis */}
-            <div className="p-8 bg-white border border-[#E8E3D9] rounded-sm relative overflow-hidden mt-12">
-              <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#E57161] opacity-5"></div>
+            <div className="p-8 bg-white border border-[#E5E2D9] rounded-sm relative overflow-hidden mt-12">
+              <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#CAB06B] opacity-5"></div>
               
               <div className="mb-4">
                 <h3 className={`${headingFont.className} text-lg uppercase tracking-wide text-[#333333] flex items-center`}>
@@ -371,7 +371,7 @@ export default function ExecutiveSummary() {
                 </h3>
               </div>
               
-              <p className={`${bodyFont.className} text-[#777777] leading-relaxed max-w-3xl mb-6`}>
+              <p className={`${bodyFont.className} text-[#666666] leading-relaxed max-w-3xl mb-6`}>
                 Our comprehensive SWOT analysis includes detailed assessment of all competitive properties, market conditions, and strategic positioning opportunities.
               </p>
               
@@ -498,13 +498,13 @@ export default function ExecutiveSummary() {
             {/* Implementation Roadmap */}
             <div className="mt-16">
               <Heading level={3} className="mb-6">Implementation Roadmap</Heading>
-              <p className={`${bodyFont.className} text-[#777777] mb-6`}>
+              <p className={`${bodyFont.className} text-[#666666] mb-6`}>
                 Our tactical roadmap converts strategies into actionable steps with clear timelines, responsible parties, and success metrics.
               </p>
               
               {/* Detailed Implementation Blueprint */}
-              <div className="p-8 bg-white border border-[#E8E3D9] rounded-sm relative overflow-hidden mt-8">
-                <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#E57161] opacity-5"></div>
+              <div className="p-8 bg-white border border-[#E5E2D9] rounded-sm relative overflow-hidden mt-8">
+                <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#CAB06B] opacity-5"></div>
                 
                 <div className="mb-4">
                   <h3 className={`${headingFont.className} text-lg uppercase tracking-wide text-[#333333] flex items-center`}>
@@ -513,7 +513,7 @@ export default function ExecutiveSummary() {
                   </h3>
                 </div>
                 
-                <p className={`${bodyFont.className} text-[#777777] leading-relaxed max-w-3xl mb-6`}>
+                <p className={`${bodyFont.className} text-[#666666] leading-relaxed max-w-3xl mb-6`}>
                   Our detailed implementation strategy provides a complete roadmap with staffing plans, timelines, and projected ROI metrics for each strategic initiative.
                 </p>
                 
@@ -521,107 +521,107 @@ export default function ExecutiveSummary() {
                   <h5 className={`${headingFont.className} text-sm uppercase tracking-wide mb-4 text-[#555555]`}>Three-Phase Implementation Approach:</h5>
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-[#FCFAF5] p-4 border border-[#E8E3D9] rounded-sm">
-                      <div className="w-8 h-8 rounded-full bg-[#F8F0EA] flex items-center justify-center mb-3">
-                        <span className="text-[#E57161] text-sm font-bold">1</span>
+                    <div className="bg-[#F9F8F4] p-4 border border-[#E5E2D9] rounded-sm">
+                      <div className="w-8 h-8 rounded-full bg-[#F9F8F4] flex items-center justify-center mb-3">
+                        <span className="text-[#CAB06B] text-sm font-bold">1</span>
                       </div>
                       <h6 className={`${headingFont.className} text-sm mb-2 text-[#333333]`}>PRE-LAUNCH PHASE</h6>
-                      <p className="text-xs text-[#777777] mb-1">6 months pre-opening</p>
+                      <p className="text-xs text-[#666666] mb-1">6 months pre-opening</p>
                       <ul className="space-y-1.5 mt-3">
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Establish premium brand identity across all touchpoints</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Establish premium brand identity across all touchpoints</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Launch digital presence with distinctive content strategy</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Launch digital presence with distinctive content strategy</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Develop strategic local partnerships for resident benefits</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Develop strategic local partnerships for resident benefits</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Design pre-leasing incentive structure with early-bird benefits</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Design pre-leasing incentive structure with early-bird benefits</span>
                         </li>
                       </ul>
                     </div>
                     
-                    <div className="bg-[#FCFAF5] p-4 border border-[#E8E3D9] rounded-sm">
-                      <div className="w-8 h-8 rounded-full bg-[#F8F0EA] flex items-center justify-center mb-3">
-                        <span className="text-[#E57161] text-sm font-bold">2</span>
+                    <div className="bg-[#F9F8F4] p-4 border border-[#E5E2D9] rounded-sm">
+                      <div className="w-8 h-8 rounded-full bg-[#F9F8F4] flex items-center justify-center mb-3">
+                        <span className="text-[#CAB06B] text-sm font-bold">2</span>
                       </div>
                       <h6 className={`${headingFont.className} text-sm mb-2 text-[#333333]`}>LAUNCH PHASE</h6>
-                      <p className="text-xs text-[#777777] mb-1">Opening to 6 months</p>
+                      <p className="text-xs text-[#666666] mb-1">Opening to 6 months</p>
                       <ul className="space-y-1.5 mt-3">
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Implement premium service model with hospitality-trained staff</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Implement premium service model with hospitality-trained staff</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Execute high-visibility marketing campaign with digital focus</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Execute high-visibility marketing campaign with digital focus</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Launch signature community events and programming</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Launch signature community events and programming</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Activate artist residency program with public installations</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Activate artist residency program with public installations</span>
                         </li>
                       </ul>
                     </div>
                     
-                    <div className="bg-[#FCFAF5] p-4 border border-[#E8E3D9] rounded-sm">
-                      <div className="w-8 h-8 rounded-full bg-[#F8F0EA] flex items-center justify-center mb-3">
-                        <span className="text-[#E57161] text-sm font-bold">3</span>
+                    <div className="bg-[#F9F8F4] p-4 border border-[#E5E2D9] rounded-sm">
+                      <div className="w-8 h-8 rounded-full bg-[#F9F8F4] flex items-center justify-center mb-3">
+                        <span className="text-[#CAB06B] text-sm font-bold">3</span>
                       </div>
                       <h6 className={`${headingFont.className} text-sm mb-2 text-[#333333]`}>STABILIZATION PHASE</h6>
-                      <p className="text-xs text-[#777777] mb-1">6-12 months post-opening</p>
+                      <p className="text-xs text-[#666666] mb-1">6-12 months post-opening</p>
                       <ul className="space-y-1.5 mt-3">
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Transition to targeted marketing for remaining unit types</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Transition to targeted marketing for remaining unit types</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Optimize pricing strategy based on absorption analytics</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Optimize pricing strategy based on absorption analytics</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Implement resident retention program with loyalty benefits</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Implement resident retention program with loyalty benefits</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-xs text-[#777777]">Initiate premium service add-ons for ancillary revenue</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-xs text-[#666666]">Initiate premium service add-ons for ancillary revenue</span>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
                 
-                <div className="bg-[#FCFAF5] p-5 border border-[#E8E3D9] rounded-sm mb-6">
+                <div className="bg-[#F9F8F4] p-5 border border-[#E5E2D9] rounded-sm mb-6">
                   <h5 className={`${headingFont.className} text-sm uppercase tracking-wide mb-3 text-[#555555]`}>Proprietary Service Model</h5>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h6 className="text-sm font-medium text-[#333333] mb-2">Key Service Components</h6>
                       <ul className="space-y-1.5">
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Resident Experience Team with hospitality training</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Resident Experience Team with hospitality training</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">4-hour service response guarantee for all requests</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">4-hour service response guarantee for all requests</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">White-glove move-in experience with welcome gifts</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">White-glove move-in experience with welcome gifts</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Resident mobile app with premium service access</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Resident mobile app with premium service access</span>
                         </li>
                       </ul>
                     </div>
@@ -629,63 +629,63 @@ export default function ExecutiveSummary() {
                       <h6 className="text-sm font-medium text-[#333333] mb-2">Performance Metrics</h6>
                       <ul className="space-y-1.5">
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">90% resident satisfaction score target</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">90% resident satisfaction score target</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">Under 5% service standard failure rate</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">Under 5% service standard failure rate</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">75% renewal rate for first-term residents</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">75% renewal rate for first-term residents</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#E57161] mr-1.5 text-xs">•</span>
-                          <span className="text-sm text-[#777777]">4.8/5.0 average rating across review platforms</span>
+                          <span className="text-[#CAB06B] mr-1.5 text-xs">•</span>
+                          <span className="text-sm text-[#666666]">4.8/5.0 average rating across review platforms</span>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
                 
-                <div className="bg-[#FCFAF5] p-5 border border-[#E8E3D9] rounded-sm">
+                <div className="bg-[#F9F8F4] p-5 border border-[#E5E2D9] rounded-sm">
                   <h5 className={`${headingFont.className} text-sm uppercase tracking-wide mb-3 text-[#555555]`}>Financial Projections</h5>
                   
                   <div className="overflow-x-auto">
                     <table className="w-full min-w-full">
                       <thead>
                         <tr className="bg-white">
-                          <th className="text-xs font-medium text-[#333333] p-2 text-left border-b border-[#E8E3D9]">Metric</th>
-                          <th className="text-xs font-medium text-[#333333] p-2 text-center border-b border-[#E8E3D9]">Standard Approach</th>
-                          <th className="text-xs font-medium text-[#333333] p-2 text-center border-b border-[#E8E3D9]">Recommended Strategy</th>
-                          <th className="text-xs font-medium text-[#333333] p-2 text-right border-b border-[#E8E3D9]">Improvement</th>
+                          <th className="text-xs font-medium text-[#333333] p-2 text-left border-b border-[#E5E2D9]">Metric</th>
+                          <th className="text-xs font-medium text-[#333333] p-2 text-center border-b border-[#E5E2D9]">Standard Approach</th>
+                          <th className="text-xs font-medium text-[#333333] p-2 text-center border-b border-[#E5E2D9]">Recommended Strategy</th>
+                          <th className="text-xs font-medium text-[#333333] p-2 text-right border-b border-[#E5E2D9]">Improvement</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="text-xs text-[#333333] p-2 text-left border-b border-[#E8E3D9]">Stabilization Timeline</td>
-                          <td className="text-xs text-[#777777] p-2 text-center border-b border-[#E8E3D9]">12.5 months</td>
-                          <td className="text-xs text-[#777777] p-2 text-center border-b border-[#E8E3D9]">9-9.5 months</td>
-                          <td className="text-xs text-[#E57161] font-medium p-2 text-right border-b border-[#E8E3D9]">~25% faster</td>
+                          <td className="text-xs text-[#333333] p-2 text-left border-b border-[#E5E2D9]">Stabilization Timeline</td>
+                          <td className="text-xs text-[#666666] p-2 text-center border-b border-[#E5E2D9]">12.5 months</td>
+                          <td className="text-xs text-[#666666] p-2 text-center border-b border-[#E5E2D9]">9-9.5 months</td>
+                          <td className="text-xs text-[#CAB06B] font-medium p-2 text-right border-b border-[#E5E2D9]">~25% faster</td>
                         </tr>
                         <tr>
-                          <td className="text-xs text-[#333333] p-2 text-left border-b border-[#E8E3D9]">Concession Value</td>
-                          <td className="text-xs text-[#777777] p-2 text-center border-b border-[#E8E3D9]">6-8 weeks free</td>
-                          <td className="text-xs text-[#777777] p-2 text-center border-b border-[#E8E3D9]">4-6 weeks free</td>
-                          <td className="text-xs text-[#E57161] font-medium p-2 text-right border-b border-[#E8E3D9]">~30% savings</td>
+                          <td className="text-xs text-[#333333] p-2 text-left border-b border-[#E5E2D9]">Concession Value</td>
+                          <td className="text-xs text-[#666666] p-2 text-center border-b border-[#E5E2D9]">6-8 weeks free</td>
+                          <td className="text-xs text-[#666666] p-2 text-center border-b border-[#E5E2D9]">4-6 weeks free</td>
+                          <td className="text-xs text-[#CAB06B] font-medium p-2 text-right border-b border-[#E5E2D9]">~30% savings</td>
                         </tr>
                         <tr>
-                          <td className="text-xs text-[#333333] p-2 text-left border-b border-[#E8E3D9]">Year 1 Revenue</td>
-                          <td className="text-xs text-[#777777] p-2 text-center border-b border-[#E8E3D9]">$14.2M</td>
-                          <td className="text-xs text-[#777777] p-2 text-center border-b border-[#E8E3D9]">$16.8M</td>
-                          <td className="text-xs text-[#E57161] font-medium p-2 text-right border-b border-[#E8E3D9]">+$2.6M (+18.3%)</td>
+                          <td className="text-xs text-[#333333] p-2 text-left border-b border-[#E5E2D9]">Year 1 Revenue</td>
+                          <td className="text-xs text-[#666666] p-2 text-center border-b border-[#E5E2D9]">$14.2M</td>
+                          <td className="text-xs text-[#666666] p-2 text-center border-b border-[#E5E2D9]">$16.8M</td>
+                          <td className="text-xs text-[#CAB06B] font-medium p-2 text-right border-b border-[#E5E2D9]">+$2.6M (+18.3%)</td>
                         </tr>
                         <tr>
                           <td className="text-xs text-[#333333] p-2 text-left">Renewal Rate</td>
-                          <td className="text-xs text-[#777777] p-2 text-center">55-60%</td>
-                          <td className="text-xs text-[#777777] p-2 text-center">70-75%</td>
-                          <td className="text-xs text-[#E57161] font-medium p-2 text-right">+15% higher</td>
+                          <td className="text-xs text-[#666666] p-2 text-center">55-60%</td>
+                          <td className="text-xs text-[#666666] p-2 text-center">70-75%</td>
+                          <td className="text-xs text-[#CAB06B] font-medium p-2 text-right">+15% higher</td>
                         </tr>
                       </tbody>
                     </table>

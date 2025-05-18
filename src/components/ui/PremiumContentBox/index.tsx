@@ -23,7 +23,7 @@ export function PremiumContentBox({
   bulletPoints = [],
   ctaText = "Access Full Analysis",
   onCtaClick = () => {},
-  icon = <ArrowRight className="h-4 w-4 mr-2 text-[#E57161]" />
+  icon = <ArrowRight className="h-4 w-4 mr-2 text-[#CAB06B]" />
 }: PremiumContentBoxProps) {
   return (
     <div className="premium-content-box">

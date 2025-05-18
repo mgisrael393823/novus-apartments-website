@@ -14,9 +14,9 @@ export function HighlightBox({
   className = ""
 }: HighlightBoxProps) {
   const variantStyles = {
-    primary: "bg-[#FCFAF5] border-l-4 border-[#333333]",
-    secondary: "bg-white border border-[#E8E3D9]",
-    accent: "bg-[#F8F0EA] border-l-4 border-[#E57161]"
+    primary: "bg-[#F9F8F4] border-l-4 border-[#333333]",
+    secondary: "bg-white border border-[#E5E2D9]",
+    accent: "bg-[#F9F8F4] border-l-4 border-[#CAB06B]"
   }[variant];
   
   return (

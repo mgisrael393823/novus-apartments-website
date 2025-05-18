@@ -81,9 +81,9 @@ export default function TableOfContents() {
     <section className="max-w-5xl mx-auto py-24 px-4">
       <div className="text-center mb-16">
         <h4 className="section-title">ACCESS THE BLUEPRINT</h4>
-        <div className="h-0.5 w-32 bg-[#E57161] mx-auto mb-6"></div>
+        <div className="h-0.5 w-32 bg-[#CAB06B] mx-auto mb-6"></div>
         <h2 className="heading-2 uppercase mb-4">BLUEPRINT SECTIONS</h2>
-        <p className={`${bodyFont.className} text-[#777777] max-w-2xl mx-auto`}>
+        <p className={`${bodyFont.className} text-[#666666] max-w-2xl mx-auto`}>
           Navigate through our comprehensive strategic framework, with premium sections gated for client access
         </p>
       </div>
@@ -96,14 +96,14 @@ export default function TableOfContents() {
             <Link 
               href={section.path} 
               key={section.id}
-              className="group content-box flex flex-col h-full relative overflow-hidden transition-all hover:border-[#E57161]"
+              className="group content-box flex flex-col h-full relative overflow-hidden transition-all hover:border-[#CAB06B]"
             >
               {section.id % 3 === 0 && (
                 <div className="decorative-circle"></div>
               )}
               
               <div className="flex items-start mb-5">
-                <div className="p-2 mr-3 text-[#E57161]">
+                <div className="p-2 mr-3 text-[#CAB06B]">
                   <Icon className="h-5 w-5" />
                 </div>
                 
@@ -117,10 +117,10 @@ export default function TableOfContents() {
                 </div>
               </div>
               
-              <p className={`${bodyFont.className} text-[#777777] text-sm mb-5 flex-1`}>{section.description}</p>
+              <p className={`${bodyFont.className} text-[#666666] text-sm mb-5 flex-1`}>{section.description}</p>
               
               <div className="mt-auto">
-                <span className="inline-flex items-center text-xs uppercase tracking-wider font-medium text-[#E57161] group-hover:underline">
+                <span className="inline-flex items-center text-xs uppercase tracking-wider font-medium text-[#CAB06B] group-hover:underline">
                   VIEW SECTION <ArrowRight className="ml-1 h-3 w-3" />
                 </span>
               </div>
@@ -131,12 +131,12 @@ export default function TableOfContents() {
       
       <div className="mt-20 content-box-highlight p-8 text-center">
         <h3 className="heading-3 uppercase mb-4">PREMIUM SECTIONS</h3>
-        <p className={`${bodyFont.className} text-[#777777] mb-5 max-w-2xl mx-auto`}>
+        <p className={`${bodyFont.className} text-[#666666] mb-5 max-w-2xl mx-auto`}>
           Gated sections contain our proprietary strategic frameworks and implementation plans.
           Access is available to clients and qualified prospects.
         </p>
-        <div className="inline-block bg-white border border-[#E8E3D9] px-6 py-3 rounded-sm">
-          <p className={`${bodyFont.className} text-sm`}>CONTACT: <span className="text-[#E57161] font-medium">misrael00@gmail.com</span></p>
+        <div className="inline-block bg-white border border-[#E5E2D9] px-6 py-3 rounded-sm">
+          <p className={`${bodyFont.className} text-sm`}>CONTACT: <span className="text-[#CAB06B] font-medium">misrael00@gmail.com</span></p>
         </div>
       </div>
     </section>
