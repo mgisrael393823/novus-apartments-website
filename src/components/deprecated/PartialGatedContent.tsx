@@ -30,8 +30,8 @@ export function PartialGatedContent({
       </div>
       
       {/* Information section */}
-      <div className="mb-12 p-8 bg-[#FCFAF5] border border-[#E8E3D9] rounded-sm relative overflow-hidden">
-        <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#E57161] opacity-5"></div>
+      <div className="mb-12 p-8 bg-[#F9F8F4] border border-[#E5E2D9] rounded-sm relative overflow-hidden">
+        <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#CAB06B] opacity-5"></div>
         
         <div className="flex items-center justify-between mb-4">
           <h3 className={`${headingFont.className} text-lg uppercase tracking-wide text-[#333333] flex items-center`}>
@@ -39,7 +39,7 @@ export function PartialGatedContent({
           </h3>
         </div>
         
-        <p className={`${bodyFont.className} text-[#777777] leading-relaxed max-w-3xl mb-6`}>{teaser}</p>
+        <p className={`${bodyFont.className} text-[#666666] leading-relaxed max-w-3xl mb-6`}>{teaser}</p>
         
         {previewPoints.length > 0 && (
           <div className="mb-6">
@@ -47,8 +47,8 @@ export function PartialGatedContent({
             <ul className="space-y-2">
               {previewPoints.map((point, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-[#E57161] mr-2">•</span>
-                  <span className={`${bodyFont.className} text-[#777777]`}>{point}</span>
+                  <span className="text-[#CAB06B] mr-2">•</span>
+                  <span className={`${bodyFont.className} text-[#666666]`}>{point}</span>
                 </li>
               ))}
             </ul>

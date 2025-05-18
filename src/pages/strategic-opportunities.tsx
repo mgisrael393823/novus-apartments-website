@@ -1,7 +1,7 @@
 
 import Head from "next/head";
 import Layout from "@/components/Layout/Layout";
-import { GatedContent } from "@/components/GatedContent/GatedContent";
+import { GatedContent } from "@/components/deprecated/GatedContent";
 import { Heading } from "@/components/ui/Heading";
 import { HighlightBox } from "@/components/ui/HighlightBox";
 

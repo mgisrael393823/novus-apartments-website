@@ -78,7 +78,7 @@ export default function MarketIntelligence() {
               
               <div className="content-box mb-8">
                 <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-4">
-                  <LineChart className="text-[#777777]" size={24} />
+                  <LineChart className="text-[#666666]" size={24} />
                   <Heading level={3} className="mb-0">Rent Growth Trends</Heading>
                 </div>
                 <GatedChart 
@@ -141,7 +141,7 @@ export default function MarketIntelligence() {
               
               <div className="content-box mb-8">
                 <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-4">
-                  <BarChart className="text-[#777777]" size={24} />
+                  <BarChart className="text-[#666666]" size={24} />
                   <Heading level={3} className="mb-0">Income Distribution</Heading>
                 </div>
                 <GatedChart 
@@ -166,31 +166,31 @@ export default function MarketIntelligence() {
               <div className="mb-8 overflow-x-auto w-full -mx-4 px-4 md:mx-0 md:px-0">
                 <table className="w-full border-collapse">
                   <thead>
-                    <tr className="bg-[#FCFAF5]">
-                      <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Project</th>
-                      <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Units</th>
-                      <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Delivery</th>
-                      <th className="border border-[#E8E3D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Concessions</th>
+                    <tr className="bg-[#F9F8F4]">
+                      <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Project</th>
+                      <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Units</th>
+                      <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Delivery</th>
+                      <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Concessions</th>
                     </tr>
                   </thead>
                   <tbody className="text-sm">
                     <tr>
-                      <td className="border border-[#E8E3D9] px-4 py-3 font-medium">Van Alen</td>
-                      <td className="border border-[#E8E3D9] px-4 py-3">Luxury Development</td>
-                      <td className="border border-[#E8E3D9] px-4 py-3">Recent</td>
-                      <td className="border border-[#E8E3D9] px-4 py-3">$2,000 off select units</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Van Alen</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3">Luxury Development</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3">Recent</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3">$2,000 off select units</td>
                     </tr>
-                    <tr className="bg-[#FCFAF5]">
-                      <td className="border border-[#E8E3D9] px-4 py-3 font-medium">One City Center</td>
-                      <td className="border border-[#E8E3D9] px-4 py-3">High-rise</td>
-                      <td className="border border-[#E8E3D9] px-4 py-3">Recent</td>
-                      <td className="border border-[#E8E3D9] px-4 py-3">Up to 1 month free</td>
+                    <tr className="bg-[#F9F8F4]">
+                      <td className="border border-[#E5E2D9] px-4 py-3 font-medium">One City Center</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3">High-rise</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3">Recent</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3">Up to 1 month free</td>
                     </tr>
                     <tr>
-                      <td className="border border-[#E8E3D9] px-4 py-3 font-medium">Beckon Apartments</td>
-                      <td className="border border-[#E8E3D9] px-4 py-3">Near Central Park</td>
-                      <td className="border border-[#E8E3D9] px-4 py-3">Recent</td>
-                      <td className="border border-[#E8E3D9] px-4 py-3">Up to 2 months free</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Beckon Apartments</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3">Near Central Park</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3">Recent</td>
+                      <td className="border border-[#E5E2D9] px-4 py-3">Up to 2 months free</td>
                     </tr>
                   </tbody>
                 </table>
@@ -203,7 +203,7 @@ export default function MarketIntelligence() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="content-box-light">
                   <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-3">
-                    <TrendingUp className="text-[#777777]" size={20} />
+                    <TrendingUp className="text-[#666666]" size={20} />
                     <Heading level={3} className="mb-0">Employment Growth</Heading>
                   </div>
                   <p className="body-text mb-3">
@@ -227,7 +227,7 @@ export default function MarketIntelligence() {
                 
                 <div className="content-box-light">
                   <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-3">
-                    <PieChart className="text-[#777777]" size={20} />
+                    <PieChart className="text-[#666666]" size={20} />
                     <Heading level={3} className="mb-0">Lifestyle Amenities</Heading>
                   </div>
                   <p className="body-text mb-3">

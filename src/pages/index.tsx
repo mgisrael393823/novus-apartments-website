@@ -10,20 +10,20 @@ export default function Home() {
       <Head>
         <title>The Novus – Lease-Up Strategy & Competitive Blueprint</title>
         <meta name="description" content="A comprehensive lease-up strategy and competitive blueprint for The Novus Apartments" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon-original.png" />
+        <link rel="icon" href="/novus-favicon.webp" type="image/webp" />
+        <link rel="alternate icon" href="/novus-favicon.webp" />
         
         {/* Open Graph meta tags specifically for home page (will override defaults in _document.tsx) */}
         <meta property="og:title" content="THE NOVUS | THE BLUEPRINT" />
         <meta property="og:description" content="LEASE-UP STRATEGY BLUEPRINT" />
-        <meta property="og:image" content="/og-image.png?v=3&t=0429" />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image" content="/novus-ogimage.webp" />
+        <meta property="og:image:type" content="image/webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="The Novus with 'THE BLUEPRINT' spray painted in gold over a dark background" />
         
         {/* Twitter Card tags */}
-        <meta name="twitter:image" content="/og-image.png?v=3&t=0429" />
+        <meta name="twitter:image" content="/novus-ogimage.webp" />
       </Head>
       
       <Layout>

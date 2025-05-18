@@ -41,12 +41,12 @@ export function BlurredVisualization({
   };
 
   return (
-    <div className={`${height} border border-[#E8E3D9] rounded-sm p-6 bg-white relative overflow-hidden`}>
+    <div className={`${height} border border-[#E5E2D9] rounded-sm p-6 bg-white relative overflow-hidden`}>
       {/* Title and description */}
       <div className="mb-4">
         <h3 className={`${headingFont.className} text-lg text-center text-[#333333] mb-1`}>{title}</h3>
         {description && (
-          <p className={`${bodyFont.className} text-sm text-center text-[#777777]`}>{description}</p>
+          <p className={`${bodyFont.className} text-sm text-center text-[#666666]`}>{description}</p>
         )}
       </div>
       

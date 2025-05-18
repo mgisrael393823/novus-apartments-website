@@ -60,14 +60,14 @@ export default function ExecutiveSummary() {
       <Head>
         <title>Executive Summary | The Novus</title>
         <meta name="description" content="Executive Summary of The Novus Apartments Lease-Up Strategy" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon-original.png" />
+        <link rel="icon" href="/novus-favicon.webp" type="image/webp" />
+        <link rel="alternate icon" href="/novus-favicon.webp" />
         
         {/* Open Graph meta tags */}
         <meta property="og:title" content="THE NOVUS | THE BLUEPRINT - Executive Summary" />
         <meta property="og:description" content="Executive Summary of The Novus Apartments Lease-Up Strategy" />
-        <meta property="og:image" content="/og-image.png?v=3&t=0429" />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image" content="/novus-ogimage.webp" />
+        <meta property="og:image:type" content="image/webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="The Novus with 'THE BLUEPRINT' spray painted in gold over a dark background" />
@@ -76,7 +76,7 @@ export default function ExecutiveSummary() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="THE NOVUS | THE BLUEPRINT - Executive Summary" />
         <meta name="twitter:description" content="Executive Summary of The Novus Apartments Lease-Up Strategy" />
-        <meta name="twitter:image" content="/og-image.png?v=3&t=0429" />
+        <meta name="twitter:image" content="/novus-ogimage.webp" />
       </Head>
       
       <Layout>

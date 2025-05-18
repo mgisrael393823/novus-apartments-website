@@ -54,12 +54,12 @@ export function IncomeDistributionChart({ height = "h-80" }: IncomeDistributionC
             bottom: 30,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="#E8E3D9" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#E5E2D9" />
           <XAxis 
             dataKey="name"
-            tick={{ fontSize: 12, fill: '#777777' }}
-            axisLine={{ stroke: '#E8E3D9' }}
-            tickLine={{ stroke: '#E8E3D9' }}
+            tick={{ fontSize: 12, fill: '#666666' }}
+            axisLine={{ stroke: '#E5E2D9' }}
+            tickLine={{ stroke: '#E5E2D9' }}
           />
           <YAxis 
             hide={true}
@@ -67,20 +67,20 @@ export function IncomeDistributionChart({ height = "h-80" }: IncomeDistributionC
             tickLine={false}
           />
           <Tooltip 
-            cursor={{ fill: 'rgba(229, 113, 97, 0.1)' }}
+            cursor={{ fill: 'rgba(202, 176, 107, 0.1)' }}
             contentStyle={{ 
               backgroundColor: 'white', 
-              border: '1px solid #E8E3D9',
+              border: '1px solid #E5E2D9',
               borderRadius: '2px',
               fontSize: '12px'
             }}
           />
           <Bar 
             dataKey="value" 
-            fill="#E57161"
+            fill="#CAB06B"
             radius={[2, 2, 0, 0]}
           >
-            <LabelList dataKey="value" position="top" fill="#777777" fontSize={12} />
+            <LabelList dataKey="value" position="top" fill="#666666" fontSize={12} />
           </Bar>
         </BarChart>
       </ResponsiveContainer>

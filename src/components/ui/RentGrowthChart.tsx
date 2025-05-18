@@ -67,24 +67,24 @@ export function RentGrowthChart({ height = "h-80" }: RentGrowthChartProps) {
             bottom: 30,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="#E8E3D9" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#E5E2D9" />
           <XAxis 
             dataKey="name" 
-            tick={{ fontSize: 12, fill: '#777777' }}
-            axisLine={{ stroke: '#E8E3D9' }}
-            tickLine={{ stroke: '#E8E3D9' }}
+            tick={{ fontSize: 12, fill: '#666666' }}
+            axisLine={{ stroke: '#E5E2D9' }}
+            tickLine={{ stroke: '#E5E2D9' }}
           />
           <YAxis 
             tickFormatter={(value) => `${value}%`}
-            tick={{ fontSize: 12, fill: '#777777' }}
-            axisLine={{ stroke: '#E8E3D9' }}
-            tickLine={{ stroke: '#E8E3D9' }}
+            tick={{ fontSize: 12, fill: '#666666' }}
+            axisLine={{ stroke: '#E5E2D9' }}
+            tickLine={{ stroke: '#E5E2D9' }}
           />
           <Tooltip 
             formatter={(value) => [`${value}%`, null]}
             contentStyle={{ 
               backgroundColor: 'white', 
-              border: '1px solid #E8E3D9',
+              border: '1px solid #E5E2D9',
               borderRadius: '2px',
               fontSize: '12px'
             }}
@@ -98,17 +98,17 @@ export function RentGrowthChart({ height = "h-80" }: RentGrowthChartProps) {
             type="monotone" 
             dataKey="downtown" 
             name="Downtown"
-            stroke="#E57161" 
+            stroke="#CAB06B" 
             activeDot={{ r: 6 }} 
-            dot={{ stroke: '#E57161', strokeWidth: 2, r: 4, fill: 'white' }}
+            dot={{ stroke: '#CAB06B', strokeWidth: 2, r: 4, fill: 'white' }}
             strokeWidth={2}
           />
           <Line 
             type="monotone" 
             dataKey="metro" 
             name="Metro Average"
-            stroke="#777777" 
-            dot={{ stroke: '#777777', strokeWidth: 2, r: 4, fill: 'white' }}
+            stroke="#666666" 
+            dot={{ stroke: '#666666', strokeWidth: 2, r: 4, fill: 'white' }}
             strokeWidth={2}
           />
         </LineChart>
