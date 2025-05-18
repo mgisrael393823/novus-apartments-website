@@ -296,6 +296,105 @@ export default function MarketIntelligence() {
                 </div>
               </div>
             </section>
+            
+            <section className="section-divider section">
+              <Heading level={2} className="mb-5">Downtown Durham Market Highlights</Heading>
+              
+              <div className="bg-[#F9F8F4] border border-[#E5E2D9] rounded-md p-6 mb-8">
+                <p className="text-base text-[#666666] mb-6">
+                  Current market analysis reveals strong fundamentals in the Downtown Durham rental market, with stabilized occupancy and consistent rent growth driven by the area's robust technology, healthcare, and education sectors.
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {/* Occupancy Rate Card */}
+                  <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden">
+                    <div className="bg-gradient-to-r from-[#EBE8DF] to-[#F9F8F4] p-4">
+                      <h3 className="font-semibold text-[#333333]">Occupancy Rate</h3>
+                    </div>
+                    <div className="p-5 text-center">
+                      <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] mb-3">
+                        <span className="text-3xl font-bold text-[#CAB06B]">92.5%</span>
+                      </div>
+                      <p className="text-sm text-[#666666] mt-2">Current downtown average</p>
+                      <div className="flex items-center justify-center mt-3">
+                        <div className="h-1 w-16 bg-[#CAB06B] rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Rent Growth Card */}
+                  <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden">
+                    <div className="bg-gradient-to-r from-[#EBE8DF] to-[#F9F8F4] p-4">
+                      <h3 className="font-semibold text-[#333333]">Annual Rent Growth</h3>
+                    </div>
+                    <div className="p-5 text-center">
+                      <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] mb-3">
+                        <span className="text-3xl font-bold text-[#CAB06B]">7.2%</span>
+                      </div>
+                      <p className="text-sm text-[#666666] mt-2">Year-over-year increase</p>
+                      <div className="flex items-center justify-center mt-3">
+                        <div className="h-1 w-16 bg-[#CAB06B] rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Absorption Rate Card */}
+                  <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden">
+                    <div className="bg-gradient-to-r from-[#EBE8DF] to-[#F9F8F4] p-4">
+                      <h3 className="font-semibold text-[#333333]">Quarterly Absorption</h3>
+                    </div>
+                    <div className="p-5 text-center">
+                      <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] mb-3">
+                        <div className="text-center">
+                          <span className="text-3xl font-bold text-[#CAB06B]">250-</span>
+                          <span className="text-3xl font-bold text-[#CAB06B] block -mt-2">300</span>
+                        </div>
+                      </div>
+                      <p className="text-sm text-[#666666] mt-2">Units per quarter</p>
+                      <div className="flex items-center justify-center mt-3">
+                        <div className="h-1 w-16 bg-[#CAB06B] rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Renter Demographics Card */}
+                  <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden">
+                    <div className="bg-gradient-to-r from-[#EBE8DF] to-[#F9F8F4] p-4">
+                      <h3 className="font-semibold text-[#333333]">Renter Profile</h3>
+                    </div>
+                    <div className="p-5">
+                      <ul className="space-y-3">
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-[#CAB06B] mr-2"></div>
+                          <span className="text-sm text-[#333333] font-medium">Age:</span>
+                          <span className="text-sm text-[#666666] ml-2">25-44 years</span>
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-[#CAB06B] mr-2"></div>
+                          <span className="text-sm text-[#333333] font-medium">Income:</span>
+                          <span className="text-sm text-[#666666] ml-2">~$95,000/year</span>
+                        </li>
+                        <li className="flex items-start">
+                          <div className="w-2 h-2 rounded-full bg-[#CAB06B] mr-2 mt-1.5"></div>
+                          <span className="text-sm text-[#333333] font-medium mr-2">Industries:</span>
+                          <span className="text-sm text-[#666666]">Technology, Healthcare, Education</span>
+                        </li>
+                      </ul>
+                      <div className="flex items-center justify-center mt-4">
+                        <div className="h-1 w-16 bg-[#CAB06B] rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white border-l-4 border-[#CAB06B] p-5 mb-8">
+                <h3 className="text-lg font-semibold text-[#333333] mb-2">Market Opportunity Summary</h3>
+                <p className="text-[#666666]">
+                  The Downtown Durham rental market exhibits resilient fundamentals with high occupancy (92.5%) and strong rent growth (7.2% YoY), despite new inventory. The target demographic aligns perfectly with The Novus's premium high-rise positioning and amenity strategy, catering to professionals in the technology, healthcare, and education sectors with a median income of approximately $95,000 annually.
+                </p>
+              </div>
+            </section>
           </div>
         </div>
       </Layout>
