@@ -1,10 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import Layout from "@/components/Layout/Layout";
-import { BarChart, LineChart, PieChart, TrendingUp } from "lucide-react";
+import { BarChart, LineChart, PieChart, TrendingUp, Users, ArrowRight, Building, Clock } from "lucide-react";
 import { Heading } from "@/components/ui/Heading";
 import { HighlightBox } from "@/components/ui/HighlightBox";
-import { StatBox } from "@/components/ui/StatBox";
+import { StatDisplay } from "@/components/ui/StatDisplay";
+import { ProfileDisplay } from "@/components/ui/StatDisplay/ProfileDisplay";
 import { IncomeDistributionChart } from "@/components/ui/IncomeDistributionChart";
 import { RentGrowthChart } from "@/components/ui/RentGrowthChart";
 import { Montserrat } from "next/font/google";
@@ -32,49 +33,38 @@ export default function MarketIntelligence() {
           </HighlightBox>
           
           <div className="my-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-white border border-[#E5E2D9] rounded-md p-5 hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-3">
-                <div className="w-10 h-10 rounded-full bg-[#F9F8F4] flex items-center justify-center mr-3">
-                  <TrendingUp className="text-[#CAB06B]" size={18} />
-                </div>
-                <h3 className="text-lg font-semibold">Vacancy Rate</h3>
-              </div>
-              <p className="text-2xl font-bold text-[#CAB06B] mb-2">~7%</p>
-              <p className="text-sm text-[#666666]">Decreasing year-over-year, reflecting strong market demand</p>
-            </div>
+            <StatDisplay
+              label="Vacancy Rate"
+              value="~7%"
+              description="Decreasing year-over-year, reflecting strong market demand"
+              icon={<TrendingUp />}
+              variant="outline"
+              trend="down"
+            />
             
-            <div className="bg-white border border-[#E5E2D9] rounded-md p-5 hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-3">
-                <div className="w-10 h-10 rounded-full bg-[#F9F8F4] flex items-center justify-center mr-3">
-                  <LineChart className="text-[#CAB06B]" size={18} />
-                </div>
-                <h3 className="text-lg font-semibold">Absorption Rate</h3>
-              </div>
-              <p className="text-2xl font-bold text-[#CAB06B] mb-2">25 units/month</p>
-              <p className="text-sm text-[#666666]">Average leasing velocity in Downtown Durham</p>
-            </div>
+            <StatDisplay
+              label="Absorption Rate"
+              value="25 units/month"
+              description="Average leasing velocity in Downtown Durham"
+              icon={<LineChart />}
+              variant="outline"
+            />
             
-            <div className="bg-white border border-[#E5E2D9] rounded-md p-5 hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-3">
-                <div className="w-10 h-10 rounded-full bg-[#F9F8F4] flex items-center justify-center mr-3">
-                  <BarChart className="text-[#CAB06B]" size={18} />
-                </div>
-                <h3 className="text-lg font-semibold">Key Demographics</h3>
-              </div>
-              <p className="text-2xl font-bold text-[#CAB06B] mb-2">$80k-$120k</p>
-              <p className="text-sm text-[#666666]">Median renter income, primarily tech professionals and university affiliates</p>
-            </div>
+            <StatDisplay
+              label="Key Demographics"
+              value="$80k-$120k"
+              description="Median renter income, primarily tech professionals and university affiliates"
+              icon={<BarChart />}
+              variant="outline"
+            />
             
-            <div className="bg-white border border-[#E5E2D9] rounded-md p-5 hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-3">
-                <div className="w-10 h-10 rounded-full bg-[#F9F8F4] flex items-center justify-center mr-3">
-                  <PieChart className="text-[#CAB06B]" size={18} />
-                </div>
-                <h3 className="text-lg font-semibold">Pipeline Projects</h3>
-              </div>
-              <p className="text-2xl font-bold text-[#CAB06B] mb-2">450 units</p>
-              <p className="text-sm text-[#666666]">New units expected within 18 months, potentially impacting market dynamics</p>
-            </div>
+            <StatDisplay
+              label="Pipeline Projects"
+              value="450 units"
+              description="New units expected within 18 months, potentially impacting market dynamics"
+              icon={<PieChart />}
+              variant="outline"
+            />
           </div>
           
           <div className="space-y-10">
@@ -82,22 +72,27 @@ export default function MarketIntelligence() {
               <Heading level={2} className="mb-5">Market Overview</Heading>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
-                <StatBox
+                <StatDisplay
                   label="Metro Occupancy"
                   value="94.0%"
                   description="-1.5% Year-over-Year"
+                  trend="down"
+                  variant="accent"
                 />
                 
-                <StatBox
+                <StatDisplay
                   label="Avg. 1BR Rent"
                   value="$1,290"
                   description="-12.8% Year-over-Year"
+                  trend="down"
+                  variant="accent"
                 />
                 
-                <StatBox
+                <StatDisplay
                   label="Recent Absorption"
                   value="5,416 Units"
                   description="Q4 2024 Metro Area"
+                  variant="accent"
                 />
               </div>
               
@@ -306,85 +301,42 @@ export default function MarketIntelligence() {
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {/* Occupancy Rate Card */}
-                  <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden">
-                    <div className="bg-gradient-to-r from-[#EBE8DF] to-[#F9F8F4] p-4">
-                      <h3 className="font-semibold text-[#333333]">Occupancy Rate</h3>
-                    </div>
-                    <div className="p-5 text-center">
-                      <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] mb-3">
-                        <span className="text-3xl font-bold text-[#CAB06B]">92.5%</span>
-                      </div>
-                      <p className="text-sm text-[#666666] mt-2">Current downtown average</p>
-                      <div className="flex items-center justify-center mt-3">
-                        <div className="h-1 w-16 bg-[#CAB06B] rounded-full"></div>
-                      </div>
-                    </div>
-                  </div>
+                  {/* Consistent stat displays with circular variant */}
+                  <StatDisplay
+                    label="Occupancy Rate"
+                    value="92.5%"
+                    description="Current downtown average"
+                    variant="circular"
+                    textAlign="center"
+                  />
                   
-                  {/* Rent Growth Card */}
-                  <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden">
-                    <div className="bg-gradient-to-r from-[#EBE8DF] to-[#F9F8F4] p-4">
-                      <h3 className="font-semibold text-[#333333]">Annual Rent Growth</h3>
-                    </div>
-                    <div className="p-5 text-center">
-                      <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] mb-3">
-                        <span className="text-3xl font-bold text-[#CAB06B]">7.2%</span>
-                      </div>
-                      <p className="text-sm text-[#666666] mt-2">Year-over-year increase</p>
-                      <div className="flex items-center justify-center mt-3">
-                        <div className="h-1 w-16 bg-[#CAB06B] rounded-full"></div>
-                      </div>
-                    </div>
-                  </div>
+                  <StatDisplay
+                    label="Annual Rent Growth"
+                    value="7.2%"
+                    description="Year-over-year increase"
+                    variant="circular"
+                    textAlign="center"
+                  />
                   
-                  {/* Absorption Rate Card */}
-                  <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden">
-                    <div className="bg-gradient-to-r from-[#EBE8DF] to-[#F9F8F4] p-4">
-                      <h3 className="font-semibold text-[#333333]">Quarterly Absorption</h3>
-                    </div>
-                    <div className="p-5 text-center">
-                      <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] mb-3">
-                        <div className="text-center">
-                          <span className="text-3xl font-bold text-[#CAB06B]">250-</span>
-                          <span className="text-3xl font-bold text-[#CAB06B] block -mt-2">300</span>
-                        </div>
-                      </div>
-                      <p className="text-sm text-[#666666] mt-2">Units per quarter</p>
-                      <div className="flex items-center justify-center mt-3">
-                        <div className="h-1 w-16 bg-[#CAB06B] rounded-full"></div>
-                      </div>
-                    </div>
-                  </div>
+                  <StatDisplay
+                    label="Quarterly Absorption"
+                    value="250-300"
+                    description="Units per quarter"
+                    variant="circular"
+                    textAlign="center"
+                  />
                   
-                  {/* Renter Demographics Card */}
-                  <div className="bg-white rounded-md shadow-sm border border-[#E5E2D9] overflow-hidden">
-                    <div className="bg-gradient-to-r from-[#EBE8DF] to-[#F9F8F4] p-4">
-                      <h3 className="font-semibold text-[#333333]">Renter Profile</h3>
-                    </div>
-                    <div className="p-5">
-                      <ul className="space-y-3">
-                        <li className="flex items-center">
-                          <div className="w-2 h-2 rounded-full bg-[#CAB06B] mr-2"></div>
-                          <span className="text-sm text-[#333333] font-medium">Age:</span>
-                          <span className="text-sm text-[#666666] ml-2">25-44 years</span>
-                        </li>
-                        <li className="flex items-center">
-                          <div className="w-2 h-2 rounded-full bg-[#CAB06B] mr-2"></div>
-                          <span className="text-sm text-[#333333] font-medium">Income:</span>
-                          <span className="text-sm text-[#666666] ml-2">~$95,000/year</span>
-                        </li>
-                        <li className="flex items-start">
-                          <div className="w-2 h-2 rounded-full bg-[#CAB06B] mr-2 mt-1.5"></div>
-                          <span className="text-sm text-[#333333] font-medium mr-2">Industries:</span>
-                          <span className="text-sm text-[#666666]">Technology, Healthcare, Education</span>
-                        </li>
-                      </ul>
-                      <div className="flex items-center justify-center mt-4">
-                        <div className="h-1 w-16 bg-[#CAB06B] rounded-full"></div>
-                      </div>
-                    </div>
-                  </div>
+                  {/* Profile display for renter demographics */}
+                  <ProfileDisplay
+                    title="Renter Profile"
+                    items={[
+                      { label: "Age", value: "25-44 years" },
+                      { label: "Income", value: "~$95,000/year" },
+                      { label: "Industries", value: "Technology, Healthcare, Education" }
+                    ]}
+                    variant="outline"
+                    icon={<Users size={18} />}
+                  />
                 </div>
               </div>
               

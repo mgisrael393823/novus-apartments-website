@@ -1,42 +1,252 @@
-import React from "react";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { HelpCircle, TrendingUp, TrendingDown, ArrowRight } from 'lucide-react';
+import { 
+  Tooltip, 
+  TooltipContent, 
+  TooltipProvider, 
+  TooltipTrigger 
+} from '@/components/ui/tooltip';
+import { cn } from '@/lib/utils';
 
-interface StatDisplayProps {
+export interface StatDisplayProps {
+  label: string;
+  value: string | number;
+  description?: string;
+  tooltip?: string;
+  icon?: React.ReactNode;
+  variant?: 'default' | 'accent' | 'outline' | 'highlight' | 'dark' | 'circular';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+  animate?: boolean;
+  textAlign?: 'left' | 'center';
+  trend?: 'up' | 'down' | 'neutral';
+}
+
+export function StatDisplay({
+  label,
+  value,
+  description,
+  tooltip,
+  icon,
+  variant = 'default',
+  size = 'md',
+  className = '',
+  animate = true,
+  textAlign = 'left',
+  trend
+}: StatDisplayProps) {
+  // Variant base styles
+  const variantStyles = {
+    default: "bg-[#F9F8F4] border border-[#E5E2D9]",
+    accent: "bg-[#F5F5E6] border border-[#E5E2D9]",
+    outline: "bg-white border border-[#E5E2D9]",
+    highlight: "bg-white border-l-4 border-[#CAB06B] border-t border-r border-b border-[#E5E2D9]",
+    dark: "bg-[#333333] border border-[#444444]",
+    circular: "bg-white border border-[#E5E2D9]"
+  }[variant];
+
+  // Size-specific padding
+  const boxSizeStyles = {
+    sm: "p-4",
+    md: "p-5",
+    lg: "p-6"
+  }[size];
+
+  // Text sizes based on component size
+  const labelSizeStyles = {
+    sm: "text-xs",
+    md: "text-sm",
+    lg: "text-sm"
+  }[size];
+
+  const valueSizeStyles = {
+    sm: "text-xl",
+    md: "text-2xl",
+    lg: "text-3xl"
+  }[size];
+
+  const descSizeStyles = {
+    sm: "text-xs",
+    md: "text-sm",
+    lg: "text-sm"
+  }[size];
+
+  // Text alignment styles
+  const alignStyles = textAlign === 'center' ? 'text-center' : 'text-left';
+
+  // Text color settings
+  const labelColor = variant === 'dark' ? 'text-gray-300' : 'text-[#666666]';
+  const valueColor = variant === 'dark' ? 'text-white' : 'text-[#333333]';
+  const descColor = variant === 'dark' ? 'text-gray-400' : 'text-[#666666]';
+  const iconColor = variant === 'dark' ? 'text-white' : 'text-[#CAB06B]';
+
+  // Trend icons and colors
+  const trendIcon = trend && {
+    up: <TrendingUp size={16} />,
+    down: <TrendingDown size={16} />,
+    neutral: <ArrowRight size={16} />
+  }[trend];
+
+  const trendColor = trend && {
+    up: "text-green-500",
+    down: "text-red-500",
+    neutral: "text-gray-500"
+  }[trend];
+
+  // Animation variants
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.5, 
+        ease: "easeOut" 
+      } 
+    }
+  };
+
+  // Render circular variant differently
+  const isCircular = variant === 'circular';
+
+  return (
+    <motion.div
+      className={cn(
+        "rounded-sm transition-all duration-300 hover:shadow-md relative overflow-hidden",
+        variantStyles,
+        boxSizeStyles,
+        className
+      )}
+      initial={animate ? "hidden" : "visible"}
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      variants={variants}
+    >
+      {/* Label and optional tooltip */}
+      <div className={cn(
+        "flex",
+        textAlign === 'center' ? 'justify-center' : 'justify-between',
+        "items-start mb-3"
+      )}>
+        <div className={cn(
+          "flex items-center",
+          textAlign === 'center' ? 'justify-center' : 'justify-start'
+        )}>
+          {icon && !isCircular && (
+            <div className="w-10 h-10 rounded-full bg-[#F9F8F4] flex items-center justify-center mr-3">
+              <span className={iconColor}>
+                {React.cloneElement(icon as React.ReactElement, { size: 18 })}
+              </span>
+            </div>
+          )}
+          <div className="flex items-center space-x-2">
+            <p className={cn(
+              labelColor,
+              labelSizeStyles, 
+              "font-medium uppercase tracking-wide"
+            )}>
+              {label}
+            </p>
+            {tooltip && (
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span className="cursor-help inline-flex items-center">
+                      <HelpCircle size={14} className="text-[#999999] hover:text-[#666666] transition-colors" />
+                    </span>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p className="text-xs">{tooltip}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
+          </div>
+        </div>
+      </div>
+      
+      {/* Value display - either circular or standard */}
+      {isCircular ? (
+        <div className={cn("flex", textAlign === 'center' ? 'justify-center' : 'justify-start', "mb-3")}>
+          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B]">
+            <span className={cn(
+              "font-bold",
+              valueColor,
+              valueSizeStyles
+            )}>
+              {value}
+            </span>
+          </div>
+        </div>
+      ) : (
+        <div className={cn("flex items-end", textAlign === 'center' ? 'justify-center' : 'justify-start', "mb-3")}>
+          <p className={cn(
+            "font-bold",
+            valueColor,
+            valueSizeStyles,
+            "mr-2"
+          )}>
+            {value}
+          </p>
+          {trend && (
+            <span className={cn(trendColor, "mb-1")}>
+              {trendIcon}
+            </span>
+          )}
+        </div>
+      )}
+      
+      {/* Description text */}
+      {description && (
+        <div className={cn(textAlign === 'center' ? 'text-center' : 'text-left')}>
+          <p className={cn(
+            descColor,
+            descSizeStyles,
+            "max-w-full break-words"
+          )}>
+            {description}
+          </p>
+        </div>
+      )}
+      
+      {/* Visual decorative elements */}
+      {variant === 'accent' && (
+        <div className="absolute -right-8 -bottom-8 w-24 h-24 rounded-full bg-[#CAB06B] opacity-10"></div>
+      )}
+      {variant === 'highlight' && (
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-[#CAB06B] opacity-30"></div>
+      )}
+      {isCircular && (
+        <div className="flex items-center justify-center mt-2">
+          <div className="h-1 w-16 bg-[#CAB06B] rounded-full"></div>
+        </div>
+      )}
+    </motion.div>
+  );
+}
+
+// For compatibility with existing code
+export interface LegacyStatDisplayProps {
   title: string;
   value: string;
   description?: string;
   trend?: "up" | "down" | "neutral";
 }
 
-export function StatDisplay({ 
+export function LegacyStatDisplay({ 
   title, 
   value, 
   description, 
   trend 
-}: StatDisplayProps) {
-  const trendIcon = {
-    up: "↑",
-    down: "↓",
-    neutral: "→"
-  }[trend || "neutral"];
-  
-  const trendColor = {
-    up: "text-green-500",
-    down: "text-red-500",
-    neutral: "text-gray-500"
-  }[trend || "neutral"];
-  
+}: LegacyStatDisplayProps) {
   return (
-    <div className="bg-white border border-gray-200 p-6 rounded-sm">
-      <h4 className="text-sm text-gray-500 uppercase tracking-wider mb-1">{title}</h4>
-      <div className="flex items-end gap-2">
-        <span className="text-3xl font-bold">{value}</span>
-        {trend && (
-          <span className={`${trendColor} text-lg mb-1`}>{trendIcon}</span>
-        )}
-      </div>
-      {description && (
-        <p className="text-sm text-gray-600 mt-2">{description}</p>
-      )}
-    </div>
+    <StatDisplay
+      label={title}
+      value={value}
+      description={description}
+      trend={trend as 'up' | 'down' | 'neutral'}
+      variant="outline"
+    />
   );
 }
