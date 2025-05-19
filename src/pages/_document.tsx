@@ -18,6 +18,9 @@ export default function Document() {
         <link rel="icon" href="/novus-favicon.webp" type="image/webp" />
         <link rel="alternate icon" href="/novus-favicon.webp" />
         
+        {/* Plausible Analytics */}
+        <script defer data-domain="novus.disrvpt.co" src="https://plausible.io/js/script.js"></script>
+        
         {/* Softgen AI monitoring script */}
         <script 
           src="https://cdn.softgen.ai/script.js" 
