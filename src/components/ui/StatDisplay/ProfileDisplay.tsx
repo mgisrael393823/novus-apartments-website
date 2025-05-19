@@ -47,7 +47,7 @@ export function ProfileDisplay({
   // Item animation variants with staggered delay
   const itemVariants = {
     hidden: { opacity: 0, x: -5 },
-    visible: i => ({ 
+    visible: (i: number) => ({ 
       opacity: 1, 
       x: 0, 
       transition: { 
