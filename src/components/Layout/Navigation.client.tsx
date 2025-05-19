@@ -11,8 +11,7 @@ import {
   Lightbulb,
   DollarSign,
   Rocket,
-  Map,
-  Lock
+  Map
 } from 'lucide-react';
 
 const headingFont = Montserrat({ subsets: ["latin"], weight: ["600"] });
@@ -65,9 +64,6 @@ export function NavigationClient() {
                 >
                   <Icon className='mr-3 h-4 w-4' />
                   <span>{item.name}</span>
-                  {'gated' in item && (item as {gated: boolean}).gated && (
-                    <Lock size={12} className='ml-2 text-[#A0A0A0]' />
-                  )}
                 </Link>
               );
             })}

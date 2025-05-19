@@ -9,7 +9,6 @@ import {
   DollarSign,
   Rocket,
   Map,
-  Lock,
   ArrowRight
 } from "lucide-react";
 import { Container, ContentBox } from "@/components/ui/Container";
@@ -86,7 +85,7 @@ export default function TableOfContents() {
           <div className="h-0.5 w-32 bg-novus-gold mx-auto mb-6"></div>
           <Heading level={2} className="uppercase mb-4" wrap="balance">BLUEPRINT SECTIONS</Heading>
           <Paragraph className="max-w-2xl mx-auto" wrap="pretty">
-            Navigate through our comprehensive strategic framework, with premium sections gated for client access
+            Navigate through our comprehensive strategic framework showcasing all available sections
           </Paragraph>
         </div>
         
@@ -101,8 +100,8 @@ export default function TableOfContents() {
                 className="block h-full"
               >
                 <Card 
-                  variant={section.id % 3 === 0 ? "premium" : "default"} 
-                  className="group h-full flex flex-col transition-all hover:border-novus-gold"
+                  variant="default"
+                  className="group h-full flex flex-col transition-all hover:border-novus-gold bg-white"
                 >
                   <CardHeader className="pb-2">
                     <div className="flex items-start">
@@ -112,9 +111,6 @@ export default function TableOfContents() {
                       
                       <div className="flex items-center justify-between">
                         <CardTitle className="text-sm tracking-wide">{section.title}</CardTitle>
-                        {section.gated && (
-                          <Lock size={12} className="text-text-muted ml-2" />
-                        )}
                       </div>
                     </div>
                   </CardHeader>
@@ -137,10 +133,10 @@ export default function TableOfContents() {
         </Grid>
         
         <ContentBox variant="highlight-accent" className="mt-20 p-8 text-center" withAnimation>
-          <Heading level={3} className="uppercase mb-4">PREMIUM SECTIONS</Heading>
+          <Heading level={3} className="uppercase mb-4">ALL SECTIONS AVAILABLE</Heading>
           <Paragraph className="mb-5 max-w-2xl mx-auto" wrap="pretty">
-            Gated sections contain our proprietary strategic frameworks and implementation plans.
-            Access is available to clients and qualified prospects.
+            All sections of our strategic framework are now available for viewing, including our
+            proprietary strategic frameworks and implementation plans.
           </Paragraph>
           <div className="inline-block bg-white border border-novus-border px-6 py-3 rounded-sm">
             <Text variant="body" className="text-sm">
