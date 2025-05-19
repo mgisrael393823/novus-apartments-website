@@ -5,28 +5,22 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-STP7762E09"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Q8T10QCHM"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-STP7762E09');
+            gtag('config', 'G-3Q8T10QCHM');
           `
         }} />
+        
         {/* Favicon */}
         <link rel="icon" href="/novus-favicon.webp" type="image/webp" />
         <link rel="alternate icon" href="/novus-favicon.webp" />
         
         {/* Plausible Analytics */}
         <script defer data-domain="novus.disrvpt.co" src="https://plausible.io/js/script.js"></script>
-        
-        {/* Softgen AI monitoring script */}
-        <script 
-          src="https://cdn.softgen.ai/script.js" 
-          async 
-          data-softgen-monitoring="true"
-        />
         
         {/* Default Open Graph meta tags */}
         <meta property="og:type" content="website" />
