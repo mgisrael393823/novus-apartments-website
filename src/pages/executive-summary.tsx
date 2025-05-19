@@ -252,16 +252,17 @@ export default function ExecutiveSummary() {
                 <Heading level={3} className="font-bold text-2xl tracking-wider">KEY METRICS</Heading>
               </div>
               
-              <Grid columns={4} gap="md" className="mb-8">
-                <StatDisplay
-                  label="Projected Lease-Up"
-                  value="12 mo"
-                  description="To stabilization"
-                  tooltip="12 mo. projection based on standard generic approach. Our strategy projects 9-9.5 months with recommended approach."
-                  variant="accent"
-                  icon={<Calendar />}
-                  animate
-                />
+              <div>
+                <Grid columns={4} gap="md" className="mb-2">
+                  <StatDisplay
+                    label="Projected Lease-Up"
+                    value="12 mo"
+                    description="To stabilization"
+                    tooltip="12 mo. projection based on standard generic approach. Our strategy projects 9-9.5 months with recommended approach."
+                    variant="accent"
+                    icon={<Calendar />}
+                    animate
+                  />
                 
                 <StatDisplay
                   label="Competitive Rents"
@@ -293,6 +294,15 @@ export default function ExecutiveSummary() {
                   animate
                 />
               </Grid>
+              
+              {/* Footnotes for Projected Lease-Up */}
+              <div className="grid grid-cols-4 gap-6 mb-6">
+                <div className="pl-5">
+                  <p className="text-xs text-gray-400 mb-1">*12-month projection based on standard generic approach.</p>
+                  <p className="text-xs text-black font-semibold">**DISRVPT projects 9–9.5 months with proprietary strategy.</p>
+                </div>
+                <div className="col-span-3"></div>
+              </div>
               
               <Grid columns={3} gap="sm" className="mb-12">
                 <StatDisplay
@@ -332,6 +342,7 @@ export default function ExecutiveSummary() {
                 annotations={chartAnnotations}
                 className="mt-8"
               />
+              </div>
             </Section>
           </Container>
           

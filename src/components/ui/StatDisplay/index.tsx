@@ -173,7 +173,7 @@ export function StatDisplay({
       
       {/* Value display - either circular or standard */}
       {isCircular ? (
-        <div className={cn("flex w-full", textAlign === 'center' ? 'justify-center' : 'justify-start', "mb-3")}>
+        <div className={cn("flex w-full", textAlign === 'center' ? 'justify-center' : 'justify-start', "mb-0.5")}>
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-novus-cream border-4 border-novus-gold overflow-hidden">
             <span className={cn(
               "font-bold text-center flex items-center justify-center",
@@ -188,7 +188,7 @@ export function StatDisplay({
           </div>
         </div>
       ) : (
-        <div className={cn("flex items-end", textAlign === 'center' ? 'justify-center' : 'justify-start', "mb-3")}>
+        <div className={cn("flex items-end", textAlign === 'center' ? 'justify-center' : 'justify-start', "mb-0.5")}>
           <p className={cn(
             "font-extrabold",
             valueColor,
@@ -198,7 +198,7 @@ export function StatDisplay({
             {value}
           </p>
           {trend && (
-            <span className={cn(trendColor, "mb-1")}>
+            <span className={cn(trendColor, "mb-0.5")}>
               {trendIcon}
             </span>
           )}
