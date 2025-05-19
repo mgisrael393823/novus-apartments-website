@@ -36,10 +36,15 @@ export default function Layout({ children }: LayoutProps) {
         
         <footer className="mt-24 border-t border-novus-border py-8 bg-novus-cream">
           <Container size="wide">
-            <div className="flex justify-between items-center">
-              <Text variant="caption" color="secondary">
-                © 2025 The Novus Blueprint. All content is proprietary information.
-              </Text>
+            <div className="flex flex-wrap justify-between items-center">
+              <div className="flex flex-col">
+                <Text variant="caption" color="secondary">
+                  © 2025 The Novus Blueprint. All content is proprietary information.
+                </Text>
+                <Text variant="caption" color="secondary" className="mt-1">
+                  Contact: <a href="mailto:m@disrvpt.co" className="text-novus-gold">Michael Israel | 847-924-2888 | m@disrvpt.co</a>
+                </Text>
+              </div>
               <div className="h-8 w-8 rounded-full bg-novus-gold opacity-10"></div>
             </div>
           </Container>

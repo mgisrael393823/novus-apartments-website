@@ -8,7 +8,6 @@ import {
   Lightbulb,
   DollarSign,
   Rocket,
-  Map,
   ArrowRight
 } from "lucide-react";
 import { Container, ContentBox } from "@/components/ui/Container";
@@ -65,29 +64,13 @@ const sections = [
     description: "Timeline and implementation plan",
     icon: Rocket,
     gated: true
-  },
-  { 
-    id: 7, 
-    title: "OPPORTUNITY MAP", 
-    path: "/opportunity-map", 
-    description: "Visual representation of key opportunities",
-    icon: Map,
-    gated: false
-  },
+  }
 ];
 
 export default function TableOfContents() {
   return (
-    <Section>
+    <Section className="pt-0">
       <Container size="wide">
-        <div className="text-center mb-16">
-          <SectionTitle className="mb-2">ACCESS THE BLUEPRINT</SectionTitle>
-          <div className="h-0.5 w-32 bg-novus-gold mx-auto mb-6"></div>
-          <Heading level={2} className="uppercase mb-4" wrap="balance">BLUEPRINT SECTIONS</Heading>
-          <Paragraph className="max-w-2xl mx-auto" wrap="pretty">
-            Navigate through our comprehensive strategic framework showcasing all available sections
-          </Paragraph>
-        </div>
         
         <Grid columns={3} gap="lg">
           {sections.map((section) => {
@@ -132,18 +115,22 @@ export default function TableOfContents() {
           })}
         </Grid>
         
-        <ContentBox variant="highlight-accent" className="mt-20 p-8 text-center" withAnimation>
-          <Heading level={3} className="uppercase mb-4">ALL SECTIONS AVAILABLE</Heading>
-          <Paragraph className="mb-5 max-w-2xl mx-auto" wrap="pretty">
-            All sections of our strategic framework are now available for viewing, including our
-            proprietary strategic frameworks and implementation plans.
-          </Paragraph>
-          <div className="inline-block bg-white border border-novus-border px-6 py-3 rounded-sm">
-            <Text variant="body" className="text-sm">
-              CONTACT: <span className="text-novus-gold font-medium">misrael00@gmail.com</span>
+        <div className="flex justify-center mt-16 mb-8">
+          <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm max-w-sm w-full text-center">
+            <Text variant="body" className="font-bold text-gray-800 mb-3 uppercase tracking-wide">
+              Contact
             </Text>
+            <Text variant="body" className="text-gray-700 text-lg mb-2">
+              Michael Israel
+            </Text>
+            <Text variant="body" className="text-novus-gold font-medium text-lg mb-2">
+              847-924-2888
+            </Text>
+            <a href="mailto:m@disrvpt.co" className="inline-block text-novus-gold font-medium text-lg hover:underline">
+              m@disrvpt.co
+            </a>
           </div>
-        </ContentBox>
+        </div>
       </Container>
     </Section>
   );

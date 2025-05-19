@@ -149,7 +149,7 @@ export function StatDisplay({
             <p className={cn(
               labelColor,
               labelSizeStyles, 
-              "font-medium uppercase tracking-wide"
+              "font-bold uppercase tracking-wide"
             )}>
               {label}
             </p>
@@ -214,7 +214,7 @@ export function StatDisplay({
           <p className={cn(
             descColor,
             descSizeStyles,
-            "max-w-full break-words",
+            "max-w-full break-words leading-relaxed",
             variant === 'circular' ? 'text-center' : ''
           )}>
             {description}

@@ -195,7 +195,7 @@ body {
   }
   
   p {
-    @apply text-text-secondary text-sm md:text-base leading-relaxed mb-4;
+    @apply text-text-secondary text-sm md:text-base leading-7 mb-4;
   }
 
   /* Link styles */
@@ -257,11 +257,11 @@ body {
   }
   
   .body-text {
-    @apply text-sm text-text-secondary leading-relaxed;
+    @apply text-sm text-text-secondary leading-7;
   }
   
   .body-text-lg {
-    @apply text-base text-text-secondary leading-relaxed;
+    @apply text-base text-text-secondary leading-7;
   }
   
   .caption {

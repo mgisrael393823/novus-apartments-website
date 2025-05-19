@@ -7,8 +7,7 @@ import {
   Target,
   Lightbulb,
   DollarSign,
-  Rocket,
-  Map
+  Rocket
 } from 'lucide-react';
 
 const headingFont = Montserrat({ subsets: ["latin"], weight: ["600"] });
@@ -21,7 +20,6 @@ const navItems = [
   { name: 'STRATEGIC OPPORTUNITIES', path: '/strategic-opportunities', icon: Lightbulb },
   { name: 'PRICING & INCENTIVES', path: '/pricing-framework', icon: DollarSign },
   { name: 'GO-TO-MARKET ROADMAP', path: '/go-to-market', icon: Rocket },
-  { name: 'OPPORTUNITY MAP', path: '/opportunity-map', icon: Map },
 ];
 
 export function StaticNavigation() {
@@ -63,9 +61,11 @@ export function StaticNavigation() {
         </div>
         
         <div className='mt-auto p-6 border-t border-[#E5E2D9]'>
-          <div className='bg-[#FFFFFF] p-4 rounded-sm border border-[#E5E2D9]'>
-            <p className={`${bodyFont.className} text-xs uppercase tracking-widest text-[#666666] mb-2`}>CONTACT</p>
-            <p className='text-sm text-[#333333]'>misrael00@gmail.com</p>
+          <div className='bg-[#FFFFFF] p-4 rounded-md border border-[#E5E2D9] shadow-sm'>
+            <p className={`${headingFont.className} text-xs uppercase tracking-widest text-[#666666] mb-3 font-bold`}>Contact</p>
+            <p className='text-sm text-[#333333] mb-2'>Michael Israel</p>
+            <p className='text-sm text-[#CAB06B] font-medium mb-2'>847-924-2888</p>
+            <a href="mailto:m@disrvpt.co" className='text-sm text-[#CAB06B] font-medium hover:underline'>m@disrvpt.co</a>
           </div>
         </div>
       </div>

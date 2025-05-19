@@ -86,7 +86,7 @@ function TimelineItem({ phase, isLast, index }: { phase: TimelinePhase; isLast: 
       {/* Timeline marker */}
       <div className="flex-shrink-0 z-10">
         <div 
-          className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg border-2`}
+          className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg border-2 shadow-md`}
           style={{ backgroundColor: accentColor, borderColor: accentColor }}
         >
           {icon ? icon : index + 1}
@@ -96,7 +96,7 @@ function TimelineItem({ phase, isLast, index }: { phase: TimelinePhase; isLast: 
       {/* Content */}
       <div className="ml-6 pb-8 w-full">
         <div className="flex items-center justify-between mb-1">
-          <h3 className="text-lg font-medium text-[#333333]">{title}</h3>
+          <h3 className="text-lg font-bold text-[#333333]">{title}</h3>
           <div className="flex items-center">
             {statusIcon()}
             <span className="text-xs text-[#666666] ml-2">{timeframe}</span>
@@ -107,8 +107,8 @@ function TimelineItem({ phase, isLast, index }: { phase: TimelinePhase; isLast: 
           <p className="text-sm text-[#666666] mb-3">{subtitle}</p>
         )}
         
-        <div className="mt-3 bg-[#F9F8F4] border border-[#E5E2D9] p-4 rounded-sm">
-          <ul className="space-y-2">
+        <div className="mt-3 bg-[#F9F8F4] border border-[#E5E2D9] p-5 rounded-md shadow-sm">
+          <ul className="space-y-3">
             {items.map((item, idx) => (
               <motion.li 
                 key={idx} 
@@ -154,20 +154,20 @@ function HorizontalTimeline({ phases, className = '' }: { phases: TimelinePhase[
               {/* Circle */}
               <div className="flex items-center justify-center mb-4">
                 <div 
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg z-10"
-                  style={{ backgroundColor: phase.accentColor || '#CAB06B' }}
+                  className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg z-10 shadow-md border-2"
+                  style={{ backgroundColor: phase.accentColor || '#CAB06B', borderColor: phase.accentColor || '#CAB06B' }}
                 >
                   {phase.icon ? phase.icon : index + 1}
                 </div>
               </div>
               
               <div className="text-center mb-3">
-                <h3 className="text-base font-medium text-[#333333]">{phase.title}</h3>
+                <h3 className="text-base font-bold text-[#333333]">{phase.title}</h3>
                 <p className="text-xs text-[#666666] mt-1">{phase.timeframe}</p>
               </div>
               
-              <div className="bg-[#F9F8F4] border border-[#E5E2D9] p-3 rounded-sm">
-                <ul className="space-y-2">
+              <div className="bg-[#F9F8F4] border border-[#E5E2D9] p-4 rounded-md shadow-sm">
+                <ul className="space-y-3">
                   {phase.items.map((item, idx) => (
                     <motion.li 
                       key={idx} 

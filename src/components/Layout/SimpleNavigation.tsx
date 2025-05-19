@@ -7,8 +7,7 @@ import {
   Target,
   Lightbulb,
   DollarSign,
-  Rocket,
-  Map
+  Rocket
 } from 'lucide-react';
 
 const headingFont = Montserrat({ subsets: ["latin"], weight: ["600"] });
@@ -21,7 +20,6 @@ const navItems = [
   { name: 'STRATEGIC OPPORTUNITIES', path: '/strategic-opportunities', icon: Lightbulb },
   { name: 'PRICING & INCENTIVES', path: '/pricing-framework', icon: DollarSign },
   { name: 'GO-TO-MARKET ROADMAP', path: '/go-to-market', icon: Rocket },
-  { name: 'OPPORTUNITY MAP', path: '/opportunity-map', icon: Map },
 ];
 
 export function SimpleNavigation() {

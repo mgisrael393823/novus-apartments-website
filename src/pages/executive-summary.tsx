@@ -208,7 +208,7 @@ export default function ExecutiveSummary() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                <Heading level={1}>Executive Summary</Heading>
+                <Heading level={1} className="text-4xl font-bold mb-6 tracking-tight">Executive Summary</Heading>
               </motion.div>
             </motion.div>
             
@@ -244,10 +244,11 @@ export default function ExecutiveSummary() {
               title="Project Overview" 
               subtitle="Key performance indicators and project details for The Novus"
               divider={true}
+              className="mb-16"
             >
-              <div className="mb-4 flex items-center">
+              <div className="mb-8 flex items-center">
                 <Activity size={22} className="text-novus-gold mr-2" />
-                <SectionTitle>KEY METRICS</SectionTitle>
+                <SectionTitle className="font-bold tracking-wider">KEY METRICS</SectionTitle>
               </div>
               
               <Grid columns={4} gap="md" className="mb-8">
@@ -292,7 +293,7 @@ export default function ExecutiveSummary() {
                 />
               </Grid>
               
-              <Grid columns={3} gap="sm" className="mb-10">
+              <Grid columns={3} gap="sm" className="mb-12">
                 <StatDisplay
                   label="Location"
                   value="Five Points District"
@@ -339,14 +340,15 @@ export default function ExecutiveSummary() {
               title="Market Opportunity Overview" 
               subtitle="Strategic opportunities for The Novus in Downtown Durham's multifamily market"
               divider={true}
+              className="mb-16"
             >
-              <div className="mb-4 flex items-center">
+              <div className="mb-8 flex items-center">
                 <LineChart size={22} className="text-novus-gold mr-2" />
-                <SectionTitle>MARKET INSIGHTS</SectionTitle>
+                <SectionTitle className="font-bold tracking-wider">MARKET INSIGHTS</SectionTitle>
               </div>
             {/* Comprehensive Market Opportunity Analysis */}
             <motion.div 
-              className="p-8 bg-white border border-[#E5E2D9] rounded-sm relative overflow-hidden mt-8"
+              className="p-8 bg-white border border-[#E5E2D9] rounded-md shadow-sm relative overflow-hidden mt-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -355,18 +357,18 @@ export default function ExecutiveSummary() {
               <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#CAB06B] opacity-5"></div>
               
               <div className="mb-4">
-                <h3 className="text-lg uppercase tracking-wide text-[#333333] flex items-center font-medium">
-                  <ArrowRight className="h-4 w-4 mr-2 text-[#CAB06B]" />
+                <Heading level={3} className="uppercase tracking-wide flex items-center font-bold text-xl mb-4">
+                  <ArrowRight className="h-5 w-5 mr-2 text-novus-gold" />
                   COMPREHENSIVE OPPORTUNITY ANALYSIS
-                </h3>
+                </Heading>
               </div>
               
-              <p className="text-[#666666] leading-relaxed max-w-3xl mb-6">
+              <Paragraph className="leading-relaxed max-w-3xl mb-6">
                 Our detailed market opportunity analysis examines current market dynamics, projected absorption rates, and target demographic profiles to identify key areas of competitive advantage.
-              </p>
+              </Paragraph>
               
               <div className="mb-6">
-                <h5 className="text-sm uppercase tracking-wide mb-3 text-[#555555] font-medium">Key Market Insights:</h5>
+                <Heading level={4} className="text-base uppercase tracking-wide mb-4 font-bold">KEY MARKET INSIGHTS</Heading>
                 <div className="space-y-3">
                   {[
                     "The Durham multifamily market is experiencing a period of adjustment with moderating rents (-12.8% year-over-year for one-bedrooms) and elevated construction activity.",
@@ -391,28 +393,28 @@ export default function ExecutiveSummary() {
               </div>
               
               <motion.div 
-                className="p-4 bg-[#F9F8F4] border border-[#E5E2D9] rounded-sm"
+                className="p-6 bg-[#F9F8F4] border border-[#E5E2D9] rounded-md shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
-                <h4 className="text-sm uppercase mb-3 text-[#333333] font-medium">Current Market Concessions</h4>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="p-3 bg-white rounded-sm border border-[#E5E2D9] hover:shadow-sm transition-shadow">
-                    <p className="text-sm font-medium text-[#333333] mb-1">Downtown Durham</p>
-                    <p className="text-sm text-[#666666]">1-2 months free on 12-month leases</p>
-                    <p className="text-xs text-[#999999] mt-1">Avg. effective discount: 8-16%</p>
+                <Heading level={4} className="text-base uppercase mb-4 font-bold tracking-wide">CURRENT MARKET CONCESSIONS</Heading>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                  <div className="p-4 bg-white rounded-md border border-[#E5E2D9] hover:shadow-md transition-shadow">
+                    <Text variant="body" className="text-sm font-bold text-[#333333] mb-2">Downtown Durham</Text>
+                    <Text variant="body" className="text-sm">1-2 months free on 12-month leases</Text>
+                    <Text variant="caption" className="mt-2 text-[#999999]">Avg. effective discount: 8-16%</Text>
                   </div>
-                  <div className="p-3 bg-white rounded-sm border border-[#E5E2D9] hover:shadow-sm transition-shadow">
-                    <p className="text-sm font-medium text-[#333333] mb-1">Five Points District</p>
-                    <p className="text-sm text-[#666666]">Up to 1.5 months free on 12+ month leases</p>
-                    <p className="text-xs text-[#999999] mt-1">Avg. effective discount: 8-12%</p>
+                  <div className="p-4 bg-white rounded-md border border-[#E5E2D9] hover:shadow-md transition-shadow">
+                    <Text variant="body" className="text-sm font-bold text-[#333333] mb-2">Five Points District</Text>
+                    <Text variant="body" className="text-sm">Up to 1.5 months free on 12+ month leases</Text>
+                    <Text variant="caption" className="mt-2 text-[#999999]">Avg. effective discount: 8-12%</Text>
                   </div>
-                  <div className="p-3 bg-white rounded-sm border border-[#E5E2D9] hover:shadow-sm transition-shadow">
-                    <p className="text-sm font-medium text-[#333333] mb-1">Ninth Street Area</p>
-                    <p className="text-sm text-[#666666]">Up to $1,000 off select units + gift cards</p>
-                    <p className="text-xs text-[#999999] mt-1">Avg. effective discount: 6-10%</p>
+                  <div className="p-4 bg-white rounded-md border border-[#E5E2D9] hover:shadow-md transition-shadow">
+                    <Text variant="body" className="text-sm font-bold text-[#333333] mb-2">Ninth Street Area</Text>
+                    <Text variant="body" className="text-sm">Up to $1,000 off select units + gift cards</Text>
+                    <Text variant="caption" className="mt-2 text-[#999999]">Avg. effective discount: 6-10%</Text>
                   </div>
                 </div>
               </motion.div>
@@ -426,6 +428,7 @@ export default function ExecutiveSummary() {
             divider
             icon={<Target size={24} />}
             subtitle="SWOT analysis identifying The Novus's position within the competitive landscape"
+            className="mb-16"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
               <CollapsibleCard 
@@ -472,7 +475,7 @@ export default function ExecutiveSummary() {
             
             {/* Detailed SWOT Analysis */}
             <motion.div 
-              className="p-8 bg-white border border-[#E5E2D9] rounded-sm relative overflow-hidden mt-12"
+              className="p-8 bg-white border border-[#E5E2D9] rounded-md shadow-sm relative overflow-hidden mt-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -481,25 +484,25 @@ export default function ExecutiveSummary() {
               <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#CAB06B] opacity-5"></div>
               
               <div className="mb-4">
-                <h3 className="text-lg uppercase tracking-wide text-[#333333] flex items-center font-medium">
-                  <ArrowRight className="h-5 w-5 mr-2 text-[#CAB06B]" />
+                <Heading level={3} className="uppercase tracking-wide flex items-center font-bold text-xl mb-4">
+                  <ArrowRight className="h-5 w-5 mr-2 text-novus-gold" />
                   DETAILED SWOT ANALYSIS
-                </h3>
+                </Heading>
               </div>
               
-              <p className="text-[#666666] leading-relaxed max-w-3xl mb-6">
+              <Paragraph className="leading-relaxed max-w-3xl mb-6">
                 Our comprehensive SWOT analysis includes detailed assessment of all competitive properties, market conditions, and strategic positioning opportunities.
-              </p>
+              </Paragraph>
               
               <div className="mb-8">
-                <h5 className="text-sm uppercase tracking-wide mb-3 text-[#555555] font-medium">Strengths - Expanded Analysis:</h5>
-                <div className="bg-[#F9F8F4] border-l-4 border-[#60A561] border-t border-r border-b border-[#E5E2D9] p-4 rounded-sm">
+                <Heading level={4} className="text-base uppercase tracking-wide mb-4 font-bold">STRENGTHS - EXPANDED ANALYSIS</Heading>
+                <div className="bg-[#F9F8F4] border-l-4 border-[#60A561] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm">
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <span className="text-[#60A561] mr-2 text-lg">•</span>
                       <div>
-                        <span className="font-medium text-[#333333]">Prime Location: </span>
-                        <span className="text-[#666666]">The Novus's position in the heart of Five Points District provides exceptional access to Duke University, downtown dining, and cultural venues, with walkability scores 18% higher than competitive set average.</span>
+                        <Text variant="body" className="font-bold">Prime Location: </Text>
+                        <Text variant="body" color="secondary" className="inline">The Novus's position in the heart of Five Points District provides exceptional access to Duke University, downtown dining, and cultural venues, with walkability scores 18% higher than competitive set average.</Text>
                       </div>
                     </li>
                     <li className="flex items-start">
@@ -521,8 +524,8 @@ export default function ExecutiveSummary() {
               </div>
               
               <div className="mb-8">
-                <h5 className="text-sm uppercase tracking-wide mb-3 text-[#555555] font-medium">Weaknesses - Risk Mitigation Strategies:</h5>
-                <div className="bg-[#F9F8F4] border-l-4 border-[#E5826D] border-t border-r border-b border-[#E5E2D9] p-4 rounded-sm">
+                <Heading level={4} className="text-base uppercase tracking-wide mb-4 font-bold">WEAKNESSES - RISK MITIGATION STRATEGIES</Heading>
+                <div className="bg-[#F9F8F4] border-l-4 border-[#E5826D] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm">
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <span className="text-[#E5826D] mr-2 text-lg">•</span>
@@ -551,8 +554,8 @@ export default function ExecutiveSummary() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h5 className="text-sm uppercase tracking-wide mb-3 text-[#555555] font-medium">Opportunities - Strategic Approach:</h5>
-                  <div className="bg-[#F9F8F4] border-l-4 border-[#CAB06B] border-t border-r border-b border-[#E5E2D9] p-4 rounded-sm h-full">
+                  <Heading level={4} className="text-base uppercase tracking-wide mb-4 font-bold">OPPORTUNITIES - STRATEGIC APPROACH</Heading>
+                  <div className="bg-[#F9F8F4] border-l-4 border-[#CAB06B] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm h-full">
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <span className="text-[#CAB06B] mr-2 text-lg">•</span>
@@ -580,8 +583,8 @@ export default function ExecutiveSummary() {
                 </div>
                 
                 <div>
-                  <h5 className="text-sm uppercase tracking-wide mb-3 text-[#555555] font-medium">Threats - Contingency Planning:</h5>
-                  <div className="bg-[#F9F8F4] border-l-4 border-[#A67BC2] border-t border-r border-b border-[#E5E2D9] p-4 rounded-sm h-full">
+                  <Heading level={4} className="text-base uppercase tracking-wide mb-4 font-bold">THREATS - CONTINGENCY PLANNING</Heading>
+                  <div className="bg-[#F9F8F4] border-l-4 border-[#A67BC2] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm h-full">
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <span className="text-[#A67BC2] mr-2 text-lg">•</span>
@@ -618,10 +621,11 @@ export default function ExecutiveSummary() {
               title="Strategy Pillars" 
               subtitle="Strategic approach categories based on our market position analysis"
               divider={true}
+              className="mb-16"
             >
-              <div className="mb-4 flex items-center">
+              <div className="mb-8 flex items-center">
                 <Columns size={22} className="text-novus-gold mr-2" />
-                <SectionTitle>RECOMMENDATIONS & ROADMAP</SectionTitle>
+                <SectionTitle className="font-bold tracking-wider">RECOMMENDATIONS & ROADMAP</SectionTitle>
               </div>
             {/* Core Strategy Section - High-level categories only */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-12">
@@ -657,10 +661,10 @@ export default function ExecutiveSummary() {
                   >
                     <span className="text-[#CAB06B] text-xl font-bold">{pillar.number}</span>
                   </motion.div>
-                  <h4 className="text-lg font-medium text-[#333333] mb-3">{pillar.title}</h4>
-                  <p className="text-sm text-[#666666]">
+                  <Heading level={4} className="text-lg font-bold mb-3">{pillar.title}</Heading>
+                  <Text variant="body" color="secondary" className="text-sm">
                     {pillar.description}
-                  </p>
+                  </Text>
                 </motion.div>
               ))}
             </div>
@@ -668,10 +672,10 @@ export default function ExecutiveSummary() {
             {/* Implementation Roadmap */}
             <div className="mt-16">
               <div className="mb-8">
-                <h3 className="text-xl font-medium text-[#333333]">Implementation Roadmap</h3>
-                <p className="text-[#666666] mt-2">
+                <Heading level={3} className="text-xl font-bold mb-4 uppercase tracking-wide">IMPLEMENTATION ROADMAP</Heading>
+                <Paragraph className="mt-2">
                   Our tactical roadmap converts strategies into actionable steps with clear timelines, responsible parties, and success metrics.
-                </p>
+                </Paragraph>
               </div>
               
               {/* Vertical Timeline for larger screens */}
@@ -686,7 +690,7 @@ export default function ExecutiveSummary() {
               
               {/* Financial Projections Table */}
               <div className="mt-12">
-                <h4 className="text-lg font-medium text-[#333333] mb-4">Financial Impact Projections</h4>
+                <Heading level={3} className="text-xl font-bold mb-4 uppercase tracking-wide">FINANCIAL IMPACT PROJECTIONS</Heading>
                 <ComparisonTable
                   data={financialComparisonData}
                   titleA="Standard Approach"
@@ -696,15 +700,15 @@ export default function ExecutiveSummary() {
               </div>
               
               <motion.div 
-                className="mt-8 p-6 bg-[#F9F8F4] border border-l-4 border-[#CAB06B] rounded-sm"
+                className="mt-8 p-6 bg-[#F9F8F4] border border-l-4 border-[#CAB06B] rounded-md shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, duration: 0.4 }}
               >
-                <p className="text-[#333333] font-medium leading-relaxed">
+                <Text variant="body-lg" color="primary" className="font-medium leading-relaxed">
                   The Novus's premium positioning strategy is projected to achieve stabilization 25% faster than industry standards while generating an additional $2.6M in first-year revenue through our specialized high-rise differentiation approach.
-                </p>
+                </Text>
               </motion.div>
             </div>
             </Section>

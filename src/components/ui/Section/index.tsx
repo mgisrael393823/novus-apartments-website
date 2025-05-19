@@ -90,7 +90,7 @@ export function Section({
               }}
             >
               {icon && <div className="mr-3 text-[#CAB06B]">{icon}</div>}
-              <h2 className={`text-2xl font-semibold text-[#333333] ${centered ? 'mx-auto' : ''}`}>
+              <h2 className={`text-3xl font-bold text-[#333333] tracking-tight ${centered ? 'mx-auto' : ''}`}>
                 {title}
               </h2>
             </motion.div>
@@ -98,7 +98,7 @@ export function Section({
           
           {subtitle && (
             <motion.p 
-              className="text-[#666666] mt-2 max-w-3xl"
+              className="text-[#666666] mt-2 max-w-3xl text-lg leading-relaxed"
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { 

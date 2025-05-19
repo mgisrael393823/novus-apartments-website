@@ -127,7 +127,7 @@ export function Paragraph({
       variant={size === 'large' ? 'body-lg' : 'body'} 
       color="secondary"
       wrap={wrap}
-      className={cn("mb-4", className)}
+      className={cn("mb-4 leading-relaxed", className)}
     >
       {children}
     </Text>
