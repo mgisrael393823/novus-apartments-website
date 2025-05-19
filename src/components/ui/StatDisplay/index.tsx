@@ -127,11 +127,13 @@ export function StatDisplay({
       <div className={cn(
         "flex",
         textAlign === 'center' ? 'justify-center' : 'justify-between',
-        "items-start mb-3"
+        "items-start mb-3",
+        variant === 'circular' ? 'w-full text-center' : ''
       )}>
         <div className={cn(
           "flex items-center",
-          textAlign === 'center' ? 'justify-center' : 'justify-start'
+          textAlign === 'center' ? 'justify-center' : 'justify-start',
+          variant === 'circular' ? 'w-full flex-col' : ''
         )}>
           {icon && !isCircular && (
             <div className="w-10 h-10 rounded-full bg-novus-cream flex items-center justify-center mr-3">
@@ -140,7 +142,10 @@ export function StatDisplay({
               </span>
             </div>
           )}
-          <div className="flex items-center space-x-2">
+          <div className={cn(
+            "flex items-center space-x-2",
+            variant === 'circular' ? 'justify-center' : ''
+          )}>
             <p className={cn(
               labelColor,
               labelSizeStyles, 
@@ -168,12 +173,13 @@ export function StatDisplay({
       
       {/* Value display - either circular or standard */}
       {isCircular ? (
-        <div className={cn("flex", textAlign === 'center' ? 'justify-center' : 'justify-start', "mb-3")}>
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-novus-cream border-4 border-novus-gold">
+        <div className={cn("flex w-full", textAlign === 'center' ? 'justify-center' : 'justify-start', "mb-3")}>
+          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-novus-cream border-4 border-novus-gold overflow-hidden">
             <span className={cn(
-              "font-bold",
+              "font-bold text-center flex items-center justify-center",
               valueColor,
-              valueSizeStyles
+              value.toString().length > 5 ? "text-xl" : valueSizeStyles,
+              "w-full h-full px-1 whitespace-nowrap"
             )}>
               {value}
             </span>
@@ -199,11 +205,15 @@ export function StatDisplay({
       
       {/* Description text */}
       {description && (
-        <div className={cn(textAlign === 'center' ? 'text-center' : 'text-left')}>
+        <div className={cn(
+          textAlign === 'center' ? 'text-center' : 'text-left',
+          variant === 'circular' ? 'w-full text-center' : ''
+        )}>
           <p className={cn(
             descColor,
             descSizeStyles,
-            "max-w-full break-words"
+            "max-w-full break-words",
+            variant === 'circular' ? 'text-center' : ''
           )}>
             {description}
           </p>

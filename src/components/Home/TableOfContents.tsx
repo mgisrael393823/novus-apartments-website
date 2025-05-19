@@ -12,11 +12,10 @@ import {
   Lock,
   ArrowRight
 } from "lucide-react";
-import { Container } from "@/components/ui/Container";
-import { Section } from "@/components/ui/Container";
+import { Container, ContentBox } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { Heading, SectionTitle, Paragraph, Text } from "@/components/ui/Typography";
 import { Grid } from "@/components/ui/Grid";
-import { ContentBox } from "@/components/ui/Container";
 import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription, CardBadge } from "@/components/ui/card";
 
 const sections = [
@@ -80,7 +79,7 @@ const sections = [
 
 export default function TableOfContents() {
   return (
-    <Section size="lg">
+    <Section>
       <Container size="wide">
         <div className="text-center mb-16">
           <SectionTitle className="mb-2">ACCESS THE BLUEPRINT</SectionTitle>

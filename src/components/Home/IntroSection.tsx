@@ -1,16 +1,15 @@
 
 import React from "react";
 import Link from "next/link";
-import { Container } from "@/components/ui/Container";
+import { Container, ContentBox } from "@/components/ui/Container";
 import { Heading, SectionTitle, Paragraph, Text } from "@/components/ui/Typography";
-import { Section } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { Grid, CardGrid } from "@/components/ui/Grid";
-import { ContentBox } from "@/components/ui/Container";
 import { Button } from "@/components/ui/button";
 
 export default function IntroSection() {
   return (
-    <Section size="lg">
+    <Section>
       <Container size="wide">
         <div className="mb-16 text-center">
           <div className="inline-block mb-8">
