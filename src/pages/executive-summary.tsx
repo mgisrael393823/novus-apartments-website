@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { TimelinePhase } from "@/components/ui/Timeline";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout/Layout";
 import { Heading, SectionTitle, Paragraph, Text } from "@/components/ui/Typography";
-import { Container, Section, ContentBox } from "@/components/ui/Container";
+import { Container, ContentBox } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { StatBox } from "@/components/ui/StatBox";
 import { StatDisplay } from "@/components/ui/StatDisplay";
 import { Grid, CardGrid } from "@/components/ui/Grid";
@@ -12,7 +14,7 @@ import { AbsorptionChart } from "@/components/ui/AbsorptionChart";
 import { Timeline } from "@/components/ui/Timeline";
 import { ComparisonTable } from "@/components/ui/DataTable";
 import { CollapsibleCard } from "@/components/ui/CollapsibleCard";
-import { CountUp } from "@/components/ui/CountUp";
+// Remove CountUp import since we're not using it anymore
 import { 
   BarChart, 
   ChevronDown, 
@@ -77,7 +79,7 @@ export default function ExecutiveSummary() {
   ];
 
   // Data for timeline
-  const implementationPhases = [
+  const implementationPhases: TimelinePhase[] = [
     {
       title: "PRE-LAUNCH PHASE",
       subtitle: "Building foundations for a successful launch",
@@ -241,7 +243,7 @@ export default function ExecutiveSummary() {
             <Section 
               title="Project Overview" 
               subtitle="Key performance indicators and project details for The Novus"
-              withDivider
+              divider={true}
             >
               <div className="mb-4 flex items-center">
                 <Activity size={22} className="text-novus-gold mr-2" />
@@ -261,7 +263,7 @@ export default function ExecutiveSummary() {
                 
                 <StatDisplay
                   label="Competitive Rents"
-                  value={<><CountUp end={15} suffix="%" duration={1500} /></>}
+                  value="15%"
                   description="Premium to market"
                   tooltip="The Novus commands a premium rental rate that reflects its superior height, views, and luxury finishes compared to downtown competitors."
                   variant="default"
@@ -281,7 +283,7 @@ export default function ExecutiveSummary() {
                 
                 <StatDisplay
                   label="Height Advantage"
-                  value={<><CountUp end={27} suffix=" stories" duration={1500} /></>}
+                  value="27 stories"
                   description="Tallest in downtown"
                   tooltip="Unique positioning as downtown Durham's tallest residential building, offering unmatched views and premium living experience."
                   variant="highlight"
@@ -336,7 +338,7 @@ export default function ExecutiveSummary() {
             <Section 
               title="Market Opportunity Overview" 
               subtitle="Strategic opportunities for The Novus in Downtown Durham's multifamily market"
-              withDivider
+              divider={true}
             >
               <div className="mb-4 flex items-center">
                 <LineChart size={22} className="text-novus-gold mr-2" />
@@ -615,7 +617,7 @@ export default function ExecutiveSummary() {
             <Section 
               title="Strategy Pillars" 
               subtitle="Strategic approach categories based on our market position analysis"
-              withDivider
+              divider={true}
             >
               <div className="mb-4 flex items-center">
                 <Columns size={22} className="text-novus-gold mr-2" />

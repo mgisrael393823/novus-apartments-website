@@ -223,13 +223,25 @@ interface SectionProps {
   className?: string;
   title?: string;
   divider?: boolean;
+  animate?: boolean;
+  icon?: React.ReactNode;
+  subtitle?: string;
+  color?: string;
+  badge?: string;
+  centered?: boolean;
 }
 
 export function Section({
   children,
   className = '',
   title,
-  divider = false
+  divider = false,
+  animate,
+  icon,
+  subtitle,
+  color,
+  badge,
+  centered
 }: SectionProps) {
   return (
     <section 

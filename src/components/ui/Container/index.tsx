@@ -51,6 +51,11 @@ interface SectionProps {
   withDivider?: boolean;
   size?: 'sm' | 'default' | 'lg';
   id?: string;
+  animate?: boolean;
+  color?: string;
+  divider?: boolean;
+  badge?: string;
+  centered?: boolean;
 }
 
 export function Section({
@@ -61,7 +66,12 @@ export function Section({
   className = '',
   withDivider = false,
   size = 'default',
-  id
+  id,
+  animate = true,
+  color,
+  divider = false,
+  badge,
+  centered = false
 }: SectionProps) {
   const sizeClass = {
     sm: "py-6 md:py-8 mb-8 md:mb-12",
