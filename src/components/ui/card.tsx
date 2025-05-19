@@ -10,18 +10,18 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant = 'default', withPadding = true, ...props }, ref) => {
     const variantStyles = {
-      default: "border border-novus-border bg-white shadow-sm",
-      outline: "border border-novus-border bg-white",
-      premium: "border border-novus-border bg-novus-cream relative",
+      default: "border border-novus-border bg-white shadow-md",
+      outline: "border border-novus-border bg-white shadow-sm",
+      premium: "border border-novus-border bg-novus-cream shadow-md relative",
     }[variant];
     
     return (
       <div
         ref={ref}
         className={cn(
-          "rounded-sm",
+          "rounded-md",
           variantStyles,
-          withPadding && "p-5 md:p-6",
+          withPadding && "p-6 md:p-8",
           className
         )}
         {...props}

@@ -61,9 +61,9 @@ export function StatDisplay({
   }[size];
 
   const valueSizeStyles = {
-    sm: "text-xl",
-    md: "text-2xl",
-    lg: "text-3xl"
+    sm: "text-xl md:text-2xl",
+    md: "text-2xl md:text-3xl",
+    lg: "text-3xl md:text-4xl"
   }[size];
 
   const descSizeStyles = {
@@ -113,7 +113,7 @@ export function StatDisplay({
   return (
     <motion.div
       className={cn(
-        "rounded-sm transition-all duration-300 hover:shadow-md relative overflow-hidden",
+        "rounded-md transition-all duration-300 hover:shadow-md relative overflow-hidden h-full flex flex-col",
         variantStyles,
         boxSizeStyles,
         className
@@ -190,7 +190,7 @@ export function StatDisplay({
       ) : (
         <div className={cn("flex items-end", textAlign === 'center' ? 'justify-center' : 'justify-start', "mb-3")}>
           <p className={cn(
-            "font-bold",
+            "font-extrabold",
             valueColor,
             valueSizeStyles,
             "mr-2"
