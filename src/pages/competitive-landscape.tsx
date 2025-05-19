@@ -4,10 +4,11 @@ import Layout from "@/components/Layout/Layout";
 import { Building, Users, Zap, Award, BarChart, Target, TrendingUp, MapPin, Diamond, Check, Star, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { CompetitorCard, CompetitorProfile } from "@/components/ui/CompetitorCard";
+import { CompetitorCard } from "@/components/ui/CompetitorCard";
 import { MatrixComparisonTable, FeatureComparisonTable } from "@/components/ui/ComparisonTable";
 import { InsightsPanel, KeyAdvantage } from "@/components/ui/InsightsPanel";
-import { Container, Section, ContentBox } from "@/components/ui/Container";
+import { Container, ContentBox } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { Heading, Text, Paragraph } from "@/components/ui/Typography";
 import { Grid } from "@/components/ui/Grid";
 
@@ -208,7 +209,29 @@ const competitors: CompetitorProfile[] = [
 ];
 
 // Matrix data
-const properties = [
+interface Property {
+  name: string;
+  year: string;
+  units: string;
+  highlight?: boolean;
+}
+
+interface MetricValue {
+  value: string;
+  highlight?: boolean;
+  rating?: number;
+}
+
+interface MetricValues {
+  [key: string]: MetricValue;
+}
+
+interface Metric {
+  name: string;
+  values: MetricValues;
+}
+
+const properties: Property[] = [
   { name: "The Novus", year: "2025", units: "188", highlight: true },
   { name: "Van Alen", year: "2021", units: "418" },
   { name: "One City Center", year: "2018", units: "139" },
@@ -217,7 +240,7 @@ const properties = [
   { name: "Berkshire Ninth Street", year: "2015", units: "303" },
 ];
 
-const matrixMetrics = [
+const matrixMetrics: Metric[] = [
   {
     name: "Avg. Rent",
     values: {
@@ -267,7 +290,22 @@ const matrixMetrics = [
 // Feature comparison data
 const featureComparisonProperties = ["The Novus", "Van Alen", "One City Center", "Cortland Bull City", "Foster on the Park"];
 
-const featureComparisonData = [
+interface FeatureValue {
+  value: string;
+  highlight?: boolean;
+}
+
+interface FeatureValues {
+  [key: string]: FeatureValue | string;
+}
+
+interface Feature {
+  name: string;
+  category?: string;
+  values: FeatureValues;
+}
+
+const featureComparisonData: Feature[] = [
   {
     name: "Building Height",
     values: {
@@ -403,6 +441,35 @@ const keyAdvantages = [
   }
 ];
 
+// Update CompetitorProfile interface to make all properties optional
+interface CompetitorProfile {
+  name: string;
+  location: string;
+  builtYear: string;
+  units: string;
+  distance: string;
+  pricing?: {
+    studio: string;
+    oneBr: string;
+    twoBr: string;
+  };
+  performance?: {
+    occupancy: string;
+    concessions: string;
+  };
+  residentProfile?: {
+    medianAge: string;
+    income: string;
+    workFromHome: string;
+    demographics: string;
+  };
+  strengths?: string[];
+  weaknesses?: string[];
+  recommendations?: string[];
+  isPrimary: boolean;
+  ranking: number;
+}
+
 export default function CompetitiveLandscape() {
   return (
     <>
@@ -460,8 +527,7 @@ export default function CompetitiveLandscape() {
             title="Competitive Set Overview"
             subtitle="An analysis of the primary and secondary competitors in the Downtown Durham market."
             icon={<Building className="h-6 w-6" />}
-            animate={true}
-            withDivider
+            divider={true}
           >
             {/* Main Competitor Section */}
             <div className="mb-10">
@@ -520,13 +586,13 @@ export default function CompetitiveLandscape() {
                           <h5 className="text-base font-semibold mb-3">Pricing</h5>
                           <div className="grid grid-cols-2 gap-y-2">
                             <div className="text-sm text-gray-500">Studio</div>
-                            <div className="text-sm font-medium text-black">{competitor.pricing.studio}</div>
+                            <div className="text-sm font-medium text-black">{competitor.pricing?.studio}</div>
                             
                             <div className="text-sm text-gray-500">1BR</div>
-                            <div className="text-sm font-medium text-black">{competitor.pricing.oneBr}</div>
+                            <div className="text-sm font-medium text-black">{competitor.pricing?.oneBr}</div>
                             
                             <div className="text-sm text-gray-500">2BR</div>
-                            <div className="text-sm font-medium text-black">{competitor.pricing.twoBr}</div>
+                            <div className="text-sm font-medium text-black">{competitor.pricing?.twoBr}</div>
                           </div>
                         </div>
                         
@@ -539,12 +605,12 @@ export default function CompetitiveLandscape() {
                             <div className="text-sm text-gray-500 flex items-center">Occupancy</div>
                             <div className="text-sm">
                               <span className="bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-medium">
-                                {competitor.performance.occupancy}
+                                {competitor.performance?.occupancy}
                               </span>
                             </div>
                             
                             <div className="text-sm text-gray-500">Concessions</div>
-                            <div className="text-sm font-medium text-black">{competitor.performance.concessions}</div>
+                            <div className="text-sm font-medium text-black">{competitor.performance?.concessions}</div>
                           </div>
                         </div>
                         
@@ -557,16 +623,16 @@ export default function CompetitiveLandscape() {
                               <h5 className="text-base font-semibold mb-3">Resident Profile</h5>
                               <div className="grid grid-cols-2 gap-y-2">
                                 <div className="text-sm text-gray-500">Median Age</div>
-                                <div className="text-sm font-medium text-black">{competitor.residentProfile.medianAge}</div>
+                                <div className="text-sm font-medium text-black">{competitor.residentProfile?.medianAge}</div>
                                 
                                 <div className="text-sm text-gray-500">Income</div>
-                                <div className="text-sm font-medium text-black">{competitor.residentProfile.income}</div>
+                                <div className="text-sm font-medium text-black">{competitor.residentProfile?.income}</div>
                                 
                                 <div className="text-sm text-gray-500">WFH</div>
-                                <div className="text-sm font-medium text-black">{competitor.residentProfile.workFromHome}</div>
+                                <div className="text-sm font-medium text-black">{competitor.residentProfile?.workFromHome}</div>
                                 
                                 <div className="text-sm text-gray-500">Demographics</div>
-                                <div className="text-sm font-medium text-black">{competitor.residentProfile.demographics}</div>
+                                <div className="text-sm font-medium text-black">{competitor.residentProfile?.demographics}</div>
                               </div>
                             </div>
                           </>
@@ -627,13 +693,13 @@ export default function CompetitiveLandscape() {
                           <h5 className="text-base font-semibold mb-3">Pricing</h5>
                           <div className="grid grid-cols-2 gap-y-2">
                             <div className="text-sm text-gray-500">Studio</div>
-                            <div className="text-sm font-medium text-black">{competitor.pricing.studio}</div>
+                            <div className="text-sm font-medium text-black">{competitor.pricing?.studio}</div>
                             
                             <div className="text-sm text-gray-500">1BR</div>
-                            <div className="text-sm font-medium text-black">{competitor.pricing.oneBr}</div>
+                            <div className="text-sm font-medium text-black">{competitor.pricing?.oneBr}</div>
                             
                             <div className="text-sm text-gray-500">2BR</div>
-                            <div className="text-sm font-medium text-black">{competitor.pricing.twoBr}</div>
+                            <div className="text-sm font-medium text-black">{competitor.pricing?.twoBr}</div>
                           </div>
                         </div>
                         
@@ -646,12 +712,12 @@ export default function CompetitiveLandscape() {
                             <div className="text-sm text-gray-500 flex items-center">Occupancy</div>
                             <div className="text-sm">
                               <span className="bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-medium">
-                                {competitor.performance.occupancy}
+                                {competitor.performance?.occupancy}
                               </span>
                             </div>
                             
                             <div className="text-sm text-gray-500">Concessions</div>
-                            <div className="text-sm font-medium text-black">{competitor.performance.concessions}</div>
+                            <div className="text-sm font-medium text-black">{competitor.performance?.concessions}</div>
                           </div>
                         </div>
                       </motion.div>
@@ -750,26 +816,44 @@ export default function CompetitiveLandscape() {
                       </tr>
                     </thead>
                     <tbody>
+                      {/* Add "Physical" category header for the first item */}
+                      <tr className="bg-[#f2f2f2] shadow-sm">
+                        <td 
+                          colSpan={featureComparisonProperties.length + 1} 
+                          className="py-5 px-6 font-semibold text-[16px] border-l-4 border-[#CAB06B]"
+                        >
+                          Physical Attributes
+                        </td>
+                      </tr>
+                      
                       {featureComparisonData.map((feature, featureIdx) => (
                         <React.Fragment key={featureIdx}>
                           {featureIdx > 0 && feature.category && feature.category !== featureComparisonData[featureIdx-1].category && (
-                            <tr className="bg-gray-100">
-                              <td colSpan={featureComparisonProperties.length + 1} className="py-2 px-4 font-medium">
-                                {feature.category}
-                              </td>
-                            </tr>
+                            <>
+                              <tr className="h-4">
+                                <td colSpan={featureComparisonProperties.length + 1}></td>
+                              </tr>
+                              <tr className="bg-[#f2f2f2] shadow-sm">
+                                <td 
+                                  colSpan={featureComparisonProperties.length + 1} 
+                                  className="py-5 px-6 font-semibold text-[16px] border-l-4 border-[#CAB06B]"
+                                >
+                                  {feature.category}
+                                </td>
+                              </tr>
+                            </>
                           )}
-                          <tr className={featureIdx % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                            <td className="border-b py-3 px-4 font-medium align-top">{feature.name}</td>
+                          <tr className={`${featureIdx % 2 === 0 ? "bg-white" : "bg-gray-50"} ${feature.category ? "mt-2" : ""}`}>
+                            <td className="border-b py-4 px-5 font-medium align-top">{feature.name}</td>
                             {featureComparisonProperties.map((property, propIdx) => {
                               const value = feature.values[property];
-                              const displayValue = typeof value === 'object' ? value.value : value;
-                              const isHighlighted = typeof value === 'object' && value.highlight;
+                              const displayValue = typeof value === 'object' && 'value' in value ? value.value : value as string;
+                              const isHighlighted = typeof value === 'object' && 'highlight' in value ? value.highlight : false;
                               
                               return (
                                 <td 
                                   key={propIdx} 
-                                  className={`border-b py-3 px-4 align-top ${isHighlighted ? "font-medium" : ""} ${property === "The Novus" ? "bg-amber-50" : ""}`}
+                                  className={`border-b py-4 px-5 align-top ${isHighlighted ? "font-medium" : ""} ${property === "The Novus" ? "bg-amber-50" : ""}`}
                                 >
                                   {displayValue && displayValue.includes("\n") ? (
                                     <ul className="list-disc pl-4 space-y-1">
@@ -796,7 +880,6 @@ export default function CompetitiveLandscape() {
             subtitle="Property-specific insights for the primary competitors in The Novus's competitive set, with recommendations for strategic positioning and competitive response."
             icon={<TrendingUp className="h-6 w-6" />}
             divider={true}
-            animate={true}
           >
             <div className="space-y-8">
               {competitors
@@ -818,7 +901,6 @@ export default function CompetitiveLandscape() {
             subtitle="Our competitive analysis reveals significant opportunity for The Novus to establish a unique market position."
             icon={<Award className="h-6 w-6" />}
             divider={true}
-            animate={true}
             color="light"
           >
             <div className="mb-8">
