@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 
 export interface StatDisplayProps {
   label: string;
-  value: string | number;
+  value: React.ReactNode;
   description?: string;
   tooltip?: string;
   icon?: React.ReactNode;
@@ -178,7 +178,9 @@ export function StatDisplay({
             <span className={cn(
               "font-bold text-center flex items-center justify-center",
               valueColor,
-              value.toString().length > 5 ? "text-xl" : valueSizeStyles,
+              typeof value === 'string' || typeof value === 'number' 
+                ? (value.toString().length > 5 ? "text-xl" : valueSizeStyles)
+                : valueSizeStyles,
               "w-full h-full px-1 whitespace-nowrap"
             )}>
               {value}
@@ -239,7 +241,7 @@ export function StatDisplay({
 // For compatibility with existing code
 export interface LegacyStatDisplayProps {
   title: string;
-  value: string;
+  value: React.ReactNode;
   description?: string;
   trend?: "up" | "down" | "neutral";
 }
