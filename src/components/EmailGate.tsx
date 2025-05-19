@@ -47,17 +47,29 @@ const EmailGate: React.FC<EmailGateProps> = ({ children }) => {
         body: JSON.stringify({ email }),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to submit email');
+      // Try to parse the response, but don't block on failure
+      let responseData;
+      try {
+        responseData = await response.json();
+      } catch (jsonError) {
+        console.error('Error parsing response:', jsonError);
       }
-
-      // Success - store in localStorage and allow access
+      
+      // Even if the API response fails, we still allow access
+      // This ensures users can access the site even if email storage fails
+      
+      // Store in localStorage and allow access
       localStorage.setItem('novus_email_submitted', 'true');
       localStorage.setItem('novus_email', email);
       setIsSubmitted(true);
     } catch (err) {
       console.error('Error submitting email:', err);
-      setError('There was a problem submitting your email. Please try again.');
+      
+      // Even if there's an error, we'll still let the user in
+      // This prevents users from being blocked due to server issues
+      localStorage.setItem('novus_email_submitted', 'true');
+      localStorage.setItem('novus_email', email);
+      setIsSubmitted(true);
     } finally {
       setIsLoading(false);
     }
@@ -79,7 +91,7 @@ const EmailGate: React.FC<EmailGateProps> = ({ children }) => {
           backdropFilter: 'blur(8px)'
         }}
       >
-        <div className="w-full max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="shine-border w-full max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="py-5 px-6 text-center">
             <div className="mb-5 flex justify-center">
               <img 
