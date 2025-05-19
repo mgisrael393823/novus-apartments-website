@@ -283,8 +283,16 @@ export default function PricingFramework() {
             <div className="mb-8">
               {/* Simplified premium item components */}
               {(() => {
+                // Define interface for PremiumItem props
+                interface PremiumItemProps {
+                  icon: React.ReactNode;
+                  label: string;
+                  price: string;
+                  description: string;
+                }
+                
                 // Single reusable premium item component
-                const PremiumItem = ({ icon, label, price, description }) => (
+                const PremiumItem = ({ icon, label, price, description }: PremiumItemProps) => (
                   <div className="flex gap-3">
                     <div className="w-7 h-7 rounded-full bg-[#F5EFD6] text-[#CAB06B] flex items-center justify-center shrink-0 mt-0.5">
                       {icon}
@@ -391,8 +399,17 @@ export default function PricingFramework() {
             <div className="mb-8">
               {/* Define the LeaseConcessionCard component */}
               {(() => {
+                // Define interface for LeaseConcessionCard props
+                interface LeaseConcessionCardProps {
+                  phase: string;
+                  occupancyRange: string;
+                  rentOffer: string;
+                  leaseTerms: string;
+                  description: string;
+                }
+                
                 // Reusable component for lease concessions
-                const LeaseConcessionCard = ({ phase, occupancyRange, rentOffer, leaseTerms, description }) => (
+                const LeaseConcessionCard = ({ phase, occupancyRange, rentOffer, leaseTerms, description }: LeaseConcessionCardProps) => (
                   <div className="bg-white rounded-lg border border-[#E5E2D9] p-5 shadow-sm flex flex-col items-center text-center">
                     <div className="flex items-center gap-2 mb-3">
                       <div className="w-8 h-8 rounded-full bg-[#CAB06B] text-white flex items-center justify-center text-base font-bold shrink-0">
@@ -467,8 +484,15 @@ export default function PricingFramework() {
             
               
               {(() => {
+                // Define interface for StabilizationBox props
+                interface StabilizationBoxProps {
+                  label: string;
+                  value: string;
+                  description: string;
+                }
+                
                 // Reusable component for stabilization concessions
-                const StabilizationBox = ({ label, value, description }) => (
+                const StabilizationBox = ({ label, value, description }: StabilizationBoxProps) => (
                   <div className="bg-white rounded-lg border border-[#E5E2D9] p-5 text-center flex flex-col items-center">
                     <h4 className="text-gray-900 font-medium mb-2">{label}</h4>
                     <p className="text-[#CAB06B] font-bold text-lg mb-2">{value}</p>
@@ -517,8 +541,16 @@ export default function PricingFramework() {
               })()}
               
               {(() => {
+                // Define interface for ReferralItem props
+                interface ReferralItemProps {
+                  id: string;
+                  label: string;
+                  value: string;
+                  description: string;
+                }
+                
                 // Reusable component for referral programs
-                const ReferralItem = ({ id, label, value, description }) => (
+                const ReferralItem = ({ id, label, value, description }: ReferralItemProps) => (
                   <div className="flex items-start">
                     <div className="w-7 h-7 rounded-full bg-[#F5EFD6] flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                       <span className="text-[#CAB06B] font-bold text-sm">{id}</span>
@@ -531,8 +563,15 @@ export default function PricingFramework() {
                   </div>
                 );
 
+                // Define interface for SeasonalSpecialCard props
+                interface SeasonalSpecialCardProps {
+                  title: string;
+                  offer: string;
+                  timing: string;
+                }
+                
                 // Reusable component for seasonal specials
-                const SeasonalSpecialCard = ({ title, offer, timing }) => (
+                const SeasonalSpecialCard = ({ title, offer, timing }: SeasonalSpecialCardProps) => (
                   <div className="border border-[#E5E2D9] rounded-md p-4 bg-[#F9F8F4] shadow-sm">
                     <p className="text-base font-medium text-gray-900 mb-1">{title}</p>
                     <p className="text-base font-semibold text-[#CAB06B] mb-1">{offer}</p>
@@ -627,8 +666,15 @@ export default function PricingFramework() {
               })()}
               
               {(() => {
+                // Define interface for LeaseSpecialCard props
+                interface LeaseSpecialCardProps {
+                  title: string;
+                  offer: string;
+                  description: string;
+                }
+                
                 // Reusable component for look & lease specials
-                const LeaseSpecialCard = ({ title, offer, description }) => (
+                const LeaseSpecialCard = ({ title, offer, description }: LeaseSpecialCardProps) => (
                   <div className="bg-white border border-[#E5E2D9] rounded-lg p-4 text-center shadow-sm">
                     <p className="text-gray-900 font-medium mb-2">{title}</p>
                     <p className="text-[#CAB06B] font-bold mb-1">{offer}</p>
@@ -686,7 +732,17 @@ export default function PricingFramework() {
           <Section title="Value-Add Alternatives" divider>
             {(() => {
               // Reusable component for value-add cards
-              const ValueAddCard = ({ title, description, items }) => (
+              // Define interface for ValueAddCard props
+              interface ValueAddCardProps {
+                title: string;
+                description: string;
+                items: Array<{
+                  label: string;
+                  description: string;
+                }>;
+              }
+              
+              const ValueAddCard = ({ title, description, items }: ValueAddCardProps) => (
                 <div className="bg-white rounded-lg border border-[#E5E2D9] p-6 shadow-sm h-full">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
                   <p className="text-gray-600 mb-4">{description}</p>
@@ -814,7 +870,14 @@ export default function PricingFramework() {
           <Section title="Renewal Strategy" divider>
             {(() => {
               // Tier Card Component
-              const RenewalTierCard = ({ tier, title, description }) => (
+              // Define interface for RenewalTierCard props
+              interface RenewalTierCardProps {
+                tier: string;
+                title: string;
+                description: string;
+              }
+              
+              const RenewalTierCard = ({ tier, title, description }: RenewalTierCardProps) => (
                 <div className="bg-white rounded-lg border border-[#E5E2D9] p-5 shadow-sm h-full flex items-start gap-3">
                   <div className="w-7 h-7 rounded-full bg-[#F5EFD6] text-[#CAB06B] flex items-center justify-center text-sm font-bold shrink-0 mt-[2px]">
                     {tier}
@@ -831,7 +894,16 @@ export default function PricingFramework() {
               );
 
               // Renewal Incentive Card Component
-              const RenewalIncentiveCard = ({ title, items }) => (
+              // Define interface for RenewalIncentiveCard props
+              interface RenewalIncentiveCardProps {
+                title: string;
+                items: Array<{
+                  label: string;
+                  description: string;
+                }>;
+              }
+              
+              const RenewalIncentiveCard = ({ title, items }: RenewalIncentiveCardProps) => (
                 <div className="bg-white rounded-lg border border-[#E5E2D9] p-6 shadow-sm h-full">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
                   <ul className="space-y-3">
@@ -970,7 +1042,15 @@ export default function PricingFramework() {
             
             {(() => {
               // PricingMatrix component
-              const PricingMatrix = ({ title, description, headers, rows }) => (
+              // Define interface for PricingMatrix props
+              interface PricingMatrixProps {
+                title: string;
+                description: string;
+                headers: string[];
+                rows: string[][];
+              }
+              
+              const PricingMatrix = ({ title, description, headers, rows }: PricingMatrixProps) => (
                 <div className="bg-white rounded-lg border border-[#E5E2D9] p-6 shadow-sm mb-8">
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
@@ -1044,7 +1124,19 @@ export default function PricingFramework() {
           <Section title="Detailed Pricing & Incentive Strategy" divider>
             {(() => {
               // Rate Card Component
-              const DetailedRateCard = ({ title, subtitle, items, footer }) => (
+              // Define interface for DetailedRateCard props
+              interface DetailedRateCardProps {
+                title: string;
+                subtitle: string;
+                items: Array<{
+                  title: string;
+                  price: string;
+                  description: string;
+                }>;
+                footer?: string;
+              }
+              
+              const DetailedRateCard = ({ title, subtitle, items, footer }: DetailedRateCardProps) => (
                 <div className="bg-white rounded-lg border border-[#E5E2D9] shadow-sm h-full overflow-hidden">
                   <div className="bg-[#F5EFD6] p-4 border-b border-[#E5E2D9]">
                     <h3 className="text-xl font-semibold text-gray-900 mb-1">{title}</h3>
