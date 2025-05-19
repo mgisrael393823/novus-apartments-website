@@ -46,6 +46,7 @@ interface SectionProps {
   children: React.ReactNode;
   title?: string;
   subtitle?: string;
+  icon?: React.ReactNode;
   className?: string;
   withDivider?: boolean;
   size?: 'sm' | 'default' | 'lg';
@@ -56,6 +57,7 @@ export function Section({
   children,
   title,
   subtitle,
+  icon,
   className = '',
   withDivider = false,
   size = 'default',
@@ -77,12 +79,15 @@ export function Section({
       )}
     >
       {title && (
-        <h2 className={cn(
-          "text-2xl md:text-3xl font-semibold text-text-primary tracking-wide leading-tight mb-3",
-          headingFont.className
-        )}>
-          {title}
-        </h2>
+        <div className="flex items-center mb-3">
+          {icon && <div className="mr-3 text-[#CAB06B]">{icon}</div>}
+          <h2 className={cn(
+            "text-2xl md:text-3xl font-semibold text-text-primary tracking-wide leading-tight",
+            headingFont.className
+          )}>
+            {title}
+          </h2>
+        </div>
       )}
       
       {subtitle && (
