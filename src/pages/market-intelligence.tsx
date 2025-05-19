@@ -3,7 +3,8 @@ import Head from "next/head";
 import Layout from "@/components/Layout/Layout";
 import { BarChart, LineChart, PieChart, TrendingUp, Users, ArrowRight, Building, Clock } from "lucide-react";
 import { Heading, Paragraph, Text } from "@/components/ui/Typography";
-import { Container, Section, ContentBox } from "@/components/ui/Container";
+import { Container, ContentBox } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { StatDisplay } from "@/components/ui/StatDisplay";
 import { ProfileDisplay } from "@/components/ui/StatDisplay/ProfileDisplay";
 import { IncomeDistributionChart } from "@/components/ui/IncomeDistributionChart";
@@ -67,7 +68,7 @@ export default function MarketIntelligence() {
           </Section>
           
           <div className="space-y-10">
-            <Section title="Market Overview" withDivider className="pt-8">
+            <Section title="Market Overview" divider={true} className="pt-8">
               <Grid columns={3} gap="md" className="mb-8">
                 <StatDisplay
                   label="Metro Occupancy"
@@ -131,7 +132,7 @@ export default function MarketIntelligence() {
               </ContentBox>
             </Section>
             
-            <Section title="Demographic Analysis" withDivider>
+            <Section title="Demographic Analysis" divider={true}>
               <Grid columns={2} gap="md" className="mb-8">
                 <ContentBox variant="light">
                   <Heading level={3} className="mb-3">Primary Demographic</Heading>
@@ -192,7 +193,7 @@ export default function MarketIntelligence() {
               </ContentBox>
             </Section>
             
-            <Section title="Supply Analysis" withDivider>
+            <Section title="Supply Analysis" divider={true}>
               <ContentBox variant="highlight-accent" className="mb-6">
                 <Heading level={3} className="mb-2">Pipeline Overview</Heading>
                 <Paragraph wrap="pretty">
@@ -235,7 +236,7 @@ export default function MarketIntelligence() {
               </div>
             </Section>
             
-            <Section title="Demand Drivers" withDivider>
+            <Section title="Demand Drivers" divider={true}>
               <Grid columns={2} gap="md" className="mb-6">
                 <ContentBox variant="light">
                   <div className="flex flex-wrap items-center gap-3 mb-3">
@@ -287,51 +288,68 @@ export default function MarketIntelligence() {
               </Grid>
             </Section>
             
-            <Section title="Downtown Durham Market Highlights" withDivider>
+            <Section title="Downtown Durham Market Highlights" divider={true}>
               <ContentBox variant="light" className="mb-8">
                 <Paragraph size="large" className="mb-6" wrap="pretty">
                   Current market analysis reveals strong fundamentals in the Downtown Durham rental market, with stabilized occupancy and consistent rent growth driven by the area's robust technology, healthcare, and education sectors.
                 </Paragraph>
                 
-                <Grid columns={4} gap="md">
-                  <StatDisplay
-                    label="Occupancy Rate"
-                    value="92.5%"
-                    description="Current downtown average"
-                    variant="circular"
-                    textAlign="center"
-                    animate
-                  />
+                <div className="flex flex-wrap items-stretch">
+                  <div className="w-full md:w-1/4 px-2 mb-6 flex flex-col">
+                    <div className="flex justify-center mb-3">
+                      <StatDisplay
+                        label="Occupancy Rate"
+                        value="92.5%"
+                        description="Current downtown average"
+                        variant="circular"
+                        textAlign="center"
+                        animate
+                        className="w-full"
+                      />
+                    </div>
+                  </div>
                   
-                  <StatDisplay
-                    label="Annual Rent Growth"
-                    value="7.2%"
-                    description="Year-over-year increase"
-                    variant="circular"
-                    textAlign="center"
-                    animate
-                  />
+                  <div className="w-full md:w-1/4 px-2 mb-6 flex flex-col">
+                    <div className="flex justify-center mb-3">
+                      <StatDisplay
+                        label="Annual Rent Growth"
+                        value="7.2%"
+                        description="Year-over-year increase"
+                        variant="circular"
+                        textAlign="center"
+                        animate
+                        className="w-full"
+                      />
+                    </div>
+                  </div>
                   
-                  <StatDisplay
-                    label="Quarterly Absorption"
-                    value="250-300"
-                    description="Units per quarter"
-                    variant="circular"
-                    textAlign="center"
-                    animate
-                  />
+                  <div className="w-full md:w-1/4 px-2 mb-6 flex flex-col">
+                    <div className="flex justify-center mb-3">
+                      <StatDisplay
+                        label="Quarterly Absorption"
+                        value="250-300"
+                        description="Units per quarter"
+                        variant="circular"
+                        textAlign="center"
+                        animate
+                        className="w-full"
+                      />
+                    </div>
+                  </div>
                   
-                  <ProfileDisplay
-                    title="Renter Profile"
-                    items={[
-                      { label: "Age", value: "25-44 years" },
-                      { label: "Income", value: "~$95,000/year" },
-                      { label: "Industries", value: "Technology, Healthcare, Education" }
-                    ]}
-                    variant="outline"
-                    icon={<Users size={18} />}
-                  />
-                </Grid>
+                  <div className="w-full md:w-1/4 px-2 mb-6 flex flex-col">
+                    <ProfileDisplay
+                      title="Renter Profile"
+                      items={[
+                        { label: "Age", value: "25-44 years" },
+                        { label: "Income", value: "~$95,000/year" },
+                        { label: "Industries", value: "Technology, Healthcare, Education" }
+                      ]}
+                      variant="outline"
+                      icon={<Users size={18} />}
+                    />
+                  </div>
+                </div>
               </ContentBox>
               
               <ContentBox variant="highlight-accent" className="mb-8">
