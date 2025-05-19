@@ -108,7 +108,7 @@ function TimelineItem({ phase, isLast, index }: { phase: TimelinePhase; isLast: 
         )}
         
         <div className="mt-3 bg-[#F9F8F4] border border-[#E5E2D9] p-5 rounded-md shadow-sm">
-          <ul className="space-y-3">
+          <ul className="space-y-4">
             {items.map((item, idx) => (
               <motion.li 
                 key={idx} 
@@ -119,10 +119,10 @@ function TimelineItem({ phase, isLast, index }: { phase: TimelinePhase; isLast: 
                 transition={{ delay: 0.2 + idx * 0.05, duration: 0.3 }}
               >
                 <div 
-                  className="w-2 h-2 rounded-full mt-1.5 mr-2 flex-shrink-0"
-                  style={{ backgroundColor: accentColor }}
+                  className="w-3 h-3 rounded-full mt-1.5 mr-3 flex-shrink-0"
+                  style={{ backgroundColor: "#CAB06B" }}
                 ></div>
-                <span className="text-sm text-[#666666]">{item}</span>
+                <span className="text-base text-[#555555]">{item}</span>
               </motion.li>
             ))}
           </ul>
@@ -167,7 +167,7 @@ function HorizontalTimeline({ phases, className = '' }: { phases: TimelinePhase[
               </div>
               
               <div className="bg-[#F9F8F4] border border-[#E5E2D9] p-4 rounded-md shadow-sm">
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {phase.items.map((item, idx) => (
                     <motion.li 
                       key={idx} 
@@ -178,10 +178,10 @@ function HorizontalTimeline({ phases, className = '' }: { phases: TimelinePhase[
                       transition={{ delay: 0.3 + idx * 0.05, duration: 0.3 }}
                     >
                       <div 
-                        className="w-2 h-2 rounded-full mt-1.5 mr-2 flex-shrink-0"
-                        style={{ backgroundColor: phase.accentColor || '#CAB06B' }}
+                        className="w-3 h-3 rounded-full mt-1.5 mr-3 flex-shrink-0"
+                        style={{ backgroundColor: "#CAB06B" }}
                       ></div>
-                      <span className="text-xs text-[#666666] text-left">{item}</span>
+                      <span className="text-sm text-[#555555] text-left">{item}</span>
                     </motion.li>
                   ))}
                 </ul>

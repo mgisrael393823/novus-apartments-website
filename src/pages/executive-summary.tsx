@@ -14,6 +14,7 @@ import { AbsorptionChart } from "@/components/ui/AbsorptionChart";
 import { Timeline } from "@/components/ui/Timeline";
 import { ComparisonTable } from "@/components/ui/DataTable";
 import { CollapsibleCard } from "@/components/ui/CollapsibleCard";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 // Remove CountUp import since we're not using it anymore
 import { 
   BarChart, 
@@ -208,7 +209,7 @@ export default function ExecutiveSummary() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                <Heading level={1} className="text-4xl font-bold mb-6 tracking-tight">Executive Summary</Heading>
+                <Heading level={1} className="text-4xl font-bold mb-16 tracking-tight">Executive Summary</Heading>
               </motion.div>
             </motion.div>
             
@@ -246,9 +247,9 @@ export default function ExecutiveSummary() {
               divider={true}
               className="mb-16"
             >
-              <div className="mb-8 flex items-center">
+              <div className="mb-12 flex items-center">
                 <Activity size={22} className="text-novus-gold mr-2" />
-                <SectionTitle className="font-bold tracking-wider">KEY METRICS</SectionTitle>
+                <Heading level={3} className="font-bold text-2xl tracking-wider">KEY METRICS</Heading>
               </div>
               
               <Grid columns={4} gap="md" className="mb-8">
@@ -342,9 +343,9 @@ export default function ExecutiveSummary() {
               divider={true}
               className="mb-16"
             >
-              <div className="mb-8 flex items-center">
+              <div className="mb-12 flex items-center">
                 <LineChart size={22} className="text-novus-gold mr-2" />
-                <SectionTitle className="font-bold tracking-wider">MARKET INSIGHTS</SectionTitle>
+                <Heading level={3} className="font-bold text-2xl tracking-wider">MARKET INSIGHTS</Heading>
               </div>
             {/* Comprehensive Market Opportunity Analysis */}
             <motion.div 
@@ -357,7 +358,7 @@ export default function ExecutiveSummary() {
               <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#CAB06B] opacity-5"></div>
               
               <div className="mb-4">
-                <Heading level={3} className="uppercase tracking-wide flex items-center font-bold text-xl mb-4">
+                <Heading level={3} className="uppercase tracking-wide flex items-center font-bold text-2xl mb-6">
                   <ArrowRight className="h-5 w-5 mr-2 text-novus-gold" />
                   COMPREHENSIVE OPPORTUNITY ANALYSIS
                 </Heading>
@@ -368,8 +369,8 @@ export default function ExecutiveSummary() {
               </Paragraph>
               
               <div className="mb-6">
-                <Heading level={4} className="text-base uppercase tracking-wide mb-4 font-bold">KEY MARKET INSIGHTS</Heading>
-                <div className="space-y-3">
+                <Heading level={4} className="text-lg uppercase tracking-wide mb-6 font-bold">KEY MARKET INSIGHTS</Heading>
+                <ul className="space-y-4">
                   {[
                     "The Durham multifamily market is experiencing a period of adjustment with moderating rents (-12.8% year-over-year for one-bedrooms) and elevated construction activity.",
                     "Developers delivered 12,002 units in Raleigh-Durham in 2024 (a decade high) with an additional 20,272 units under construction as of January 2025.",
@@ -377,7 +378,7 @@ export default function ExecutiveSummary() {
                     "The Novus's distinctive high-rise format (27 stories) provides significant differentiation in a market with limited high-rise luxury inventory.",
                     "Target demographic analysis reveals three high-potential segments: Urban Professionals (25-40, income range), Empty Nesters/Downsizers (55+), and Remote Workers seeking work-from-home friendly environments."
                   ].map((insight, idx) => (
-                    <motion.div 
+                    <motion.li 
                       key={idx}
                       className="flex items-start"
                       initial={{ opacity: 0, x: -5 }}
@@ -385,11 +386,11 @@ export default function ExecutiveSummary() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 + idx * 0.05, duration: 0.3 }}
                     >
-                      <span className="text-[#CAB06B] mr-2 text-xl flex-shrink-0">•</span>
-                      <span className="text-[#666666]">{insight}</span>
-                    </motion.div>
+                      <span className="text-[#CAB06B] mr-3 text-xl flex-shrink-0">•</span>
+                      <span className="text-[#555555] text-base">{insight}</span>
+                    </motion.li>
                   ))}
-                </div>
+                </ul>
               </div>
               
               <motion.div 
@@ -399,22 +400,43 @@ export default function ExecutiveSummary() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
-                <Heading level={4} className="text-base uppercase mb-4 font-bold tracking-wide">CURRENT MARKET CONCESSIONS</Heading>
+                <Heading level={4} className="text-lg uppercase mb-6 font-bold tracking-wide">CURRENT MARKET CONCESSIONS</Heading>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                   <div className="p-4 bg-white rounded-md border border-[#E5E2D9] hover:shadow-md transition-shadow">
-                    <Text variant="body" className="text-sm font-bold text-[#333333] mb-2">Downtown Durham</Text>
-                    <Text variant="body" className="text-sm">1-2 months free on 12-month leases</Text>
-                    <Text variant="caption" className="mt-2 text-[#999999]">Avg. effective discount: 8-16%</Text>
+                    <Text variant="body" className="font-bold text-[#333333] mb-2">Downtown Durham</Text>
+                    <ul className="space-y-2 ml-1">
+                      <li className="flex items-start">
+                        <span className="text-[#CAB06B] mr-2 text-lg flex-shrink-0">•</span>
+                        <Text variant="body" className="text-[#555555]">1-2 months free on 12-month leases</Text>
+                      </li>
+                      <li>
+                        <Text variant="caption" className="text-[#666666] ml-6">Avg. effective discount: 8-16%</Text>
+                      </li>
+                    </ul>
                   </div>
                   <div className="p-4 bg-white rounded-md border border-[#E5E2D9] hover:shadow-md transition-shadow">
-                    <Text variant="body" className="text-sm font-bold text-[#333333] mb-2">Five Points District</Text>
-                    <Text variant="body" className="text-sm">Up to 1.5 months free on 12+ month leases</Text>
-                    <Text variant="caption" className="mt-2 text-[#999999]">Avg. effective discount: 8-12%</Text>
+                    <Text variant="body" className="font-bold text-[#333333] mb-2">Five Points District</Text>
+                    <ul className="space-y-2 ml-1">
+                      <li className="flex items-start">
+                        <span className="text-[#CAB06B] mr-2 text-lg flex-shrink-0">•</span>
+                        <Text variant="body" className="text-[#555555]">Up to 1.5 months free on 12+ month leases</Text>
+                      </li>
+                      <li>
+                        <Text variant="caption" className="text-[#666666] ml-6">Avg. effective discount: 8-12%</Text>
+                      </li>
+                    </ul>
                   </div>
                   <div className="p-4 bg-white rounded-md border border-[#E5E2D9] hover:shadow-md transition-shadow">
-                    <Text variant="body" className="text-sm font-bold text-[#333333] mb-2">Ninth Street Area</Text>
-                    <Text variant="body" className="text-sm">Up to $1,000 off select units + gift cards</Text>
-                    <Text variant="caption" className="mt-2 text-[#999999]">Avg. effective discount: 6-10%</Text>
+                    <Text variant="body" className="font-bold text-[#333333] mb-2">Ninth Street Area</Text>
+                    <ul className="space-y-2 ml-1">
+                      <li className="flex items-start">
+                        <span className="text-[#CAB06B] mr-2 text-lg flex-shrink-0">•</span>
+                        <Text variant="body" className="text-[#555555]">Up to $1,000 off select units + gift cards</Text>
+                      </li>
+                      <li>
+                        <Text variant="caption" className="text-[#666666] ml-6">Avg. effective discount: 6-10%</Text>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </motion.div>
@@ -430,188 +452,246 @@ export default function ExecutiveSummary() {
             subtitle="SWOT analysis identifying The Novus's position within the competitive landscape"
             className="mb-16"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
-              <CollapsibleCard 
-                title="Strengths" 
-                variant="strength"
-                initiallyExpanded={true}
-                items={[
-                  "Prime location in the Five Points District with superior walkability",
-                  "Tallest residential building (27 stories) offering unmatched views",
-                  "Distinctive amenity package including outdoor movie theater and golf simulators"
-                ]}
-              />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <Card className="border-l-4 border-l-[#60A561] min-h-[280px] hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold uppercase tracking-wider text-[#333333]">STRENGTHS</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4 ml-1 pl-0">
+                    {[
+                      "Prime location in the Five Points District with superior walkability",
+                      "Tallest residential building (27 stories) offering unmatched views",
+                      "Distinctive amenity package including outdoor movie theater and golf simulators"
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="text-[#CAB06B] mr-3 text-xl flex-shrink-0">•</span>
+                        <span className="text-[#555555] text-base">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
               
-              <CollapsibleCard 
-                title="Weaknesses" 
-                variant="weakness"
-                items={[
-                  "Entering a market with moderating rents and elevated concessions",
-                  "Premium pricing ($2,150-$8,732) in a price-sensitive market",
-                  "Unproven property with no established reputation"
-                ]}
-              />
+              <Card className="border-l-4 border-l-[#E5826D] min-h-[280px] hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold uppercase tracking-wider text-[#333333]">WEAKNESSES</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4 ml-1 pl-0">
+                    {[
+                      "Entering a market with moderating rents and elevated concessions",
+                      "Premium pricing ($2,150-$8,732) in a price-sensitive market",
+                      "Unproven property with no established reputation"
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="text-[#CAB06B] mr-3 text-xl flex-shrink-0">•</span>
+                        <span className="text-[#555555] text-base">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
               
-              <CollapsibleCard 
-                title="Opportunities" 
-                variant="opportunity"
-                items={[
-                  "Growing demand for remote work-friendly apartments",
-                  "Limited true high-rise competition in downtown Durham",
-                  "Enhanced technology integration to differentiate from competitors"
-                ]}
-              />
+              <Card className="border-l-4 border-l-[#CAB06B] min-h-[280px] hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold uppercase tracking-wider text-[#333333]">OPPORTUNITIES</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4 ml-1 pl-0">
+                    {[
+                      "Growing demand for remote work-friendly apartments",
+                      "Limited true high-rise competition in downtown Durham",
+                      "Enhanced technology integration to differentiate from competitors"
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="text-[#CAB06B] mr-3 text-xl flex-shrink-0">•</span>
+                        <span className="text-[#555555] text-base">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
               
-              <CollapsibleCard 
-                title="Threats" 
-                variant="threat"
-                items={[
-                  "Aggressive concessions from competitors (up to 2 months free)",
-                  "Continued rent moderation affecting luxury rental demand",
-                  "Competition from established properties with resident bases"
-                ]}
-              />
+              <Card className="border-l-4 border-l-[#A67BC2] min-h-[280px] hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold uppercase tracking-wider text-[#333333]">THREATS</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4 ml-1 pl-0">
+                    {[
+                      "Aggressive concessions from competitors (up to 2 months free)",
+                      "Continued rent moderation affecting luxury rental demand",
+                      "Competition from established properties with resident bases"
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="text-[#CAB06B] mr-3 text-xl flex-shrink-0">•</span>
+                        <span className="text-[#555555] text-base">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
             
-            {/* Detailed SWOT Analysis */}
-            <motion.div 
-              className="p-8 bg-white border border-[#E5E2D9] rounded-md shadow-sm relative overflow-hidden mt-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-[#CAB06B] opacity-5"></div>
-              
-              <div className="mb-4">
-                <Heading level={3} className="uppercase tracking-wide flex items-center font-bold text-xl mb-4">
-                  <ArrowRight className="h-5 w-5 mr-2 text-novus-gold" />
-                  DETAILED SWOT ANALYSIS
-                </Heading>
-              </div>
-              
-              <Paragraph className="leading-relaxed max-w-3xl mb-6">
-                Our comprehensive SWOT analysis includes detailed assessment of all competitive properties, market conditions, and strategic positioning opportunities.
-              </Paragraph>
-              
-              <div className="mb-8">
-                <Heading level={4} className="text-base uppercase tracking-wide mb-4 font-bold">STRENGTHS - EXPANDED ANALYSIS</Heading>
-                <div className="bg-[#F9F8F4] border-l-4 border-[#60A561] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm">
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <span className="text-[#60A561] mr-2 text-lg">•</span>
-                      <div>
-                        <Text variant="body" className="font-bold">Prime Location: </Text>
-                        <Text variant="body" color="secondary" className="inline">The Novus's position in the heart of Five Points District provides exceptional access to Duke University, downtown dining, and cultural venues, with walkability scores 18% higher than competitive set average.</Text>
+            <div className="p-6 bg-[#F9F8F4] border border-[#E5E2D9] rounded-md shadow-sm mb-16">
+              <Text variant="body-lg" className="text-[#666666] italic text-pretty">
+                The Novus can leverage its distinctive height advantage and premium amenities to overcome market challenges, targeting the underserved luxury high-rise segment while strategically addressing Durham's market rate moderation through value-focused positioning.
+              </Text>
+            </div>
+            
+            {/* Detailed SWOT Analysis as Accordion */}
+            <div className="mb-16">
+              <Accordion type="single" collapsible className="border border-[#E5E2D9] rounded-md shadow-sm overflow-hidden">
+                <AccordionItem value="detailed-swot" className="border-b-0">
+                  <AccordionTrigger className="py-4 px-6 hover:bg-[#F9F8F4] group">
+                    <div className="flex items-center">
+                      <div className="h-8 w-8 rounded-full bg-[#F5F5E6] border border-[#CAB06B] flex items-center justify-center mr-3">
+                        <ArrowRight className="h-4 w-4 text-[#CAB06B] group-data-[state=open]:rotate-90 transition-transform" />
                       </div>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#60A561] mr-2 text-lg">•</span>
-                      <div>
-                        <span className="font-medium text-[#333333]">High-Rise Format: </span>
-                        <span className="text-[#666666]">As downtown Durham's tallest residential building at 27 stories, The Novus offers unmatched views and a vertical living experience unavailable elsewhere in the market, with true high-rise specifications that differentiate it from mid-rise competitors.</span>
+                      <Heading level={3} className="text-lg font-bold uppercase tracking-wide">
+                        Expanded SWOT Analysis & Strategic Insights
+                      </Heading>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="p-6 pt-2 bg-white">
+                    <Paragraph className="leading-relaxed max-w-3xl mb-8">
+                      Our comprehensive SWOT analysis includes detailed assessment of all competitive properties, market conditions, and strategic positioning opportunities.
+                    </Paragraph>
+                    
+                    <div className="mb-8">
+                      <Heading level={4} className="text-lg uppercase tracking-wide mb-6 font-bold flex items-center">
+                        <span className="flex h-6 w-6 rounded-full bg-[#60A561] text-white items-center justify-center mr-3 text-xs font-bold">S</span>
+                        STRENGTHS - EXPANDED ANALYSIS
+                      </Heading>
+                      <div className="bg-[#F9F8F4] border-l-4 border-[#60A561] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm">
+                        <ul className="space-y-4">
+                          <li className="flex items-start">
+                            <span className="text-[#60A561] mr-3 text-xl flex-shrink-0">•</span>
+                            <div>
+                              <Text variant="body" className="font-bold">Prime Location: </Text>
+                              <Text variant="body" color="secondary" className="inline">The Novus's position in the heart of Five Points District provides exceptional access to Duke University, downtown dining, and cultural venues, with walkability scores 18% higher than competitive set average.</Text>
+                            </div>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-[#60A561] mr-3 text-xl flex-shrink-0">•</span>
+                            <div>
+                              <Text variant="body" className="font-bold">High-Rise Format: </Text>
+                              <Text variant="body" color="secondary" className="inline">As downtown Durham's tallest residential building at 27 stories, The Novus offers unmatched views and a vertical living experience unavailable elsewhere in the market, with true high-rise specifications that differentiate it from mid-rise competitors.</Text>
+                            </div>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-[#60A561] mr-3 text-xl flex-shrink-0">•</span>
+                            <div>
+                              <Text variant="body" className="font-bold">Premium Amenities: </Text>
+                              <Text variant="body" color="secondary" className="inline">Distinctive offerings including an outdoor movie theater, golf simulators, and pickleball court position The Novus at the top tier of the Durham market, complemented by smart home technology and premium concierge services.</Text>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#60A561] mr-2 text-lg">•</span>
-                      <div>
-                        <span className="font-medium text-[#333333]">Premium Amenities: </span>
-                        <span className="text-[#666666]">Distinctive offerings including an outdoor movie theater, golf simulators, and pickleball court position The Novus at the top tier of the Durham market, complemented by smart home technology and premium concierge services.</span>
+                    </div>
+                    
+                    <div className="mb-8">
+                      <Heading level={4} className="text-lg uppercase tracking-wide mb-6 font-bold flex items-center">
+                        <span className="flex h-6 w-6 rounded-full bg-[#E5826D] text-white items-center justify-center mr-3 text-xs font-bold">W</span>
+                        WEAKNESSES - RISK MITIGATION STRATEGIES
+                      </Heading>
+                      <div className="bg-[#F9F8F4] border-l-4 border-[#E5826D] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm">
+                        <ul className="space-y-4">
+                          <li className="flex items-start">
+                            <span className="text-[#E5826D] mr-3 text-xl flex-shrink-0">•</span>
+                            <div>
+                              <Text variant="body" className="font-bold">Market Adjustment: </Text>
+                              <Text variant="body" color="secondary" className="inline">Address moderating rents in Durham with value-oriented pre-leasing incentives structured for early signings, targeting 15% pre-leased before opening with enhanced service packages.</Text>
+                            </div>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-[#E5826D] mr-3 text-xl flex-shrink-0">•</span>
+                            <div>
+                              <Text variant="body" className="font-bold">High-Rise Differentiation: </Text>
+                              <Text variant="body" color="secondary" className="inline">Distinguish from competing properties through emphasis on the 27-story format, panoramic views, and exclusive amenities unavailable in other Durham properties.</Text>
+                            </div>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-[#E5826D] mr-3 text-xl flex-shrink-0">•</span>
+                            <div>
+                              <Text variant="body" className="font-bold">Concession Strategy: </Text>
+                              <Text variant="body" color="secondary" className="inline">Create structured concession tiers with 1.5-2 month offerings compared to the market average, supplemented with high-value amenity access and technology packages unique to The Novus.</Text>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="mb-8">
-                <Heading level={4} className="text-base uppercase tracking-wide mb-4 font-bold">WEAKNESSES - RISK MITIGATION STRATEGIES</Heading>
-                <div className="bg-[#F9F8F4] border-l-4 border-[#E5826D] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm">
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <span className="text-[#E5826D] mr-2 text-lg">•</span>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
                       <div>
-                        <span className="font-medium text-[#333333]">Market Adjustment: </span>
-                        <span className="text-[#666666]">Address moderating rents in Durham with value-oriented pre-leasing incentives structured for early signings, targeting 15% pre-leased before opening with enhanced service packages.</span>
+                        <Heading level={4} className="text-lg uppercase tracking-wide mb-6 font-bold flex items-center">
+                          <span className="flex h-6 w-6 rounded-full bg-[#CAB06B] text-white items-center justify-center mr-3 text-xs font-bold">O</span>
+                          OPPORTUNITIES - STRATEGIC APPROACH
+                        </Heading>
+                        <div className="bg-[#F9F8F4] border-l-4 border-[#CAB06B] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm h-full">
+                          <ul className="space-y-4">
+                            <li className="flex items-start">
+                              <span className="text-[#CAB06B] mr-3 text-xl flex-shrink-0">•</span>
+                              <div>
+                                <Text variant="body" className="font-bold">Remote Work Hub: </Text>
+                                <Text variant="body" color="secondary" className="inline">Capitalize on Duke University and Research Triangle tech sector with specialized coworking spaces, enterprise-grade connectivity, and networking events for remote professionals.</Text>
+                              </div>
+                            </li>
+                            <li className="flex items-start">
+                              <span className="text-[#CAB06B] mr-3 text-xl flex-shrink-0">•</span>
+                              <div>
+                                <Text variant="body" className="font-bold">Mixed-Use Integration: </Text>
+                                <Text variant="body" color="secondary" className="inline">Leverage 22,000+ sq ft of ground floor retail to create a "vertical neighborhood" concept with curated retail partners and integrated community programming tailored to Durham's vibrant downtown scene.</Text>
+                              </div>
+                            </li>
+                            <li className="flex items-start">
+                              <span className="text-[#CAB06B] mr-3 text-xl flex-shrink-0">•</span>
+                              <div>
+                                <Text variant="body" className="font-bold">Vertical Community: </Text>
+                                <Text variant="body" color="secondary" className="inline">Implement unique programming utilizing the building's 27-story format, including floor-based community networks and stratified amenity experiences unavailable in lower-rise competitors.</Text>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#E5826D] mr-2 text-lg">•</span>
+                      
                       <div>
-                        <span className="font-medium text-[#333333]">High-Rise Differentiation: </span>
-                        <span className="text-[#666666]">Distinguish from competing properties through emphasis on the 27-story format, panoramic views, and exclusive amenities unavailable in other Durham properties.</span>
+                        <Heading level={4} className="text-lg uppercase tracking-wide mb-6 font-bold flex items-center">
+                          <span className="flex h-6 w-6 rounded-full bg-[#A67BC2] text-white items-center justify-center mr-3 text-xs font-bold">T</span>
+                          THREATS - CONTINGENCY PLANNING
+                        </Heading>
+                        <div className="bg-[#F9F8F4] border-l-4 border-[#A67BC2] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm h-full">
+                          <ul className="space-y-4">
+                            <li className="flex items-start">
+                              <span className="text-[#A67BC2] mr-3 text-xl flex-shrink-0">•</span>
+                              <div>
+                                <Text variant="body" className="font-bold">Market Saturation: </Text>
+                                <Text variant="body" color="secondary" className="inline">Develop premium pricing strategy with stratified offerings based on floor level and views, preserving value while offering flexibility.</Text>
+                              </div>
+                            </li>
+                            <li className="flex items-start">
+                              <span className="text-[#A67BC2] mr-3 text-xl flex-shrink-0">•</span>
+                              <div>
+                                <Text variant="body" className="font-bold">Concession Escalation: </Text>
+                                <Text variant="body" color="secondary" className="inline">Prepare tiered concession strategy aligned with Durham's 1.5-2 month market average, with emphasis on service enhancements over pure rent discounts.</Text>
+                              </div>
+                            </li>
+                            <li className="flex items-start">
+                              <span className="text-[#A67BC2] mr-3 text-xl flex-shrink-0">•</span>
+                              <div>
+                                <Text variant="body" className="font-bold">Economic Uncertainty: </Text>
+                                <Text variant="body" color="secondary" className="inline">Leverage Durham's stable healthcare and education sectors in targeting, with marketing positioning focused on long-term value and stability.</Text>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#E5826D] mr-2 text-lg">•</span>
-                      <div>
-                        <span className="font-medium text-[#333333]">Concession Strategy: </span>
-                        <span className="text-[#666666]">Create structured concession tiers with 1.5-2 month offerings compared to the market average, supplemented with high-value amenity access and technology packages unique to The Novus.</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <Heading level={4} className="text-base uppercase tracking-wide mb-4 font-bold">OPPORTUNITIES - STRATEGIC APPROACH</Heading>
-                  <div className="bg-[#F9F8F4] border-l-4 border-[#CAB06B] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm h-full">
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <span className="text-[#CAB06B] mr-2 text-lg">•</span>
-                        <div>
-                          <span className="font-medium text-[#333333]">Remote Work Hub: </span>
-                          <span className="text-[#666666]">Capitalize on Duke University and Research Triangle tech sector with specialized coworking spaces, enterprise-grade connectivity, and networking events for remote professionals.</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-[#CAB06B] mr-2 text-lg">•</span>
-                        <div>
-                          <span className="font-medium text-[#333333]">Mixed-Use Integration: </span>
-                          <span className="text-[#666666]">Leverage 22,000+ sq ft of ground floor retail to create a "vertical neighborhood" concept with curated retail partners and integrated community programming tailored to Durham's vibrant downtown scene.</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-[#CAB06B] mr-2 text-lg">•</span>
-                        <div>
-                          <span className="font-medium text-[#333333]">Vertical Community: </span>
-                          <span className="text-[#666666]">Implement unique programming utilizing the building's 27-story format, including floor-based community networks and stratified amenity experiences unavailable in lower-rise competitors.</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div>
-                  <Heading level={4} className="text-base uppercase tracking-wide mb-4 font-bold">THREATS - CONTINGENCY PLANNING</Heading>
-                  <div className="bg-[#F9F8F4] border-l-4 border-[#A67BC2] border-t border-r border-b border-[#E5E2D9] p-5 rounded-md shadow-sm h-full">
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <span className="text-[#A67BC2] mr-2 text-lg">•</span>
-                        <div>
-                          <span className="font-medium text-[#333333]">Market Saturation: </span>
-                          <span className="text-[#666666]">Develop premium pricing strategy with stratified offerings based on floor level and views, preserving value while offering flexibility.</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-[#A67BC2] mr-2 text-lg">•</span>
-                        <div>
-                          <span className="font-medium text-[#333333]">Concession Escalation: </span>
-                          <span className="text-[#666666]">Prepare tiered concession strategy aligned with Durham's 1.5-2 month market average, with emphasis on service enhancements over pure rent discounts.</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-[#A67BC2] mr-2 text-lg">•</span>
-                        <div>
-                          <span className="font-medium text-[#333333]">Economic Uncertainty: </span>
-                          <span className="text-[#666666]">Leverage Durham's stable healthcare and education sectors in targeting, with marketing positioning focused on long-term value and stability.</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
             </Section>
           </Container>
           
@@ -623,9 +703,9 @@ export default function ExecutiveSummary() {
               divider={true}
               className="mb-16"
             >
-              <div className="mb-8 flex items-center">
+              <div className="mb-12 flex items-center">
                 <Columns size={22} className="text-novus-gold mr-2" />
-                <SectionTitle className="font-bold tracking-wider">RECOMMENDATIONS & ROADMAP</SectionTitle>
+                <Heading level={3} className="font-bold text-2xl tracking-wider">RECOMMENDATIONS & ROADMAP</Heading>
               </div>
             {/* Core Strategy Section - High-level categories only */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-12">
@@ -661,7 +741,7 @@ export default function ExecutiveSummary() {
                   >
                     <span className="text-[#CAB06B] text-xl font-bold">{pillar.number}</span>
                   </motion.div>
-                  <Heading level={4} className="text-lg font-bold mb-3">{pillar.title}</Heading>
+                  <Heading level={4} className="text-lg font-bold mb-4">{pillar.title}</Heading>
                   <Text variant="body" color="secondary" className="text-sm">
                     {pillar.description}
                   </Text>
@@ -672,7 +752,7 @@ export default function ExecutiveSummary() {
             {/* Implementation Roadmap */}
             <div className="mt-16">
               <div className="mb-8">
-                <Heading level={3} className="text-xl font-bold mb-4 uppercase tracking-wide">IMPLEMENTATION ROADMAP</Heading>
+                <Heading level={3} className="text-2xl font-bold mb-6 uppercase tracking-wide">IMPLEMENTATION ROADMAP</Heading>
                 <Paragraph className="mt-2">
                   Our tactical roadmap converts strategies into actionable steps with clear timelines, responsible parties, and success metrics.
                 </Paragraph>
@@ -690,7 +770,7 @@ export default function ExecutiveSummary() {
               
               {/* Financial Projections Table */}
               <div className="mt-12">
-                <Heading level={3} className="text-xl font-bold mb-4 uppercase tracking-wide">FINANCIAL IMPACT PROJECTIONS</Heading>
+                <Heading level={3} className="text-2xl font-bold mb-6 uppercase tracking-wide">FINANCIAL IMPACT PROJECTIONS</Heading>
                 <ComparisonTable
                   data={financialComparisonData}
                   titleA="Standard Approach"
