@@ -2,17 +2,14 @@ import React from "react";
 import Head from "next/head";
 import Layout from "@/components/Layout/Layout";
 import { BarChart, LineChart, PieChart, TrendingUp, Users, ArrowRight, Building, Clock } from "lucide-react";
-import { Heading } from "@/components/ui/Heading";
-import { HighlightBox } from "@/components/ui/HighlightBox";
+import { Heading, Paragraph, Text } from "@/components/ui/Typography";
+import { Container, Section, ContentBox } from "@/components/ui/Container";
 import { StatDisplay } from "@/components/ui/StatDisplay";
 import { ProfileDisplay } from "@/components/ui/StatDisplay/ProfileDisplay";
 import { IncomeDistributionChart } from "@/components/ui/IncomeDistributionChart";
 import { RentGrowthChart } from "@/components/ui/RentGrowthChart";
-import { Montserrat } from "next/font/google";
 import { GatedChart } from "@/components/ui/GatedChart";
-
-const headingFont = Montserrat({ subsets: ["latin"], weight: ["600"] });
-const bodyFont = Montserrat({ subsets: ["latin"], weight: ["400"] });
+import { Grid } from "@/components/ui/Grid";
 
 export default function MarketIntelligence() {
   return (
@@ -23,61 +20,62 @@ export default function MarketIntelligence() {
       </Head>
       
       <Layout>
-        <div className="w-full max-w-4xl mx-auto">
-          <Heading level={1}>Market Intelligence</Heading>
-          
-          <HighlightBox>
-            <p className="body-text-lg">
-              The Durham multifamily rental market is experiencing a period of adjustment characterized by moderating rents, elevated construction activity, and shifting supply-demand dynamics. The Novus is poised to enter this market as a premier downtown residential option in the vibrant Five Points District.
-            </p>
-          </HighlightBox>
-          
-          <div className="my-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <StatDisplay
-              label="Vacancy Rate"
-              value="~7%"
-              description="Decreasing year-over-year, reflecting strong market demand"
-              icon={<TrendingUp />}
-              variant="outline"
-              trend="down"
-            />
+        <Container size="wide">
+          <Section>
+            <Heading level={1}>Market Intelligence</Heading>
             
-            <StatDisplay
-              label="Absorption Rate"
-              value="25 units/month"
-              description="Average leasing velocity in Downtown Durham"
-              icon={<LineChart />}
-              variant="outline"
-            />
+            <ContentBox variant="highlight-accent" className="mt-6">
+              <Text variant="body-lg" color="primary" wrap="pretty">
+                The Durham multifamily rental market is experiencing a period of adjustment characterized by moderating rents, elevated construction activity, and shifting supply-demand dynamics. The Novus is poised to enter this market as a premier downtown residential option in the vibrant Five Points District.
+              </Text>
+            </ContentBox>
             
-            <StatDisplay
-              label="Key Demographics"
-              value="$80k-$120k"
-              description="Median renter income, primarily tech professionals and university affiliates"
-              icon={<BarChart />}
-              variant="outline"
-            />
-            
-            <StatDisplay
-              label="Pipeline Projects"
-              value="450 units"
-              description="New units expected within 18 months, potentially impacting market dynamics"
-              icon={<PieChart />}
-              variant="outline"
-            />
-          </div>
+            <Grid columns={4} gap="md" className="my-8">
+              <StatDisplay
+                label="Vacancy Rate"
+                value="~7%"
+                description="Decreasing year-over-year, reflecting strong market demand"
+                icon={<TrendingUp />}
+                variant="outline"
+                trend="down"
+              />
+              
+              <StatDisplay
+                label="Absorption Rate"
+                value="25 units/month"
+                description="Average leasing velocity in Downtown Durham"
+                icon={<LineChart />}
+                variant="outline"
+              />
+              
+              <StatDisplay
+                label="Key Demographics"
+                value="$80k-$120k"
+                description="Median renter income, primarily tech professionals and university affiliates"
+                icon={<BarChart />}
+                variant="outline"
+              />
+              
+              <StatDisplay
+                label="Pipeline Projects"
+                value="450 units"
+                description="New units expected within 18 months, potentially impacting market dynamics"
+                icon={<PieChart />}
+                variant="outline"
+              />
+            </Grid>
+          </Section>
           
           <div className="space-y-10">
-            <section className="section">
-              <Heading level={2} className="mb-5">Market Overview</Heading>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+            <Section title="Market Overview" withDivider className="pt-8">
+              <Grid columns={3} gap="md" className="mb-8">
                 <StatDisplay
                   label="Metro Occupancy"
                   value="94.0%"
                   description="-1.5% Year-over-Year"
                   trend="down"
                   variant="accent"
+                  animate
                 />
                 
                 <StatDisplay
@@ -86,6 +84,7 @@ export default function MarketIntelligence() {
                   description="-12.8% Year-over-Year"
                   trend="down"
                   variant="accent"
+                  animate
                 />
                 
                 <StatDisplay
@@ -93,33 +92,34 @@ export default function MarketIntelligence() {
                   value="5,416 Units"
                   description="Q4 2024 Metro Area"
                   variant="accent"
+                  animate
                 />
-              </div>
+              </Grid>
               
-              <div className="content-box-light mb-6">
+              <ContentBox variant="light" className="mb-6">
                 <Heading level={3} className="mb-3">Key Market Insights</Heading>
-                <p className="body-text mb-4">
+                <Paragraph className="mb-4" wrap="pretty">
                   The Durham multifamily market is experiencing a period of adjustment with moderating rents creating a "renter's market" with increased price sensitivity. Despite this, occupancy remains relatively healthy with strong absorption numbers.
-                </p>
+                </Paragraph>
                 <ul className="bullet-list">
                   <li className="bullet-list-item">
                     <span className="bullet-marker">•</span>
-                    <span className="body-text">Vacancy rates approximately 6% metro-wide, expected to stabilize in late 2025</span>
+                    <Paragraph>Vacancy rates approximately 6% metro-wide, expected to stabilize in late 2025</Paragraph>
                   </li>
                   <li className="bullet-list-item">
                     <span className="bullet-marker">•</span>
-                    <span className="body-text">Average asking rent in Raleigh-Durham: $1,520 (-3.1% year-over-year)</span>
+                    <Paragraph>Average asking rent in Raleigh-Durham: $1,520 (-3.1% year-over-year)</Paragraph>
                   </li>
                   <li className="bullet-list-item">
                     <span className="bullet-marker">•</span>
-                    <span className="body-text">Downtown Durham shows stronger absorption due to employment growth and urban lifestyle preferences</span>
+                    <Paragraph>Downtown Durham shows stronger absorption due to employment growth and urban lifestyle preferences</Paragraph>
                   </li>
                 </ul>
-              </div>
+              </ContentBox>
               
-              <div className="content-box mb-8">
-                <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-4">
-                  <LineChart className="text-[#666666]" size={24} />
+              <ContentBox className="mb-8">
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <LineChart className="text-novus-gold" size={20} />
                   <Heading level={3} className="mb-0">Rent Growth Trends</Heading>
                 </div>
                 <GatedChart 
@@ -128,61 +128,59 @@ export default function MarketIntelligence() {
                 >
                   <RentGrowthChart height="h-56 md:h-64" />
                 </GatedChart>
-              </div>
-            </section>
+              </ContentBox>
+            </Section>
             
-            <section className="section-divider section">
-              <Heading level={2} className="mb-5">Demographic Analysis</Heading>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="content-box-light">
+            <Section title="Demographic Analysis" withDivider>
+              <Grid columns={2} gap="md" className="mb-8">
+                <ContentBox variant="light">
                   <Heading level={3} className="mb-3">Primary Demographic</Heading>
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Urban professionals (25-40)</span>
+                      <Paragraph>Urban professionals (25-40)</Paragraph>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Income range: $85,000-$150,000</span>
+                      <Paragraph>Income range: $85,000-$150,000</Paragraph>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Tech, healthcare, and education sectors</span>
+                      <Paragraph>Tech, healthcare, and education sectors</Paragraph>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Value lifestyle, convenience, and social opportunities</span>
+                      <Paragraph>Value lifestyle, convenience, and social opportunities</Paragraph>
                     </li>
                   </ul>
-                </div>
+                </ContentBox>
                 
-                <div className="content-box-light">
+                <ContentBox variant="light">
                   <Heading level={3} className="mb-3">Secondary Demographic</Heading>
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Empty nesters/downsizers (55+)</span>
+                      <Paragraph>Empty nesters/downsizers (55+)</Paragraph>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Income range: $120,000+</span>
+                      <Paragraph>Income range: $120,000+</Paragraph>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Seeking lock-and-leave luxury living</span>
+                      <Paragraph>Seeking lock-and-leave luxury living</Paragraph>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Prioritize security, concierge, and quality finishes</span>
+                      <Paragraph>Prioritize security, concierge, and quality finishes</Paragraph>
                     </li>
                   </ul>
-                </div>
-              </div>
+                </ContentBox>
+              </Grid>
               
-              <div className="content-box mb-8">
-                <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-4">
-                  <BarChart className="text-[#666666]" size={24} />
+              <ContentBox className="mb-8">
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <BarChart className="text-novus-gold" size={20} />
                   <Heading level={3} className="mb-0">Income Distribution</Heading>
                 </div>
                 <GatedChart 
@@ -191,123 +189,118 @@ export default function MarketIntelligence() {
                 >
                   <IncomeDistributionChart height="h-56 md:h-64" />
                 </GatedChart>
-              </div>
-            </section>
+              </ContentBox>
+            </Section>
             
-            <section className="section-divider section">
-              <Heading level={2} className="mb-5">Supply Analysis</Heading>
-              
-              <HighlightBox variant="secondary" className="mb-6">
+            <Section title="Supply Analysis" withDivider>
+              <ContentBox variant="highlight-accent" className="mb-6">
                 <Heading level={3} className="mb-2">Pipeline Overview</Heading>
-                <p className="body-text">
+                <Paragraph wrap="pretty">
                   The Raleigh-Durham market has seen record deliveries with 12,002 units completed in 2024 and an additional 20,272 units under construction. The Novus represents one of the few true high-rise luxury developments in downtown Durham.
-                </p>
-              </HighlightBox>
+                </Paragraph>
+              </ContentBox>
               
-              <div className="mb-8 overflow-x-auto w-full -mx-4 px-4 md:mx-0 md:px-0">
-                <table className="w-full border-collapse">
+              <div className="table-responsive mb-8">
+                <div className="mobile-scroll-indicator">Scroll horizontally to view all data</div>
+                <table className="table-default">
                   <thead>
-                    <tr className="bg-[#F9F8F4]">
-                      <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Project</th>
-                      <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Units</th>
-                      <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Delivery</th>
-                      <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Distance</th>
+                    <tr>
+                      <th className="table-header">Project</th>
+                      <th className="table-header">Units</th>
+                      <th className="table-header">Delivery</th>
+                      <th className="table-header">Distance</th>
                     </tr>
                   </thead>
-                  <tbody className="text-sm">
+                  <tbody>
                     <tr>
-                      <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Van Alen</td>
-                      <td className="border border-[#E5E2D9] px-4 py-3">418</td>
-                      <td className="border border-[#E5E2D9] px-4 py-3">Existing</td>
-                      <td className="border border-[#E5E2D9] px-4 py-3">0.7 miles</td>
-                    </tr>
-                    <tr className="bg-[#F9F8F4]">
-                      <td className="border border-[#E5E2D9] px-4 py-3 font-medium">One City Center</td>
-                      <td className="border border-[#E5E2D9] px-4 py-3">139</td>
-                      <td className="border border-[#E5E2D9] px-4 py-3">Existing</td>
-                      <td className="border border-[#E5E2D9] px-4 py-3">0.3 miles</td>
+                      <td className="table-cell font-medium">Van Alen</td>
+                      <td className="table-cell">418</td>
+                      <td className="table-cell">Existing</td>
+                      <td className="table-cell">0.7 miles</td>
                     </tr>
                     <tr>
-                      <td className="border border-[#E5E2D9] px-4 py-3 font-medium">511 Faye</td>
-                      <td className="border border-[#E5E2D9] px-4 py-3">196</td>
-                      <td className="border border-[#E5E2D9] px-4 py-3">Q3 2024</td>
-                      <td className="border border-[#E5E2D9] px-4 py-3">0.5 miles</td>
+                      <td className="table-cell font-medium">One City Center</td>
+                      <td className="table-cell">139</td>
+                      <td className="table-cell">Existing</td>
+                      <td className="table-cell">0.3 miles</td>
+                    </tr>
+                    <tr>
+                      <td className="table-cell font-medium">511 Faye</td>
+                      <td className="table-cell">196</td>
+                      <td className="table-cell">Q3 2024</td>
+                      <td className="table-cell">0.5 miles</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </section>
+            </Section>
             
-            <section className="section-divider section">
-              <Heading level={2} className="mb-5">Demand Drivers</Heading>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div className="content-box-light">
-                  <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-3">
-                    <TrendingUp className="text-[#666666]" size={20} />
+            <Section title="Demand Drivers" withDivider>
+              <Grid columns={2} gap="md" className="mb-6">
+                <ContentBox variant="light">
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <TrendingUp className="text-novus-gold" size={20} />
                     <Heading level={3} className="mb-0">Employment Growth</Heading>
                   </div>
-                  <p className="body-text mb-3">
+                  <Paragraph className="mb-3" wrap="pretty">
                     Durham shows solid employment growth with total nonfarm employment at 356,100 (March 2025) and year-over-year growth of +1.8%, adding 6,400 jobs.
-                  </p>
+                  </Paragraph>
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Education and health services leading growth (+5.9% YoY)</span>
+                      <Paragraph>Education and health services leading growth (+5.9% YoY)</Paragraph>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Professional and business services growing steadily (+2.1% YoY)</span>
+                      <Paragraph>Professional and business services growing steadily (+2.1% YoY)</Paragraph>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Duke University and healthcare system providing stable employment base</span>
+                      <Paragraph>Duke University and healthcare system providing stable employment base</Paragraph>
                     </li>
                   </ul>
-                </div>
+                </ContentBox>
                 
-                <div className="content-box-light">
-                  <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-3">
-                    <PieChart className="text-[#666666]" size={20} />
+                <ContentBox variant="light">
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <PieChart className="text-novus-gold" size={20} />
                     <Heading level={3} className="mb-0">Lifestyle Amenities</Heading>
                   </div>
-                  <p className="body-text mb-3">
+                  <Paragraph className="mb-3" wrap="pretty">
                     Downtown Durham offers a vibrant urban lifestyle with walkability to dining, entertainment, and cultural amenities that appeal to target demographics.
-                  </p>
+                  </Paragraph>
                   <ul className="bullet-list">
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Vibrant downtown dining scene and growing retail presence</span>
+                      <Paragraph>Vibrant downtown dining scene and growing retail presence</Paragraph>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Proximity to performing arts venues, museums, and galleries</span>
+                      <Paragraph>Proximity to performing arts venues, museums, and galleries</Paragraph>
                     </li>
                     <li className="bullet-list-item">
                       <span className="bullet-marker">•</span>
-                      <span className="body-text">Regular community events and festivals in the Five Points District</span>
+                      <Paragraph>Regular community events and festivals in the Five Points District</Paragraph>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </section>
+                </ContentBox>
+              </Grid>
+            </Section>
             
-            <section className="section-divider section">
-              <Heading level={2} className="mb-5">Downtown Durham Market Highlights</Heading>
-              
-              <div className="bg-[#F9F8F4] border border-[#E5E2D9] rounded-md p-6 mb-8">
-                <p className="text-base text-[#666666] mb-6">
+            <Section title="Downtown Durham Market Highlights" withDivider>
+              <ContentBox variant="light" className="mb-8">
+                <Paragraph size="large" className="mb-6" wrap="pretty">
                   Current market analysis reveals strong fundamentals in the Downtown Durham rental market, with stabilized occupancy and consistent rent growth driven by the area's robust technology, healthcare, and education sectors.
-                </p>
+                </Paragraph>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {/* Consistent stat displays with circular variant */}
+                <Grid columns={4} gap="md">
                   <StatDisplay
                     label="Occupancy Rate"
                     value="92.5%"
                     description="Current downtown average"
                     variant="circular"
                     textAlign="center"
+                    animate
                   />
                   
                   <StatDisplay
@@ -316,6 +309,7 @@ export default function MarketIntelligence() {
                     description="Year-over-year increase"
                     variant="circular"
                     textAlign="center"
+                    animate
                   />
                   
                   <StatDisplay
@@ -324,9 +318,9 @@ export default function MarketIntelligence() {
                     description="Units per quarter"
                     variant="circular"
                     textAlign="center"
+                    animate
                   />
                   
-                  {/* Profile display for renter demographics */}
                   <ProfileDisplay
                     title="Renter Profile"
                     items={[
@@ -337,18 +331,18 @@ export default function MarketIntelligence() {
                     variant="outline"
                     icon={<Users size={18} />}
                   />
-                </div>
-              </div>
+                </Grid>
+              </ContentBox>
               
-              <div className="bg-white border-l-4 border-[#CAB06B] p-5 mb-8">
-                <h3 className="text-lg font-semibold text-[#333333] mb-2">Market Opportunity Summary</h3>
-                <p className="text-[#666666]">
+              <ContentBox variant="highlight-accent" className="mb-8">
+                <Heading level={3} className="mb-2">Market Opportunity Summary</Heading>
+                <Paragraph wrap="pretty">
                   The Downtown Durham rental market exhibits resilient fundamentals with high occupancy (92.5%) and strong rent growth (7.2% YoY), despite new inventory. The target demographic aligns perfectly with The Novus's premium high-rise positioning and amenity strategy, catering to professionals in the technology, healthcare, and education sectors with a median income of approximately $95,000 annually.
-                </p>
-              </div>
-            </section>
+                </Paragraph>
+              </ContentBox>
+            </Section>
           </div>
-        </div>
+        </Container>
       </Layout>
     </>
   );

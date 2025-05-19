@@ -86,7 +86,8 @@ export function RentGrowthChart({ height = "h-80" }: RentGrowthChartProps) {
               backgroundColor: 'white', 
               border: '1px solid #E5E2D9',
               borderRadius: '2px',
-              fontSize: '12px'
+              fontSize: '12px',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
             }}
           />
           <Legend 
@@ -107,8 +108,8 @@ export function RentGrowthChart({ height = "h-80" }: RentGrowthChartProps) {
             type="monotone" 
             dataKey="metro" 
             name="Metro Average"
-            stroke="#666666" 
-            dot={{ stroke: '#666666', strokeWidth: 2, r: 4, fill: 'white' }}
+            stroke="#A8C0D1" 
+            dot={{ stroke: '#A8C0D1', strokeWidth: 2, r: 4, fill: 'white' }}
             strokeWidth={2}
           />
         </LineChart>

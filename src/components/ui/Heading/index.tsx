@@ -2,6 +2,8 @@
 
 import React from "react";
 import { Montserrat } from "next/font/google";
+import { Text } from "@/components/ui/Typography";
+import { cn } from "@/lib/utils";
 
 const headingFont = Montserrat({ subsets: ["latin"], weight: ["600"] });
 
@@ -10,32 +12,42 @@ interface HeadingProps {
   children: React.ReactNode;
   className?: string;
   uppercase?: boolean;
+  color?: 'primary' | 'secondary' | 'muted' | 'accent';
 }
 
 export function Heading({ 
   level = 1, 
   children, 
   className = "",
-  uppercase = false 
+  uppercase = false,
+  color = "primary"
 }: HeadingProps) {
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+  const variant = level <= 4 
+    ? `h${level}` as 'h1' | 'h2' | 'h3' | 'h4'
+    : 'h4';
   
-  const baseStyles = "text-[#333333] leading-tight";
-  const uppercaseStyle = uppercase ? "uppercase tracking-wide" : "";
-  
-  // Use the predefined heading classes with reduced margins
-  const headingClass = {
-    1: "heading-1 mb-6",
-    2: "heading-2 mb-5",
-    3: "heading-3 mb-4",
-    4: "heading-4 mb-3",
-    5: "text-base font-medium mb-2",
-    6: "text-sm font-medium mb-2",
+  // Default margins based on heading level
+  const marginClass = {
+    1: "mb-6",
+    2: "mb-5",
+    3: "mb-4",
+    4: "mb-3",
+    5: "mb-2",
+    6: "mb-2",
   }[level];
   
   return (
-    <Tag className={`${headingFont.className} ${baseStyles} ${headingClass} ${uppercaseStyle} ${className}`}>
+    <Text
+      variant={variant}
+      color={color}
+      className={cn(
+        marginClass,
+        uppercase && "uppercase tracking-wide",
+        level > 4 && (level === 5 ? "text-base font-medium" : "text-sm font-medium"),
+        className
+      )}
+    >
       {children}
-    </Tag>
+    </Text>
   );
 }

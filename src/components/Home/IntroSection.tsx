@@ -1,56 +1,78 @@
 
 import React from "react";
-import { Montserrat } from "next/font/google";
 import Link from "next/link";
-
-const headingFont = Montserrat({ subsets: ["latin"], weight: ["600"] });
-const bodyFont = Montserrat({ subsets: ["latin"], weight: ["400"] });
+import { Container } from "@/components/ui/Container";
+import { Heading, SectionTitle, Paragraph, Text } from "@/components/ui/Typography";
+import { Section } from "@/components/ui/Container";
+import { Grid, CardGrid } from "@/components/ui/Grid";
+import { ContentBox } from "@/components/ui/Container";
+import { Button } from "@/components/ui/button";
 
 export default function IntroSection() {
   return (
-    <section className="max-w-5xl mx-auto py-20">
-      <div className="mb-16 text-center">
-        <div className="inline-block mb-8">
-          <h4 className="section-title">THE BLUEPRINT</h4>
-          <div className="h-0.5 w-32 bg-[#CAB06B] mx-auto"></div>
-        </div>
-        
-        <h1 className="heading-1 mb-6">
-          ELEVATE THE EVERYDAY
-        </h1>
-        
-        <div className="max-w-3xl mx-auto">
-          <p className={`${bodyFont.className} text-xl text-center font-medium text-[#333333] leading-relaxed mb-6`}>
-            Novus Apartments distinguishes itself in Downtown Durham with its exceptional sustainability features, high-end finishes, and unmatched leasing incentives, catering specifically to discerning renters seeking luxury and convenience.
-          </p>
+    <Section size="lg">
+      <Container size="wide">
+        <div className="mb-16 text-center">
+          <div className="inline-block mb-8">
+            <SectionTitle>THE BLUEPRINT</SectionTitle>
+            <div className="h-0.5 w-32 bg-novus-gold mx-auto"></div>
+          </div>
           
-          <p className={`${bodyFont.className} text-lg text-[#666666] leading-relaxed mb-10`}>
-            The Novus Blueprint is a comprehensive strategic framework designed to optimize the lease-up process, identify competitive advantages, and provide actionable recommendations to maximize occupancy and rental revenue for the Five Points District/Downtown Durham market.
-          </p>
+          <Heading level={1} className="mb-6" wrap="balance">
+            ELEVATE THE EVERYDAY
+          </Heading>
           
-          <Link href="/executive-summary" className="btn-primary inline-block px-8 py-4">
-            EXPLORE BLUEPRINT
-          </Link>
-        </div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="content-box">
-          <h3 className="heading-4 mb-4">MARKET ANALYSIS</h3>
-          <p className={`${bodyFont.className} text-[#666666]`}>Comprehensive market intelligence and detailed competitive landscape analysis for the Five Points District submarket.</p>
+          <div className="max-w-3xl mx-auto">
+            <Text 
+              variant="body-lg" 
+              color="primary" 
+              className="text-center font-medium mb-6" 
+              wrap="pretty"
+            >
+              Novus Apartments distinguishes itself in Downtown Durham with its exceptional sustainability features, high-end finishes, and unmatched leasing incentives, catering specifically to discerning renters seeking luxury and convenience.
+            </Text>
+            
+            <Paragraph size="large" className="mb-10" wrap="pretty">
+              The Novus Blueprint is a comprehensive strategic framework designed to optimize the lease-up process, identify competitive advantages, and provide actionable recommendations to maximize occupancy and rental revenue for the Five Points District/Downtown Durham market.
+            </Paragraph>
+            
+            <Button variant="default" size="xl" uppercase className="px-8">
+              <Link href="/executive-summary">
+                EXPLORE BLUEPRINT
+              </Link>
+            </Button>
+          </div>
         </div>
         
-        <div className="content-box relative overflow-hidden">
-          <div className="decorative-circle"></div>
-          <h3 className="heading-4 mb-4">STRATEGIC FRAMEWORK</h3>
-          <p className={`${bodyFont.className} text-[#666666]`}>Strategic opportunities, pricing model, and incentive structure to optimize lease-up velocity and revenue.</p>
-        </div>
-        
-        <div className="content-box">
-          <h3 className="heading-4 mb-4">IMPLEMENTATION PLAN</h3>
-          <p className={`${bodyFont.className} text-[#666666]`}>Detailed go-to-market roadmap with phased marketing approach and actionable opportunity map.</p>
-        </div>
-      </div>
-    </section>
+        <CardGrid columns={3} gap="lg" withAnimation staggered>
+          <ContentBox>
+            <Heading level={4} className="mb-4">
+              MARKET ANALYSIS
+            </Heading>
+            <Paragraph wrap="pretty">
+              Comprehensive market intelligence and detailed competitive landscape analysis for the Five Points District submarket.
+            </Paragraph>
+          </ContentBox>
+          
+          <ContentBox variant="light">
+            <Heading level={4} className="mb-4">
+              STRATEGIC FRAMEWORK
+            </Heading>
+            <Paragraph wrap="pretty">
+              Strategic opportunities, pricing model, and incentive structure to optimize lease-up velocity and revenue.
+            </Paragraph>
+          </ContentBox>
+          
+          <ContentBox>
+            <Heading level={4} className="mb-4">
+              IMPLEMENTATION PLAN
+            </Heading>
+            <Paragraph wrap="pretty">
+              Detailed go-to-market roadmap with phased marketing approach and actionable opportunity map.
+            </Paragraph>
+          </ContentBox>
+        </CardGrid>
+      </Container>
+    </Section>
   );
 }

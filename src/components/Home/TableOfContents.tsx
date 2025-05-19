@@ -1,7 +1,6 @@
 
 import React from "react";
 import Link from "next/link";
-import { Montserrat } from "next/font/google";
 import {
   BookOpen,
   BarChart2,
@@ -13,9 +12,12 @@ import {
   Lock,
   ArrowRight
 } from "lucide-react";
-
-const headingFont = Montserrat({ subsets: ["latin"], weight: ["600"] });
-const bodyFont = Montserrat({ subsets: ["latin"], weight: ["400"] });
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Container";
+import { Heading, SectionTitle, Paragraph, Text } from "@/components/ui/Typography";
+import { Grid } from "@/components/ui/Grid";
+import { ContentBox } from "@/components/ui/Container";
+import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription, CardBadge } from "@/components/ui/card";
 
 const sections = [
   { 
@@ -78,67 +80,76 @@ const sections = [
 
 export default function TableOfContents() {
   return (
-    <section className="max-w-5xl mx-auto py-24 px-4">
-      <div className="text-center mb-16">
-        <h4 className="section-title">ACCESS THE BLUEPRINT</h4>
-        <div className="h-0.5 w-32 bg-[#CAB06B] mx-auto mb-6"></div>
-        <h2 className="heading-2 uppercase mb-4">BLUEPRINT SECTIONS</h2>
-        <p className={`${bodyFont.className} text-[#666666] max-w-2xl mx-auto`}>
-          Navigate through our comprehensive strategic framework, with premium sections gated for client access
-        </p>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        {sections.map((section) => {
-          const Icon = section.icon;
-          
-          return (
-            <Link 
-              href={section.path} 
-              key={section.id}
-              className="group content-box flex flex-col h-full relative overflow-hidden transition-all hover:border-[#CAB06B]"
-            >
-              {section.id % 3 === 0 && (
-                <div className="decorative-circle"></div>
-              )}
-              
-              <div className="flex items-start mb-5">
-                <div className="p-2 mr-3 text-[#CAB06B]">
-                  <Icon className="h-5 w-5" />
-                </div>
-                
-                <div>
-                  <div className="flex items-center justify-between">
-                    <h3 className={`${headingFont.className} text-sm tracking-wide text-[#333333]`}>{section.title}</h3>
-                    {section.gated && (
-                      <Lock size={12} className="text-[#A0A0A0] ml-2" />
-                    )}
-                  </div>
-                </div>
-              </div>
-              
-              <p className={`${bodyFont.className} text-[#666666] text-sm mb-5 flex-1`}>{section.description}</p>
-              
-              <div className="mt-auto">
-                <span className="inline-flex items-center text-xs uppercase tracking-wider font-medium text-[#CAB06B] group-hover:underline">
-                  VIEW SECTION <ArrowRight className="ml-1 h-3 w-3" />
-                </span>
-              </div>
-            </Link>
-          );
-        })}
-      </div>
-      
-      <div className="mt-20 content-box-highlight p-8 text-center">
-        <h3 className="heading-3 uppercase mb-4">PREMIUM SECTIONS</h3>
-        <p className={`${bodyFont.className} text-[#666666] mb-5 max-w-2xl mx-auto`}>
-          Gated sections contain our proprietary strategic frameworks and implementation plans.
-          Access is available to clients and qualified prospects.
-        </p>
-        <div className="inline-block bg-white border border-[#E5E2D9] px-6 py-3 rounded-sm">
-          <p className={`${bodyFont.className} text-sm`}>CONTACT: <span className="text-[#CAB06B] font-medium">misrael00@gmail.com</span></p>
+    <Section size="lg">
+      <Container size="wide">
+        <div className="text-center mb-16">
+          <SectionTitle className="mb-2">ACCESS THE BLUEPRINT</SectionTitle>
+          <div className="h-0.5 w-32 bg-novus-gold mx-auto mb-6"></div>
+          <Heading level={2} className="uppercase mb-4" wrap="balance">BLUEPRINT SECTIONS</Heading>
+          <Paragraph className="max-w-2xl mx-auto" wrap="pretty">
+            Navigate through our comprehensive strategic framework, with premium sections gated for client access
+          </Paragraph>
         </div>
-      </div>
-    </section>
+        
+        <Grid columns={3} gap="lg">
+          {sections.map((section) => {
+            const Icon = section.icon;
+            
+            return (
+              <Link 
+                href={section.path} 
+                key={section.id}
+                className="block h-full"
+              >
+                <Card 
+                  variant={section.id % 3 === 0 ? "premium" : "default"} 
+                  className="group h-full flex flex-col transition-all hover:border-novus-gold"
+                >
+                  <CardHeader className="pb-2">
+                    <div className="flex items-start">
+                      <div className="p-2 mr-3 text-novus-gold bg-novus-cream-dark rounded-sm">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-sm tracking-wide">{section.title}</CardTitle>
+                        {section.gated && (
+                          <Lock size={12} className="text-text-muted ml-2" />
+                        )}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  
+                  <CardContent className="flex-1">
+                    <CardDescription className="text-text-secondary text-sm mb-0">
+                      {section.description}
+                    </CardDescription>
+                  </CardContent>
+                  
+                  <CardFooter className="pt-2 mt-auto border-t-0">
+                    <span className="inline-flex items-center text-xs uppercase tracking-wider font-medium text-novus-gold group-hover:underline">
+                      VIEW SECTION <ArrowRight className="ml-1 h-3 w-3" />
+                    </span>
+                  </CardFooter>
+                </Card>
+              </Link>
+            );
+          })}
+        </Grid>
+        
+        <ContentBox variant="highlight-accent" className="mt-20 p-8 text-center" withAnimation>
+          <Heading level={3} className="uppercase mb-4">PREMIUM SECTIONS</Heading>
+          <Paragraph className="mb-5 max-w-2xl mx-auto" wrap="pretty">
+            Gated sections contain our proprietary strategic frameworks and implementation plans.
+            Access is available to clients and qualified prospects.
+          </Paragraph>
+          <div className="inline-block bg-white border border-novus-border px-6 py-3 rounded-sm">
+            <Text variant="body" className="text-sm">
+              CONTACT: <span className="text-novus-gold font-medium">misrael00@gmail.com</span>
+            </Text>
+          </div>
+        </ContentBox>
+      </Container>
+    </Section>
   );
 }

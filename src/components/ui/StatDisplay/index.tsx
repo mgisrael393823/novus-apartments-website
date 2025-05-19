@@ -38,12 +38,12 @@ export function StatDisplay({
 }: StatDisplayProps) {
   // Variant base styles
   const variantStyles = {
-    default: "bg-[#F9F8F4] border border-[#E5E2D9]",
-    accent: "bg-[#F5F5E6] border border-[#E5E2D9]",
-    outline: "bg-white border border-[#E5E2D9]",
-    highlight: "bg-white border-l-4 border-[#CAB06B] border-t border-r border-b border-[#E5E2D9]",
-    dark: "bg-[#333333] border border-[#444444]",
-    circular: "bg-white border border-[#E5E2D9]"
+    default: "bg-novus-cream border border-novus-border",
+    accent: "bg-novus-cream-dark border border-novus-border",
+    outline: "bg-white border border-novus-border",
+    highlight: "bg-white border-l-4 border-novus-gold border-t border-r border-b border-novus-border",
+    dark: "bg-text-primary border border-gray-700",
+    circular: "bg-white border border-novus-border"
   }[variant];
 
   // Size-specific padding
@@ -76,10 +76,10 @@ export function StatDisplay({
   const alignStyles = textAlign === 'center' ? 'text-center' : 'text-left';
 
   // Text color settings
-  const labelColor = variant === 'dark' ? 'text-gray-300' : 'text-[#666666]';
-  const valueColor = variant === 'dark' ? 'text-white' : 'text-[#333333]';
-  const descColor = variant === 'dark' ? 'text-gray-400' : 'text-[#666666]';
-  const iconColor = variant === 'dark' ? 'text-white' : 'text-[#CAB06B]';
+  const labelColor = variant === 'dark' ? 'text-gray-300' : 'text-text-secondary';
+  const valueColor = variant === 'dark' ? 'text-white' : 'text-text-primary';
+  const descColor = variant === 'dark' ? 'text-gray-400' : 'text-text-secondary';
+  const iconColor = variant === 'dark' ? 'text-white' : 'text-novus-gold';
 
   // Trend icons and colors
   const trendIcon = trend && {
@@ -89,9 +89,9 @@ export function StatDisplay({
   }[trend];
 
   const trendColor = trend && {
-    up: "text-green-500",
-    down: "text-red-500",
-    neutral: "text-gray-500"
+    up: "text-success",
+    down: "text-error",
+    neutral: "text-text-muted"
   }[trend];
 
   // Animation variants
@@ -134,7 +134,7 @@ export function StatDisplay({
           textAlign === 'center' ? 'justify-center' : 'justify-start'
         )}>
           {icon && !isCircular && (
-            <div className="w-10 h-10 rounded-full bg-[#F9F8F4] flex items-center justify-center mr-3">
+            <div className="w-10 h-10 rounded-full bg-novus-cream flex items-center justify-center mr-3">
               <span className={iconColor}>
                 {React.cloneElement(icon as React.ReactElement, { size: 18 })}
               </span>
@@ -153,7 +153,7 @@ export function StatDisplay({
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <span className="cursor-help inline-flex items-center">
-                      <HelpCircle size={14} className="text-[#999999] hover:text-[#666666] transition-colors" />
+                      <HelpCircle size={14} className="text-text-muted hover:text-text-secondary transition-colors" />
                     </span>
                   </TooltipTrigger>
                   <TooltipContent className="max-w-xs">
@@ -169,7 +169,7 @@ export function StatDisplay({
       {/* Value display - either circular or standard */}
       {isCircular ? (
         <div className={cn("flex", textAlign === 'center' ? 'justify-center' : 'justify-start', "mb-3")}>
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B]">
+          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-novus-cream border-4 border-novus-gold">
             <span className={cn(
               "font-bold",
               valueColor,
@@ -212,14 +212,14 @@ export function StatDisplay({
       
       {/* Visual decorative elements */}
       {variant === 'accent' && (
-        <div className="absolute -right-8 -bottom-8 w-24 h-24 rounded-full bg-[#CAB06B] opacity-10"></div>
+        <div className="absolute -right-8 -bottom-8 w-24 h-24 rounded-full bg-novus-gold opacity-10"></div>
       )}
       {variant === 'highlight' && (
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-[#CAB06B] opacity-30"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-novus-gold opacity-30"></div>
       )}
       {isCircular && (
         <div className="flex items-center justify-center mt-2">
-          <div className="h-1 w-16 bg-[#CAB06B] rounded-full"></div>
+          <div className="h-1 w-16 bg-novus-gold rounded-full"></div>
         </div>
       )}
     </motion.div>
