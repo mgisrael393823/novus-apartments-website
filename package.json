@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "import-emails": "node scripts/import-emails.js"
   },
   "dependencies": {
     "@faker-js/faker": "^9.4.0",
@@ -45,11 +46,13 @@
     "@t3-oss/env-nextjs": "^0.12.0",
     "@types/three": "^0.174.0",
     "@vercel/analytics": "^1.5.0",
+    "@vercel/kv": "^3.0.0",
     "chart.js": "^4.4.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.4",
     "date-fns": "^3.6.0",
+    "dotenv": "^16.5.0",
     "embla-carousel-react": "^8.5.2",
     "firebase": "^11.2.0",
     "firebase-admin": "^13.0.2",

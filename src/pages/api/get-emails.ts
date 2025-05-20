@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+import { kv } from '@vercel/kv';
 
 // Interface for email entry
 interface EmailEntry {
@@ -36,13 +37,63 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // Return empty array if file cannot be read
       }
     } else {
-      // In production environment
-      // Here you would retrieve emails from your database
-      // For now, we'll return a message explaining the situation
-      return res.status(200).json({ 
-        emails: [],
-        message: "Email storage in production is currently logged to console only. To implement proper storage, use a database solution (MongoDB, PostgreSQL, Firebase) or Vercel KV Storage."
-      });
+      // In production: Use Vercel KV
+      try {
+        // Get all email addresses from the set
+        const emailsSet = await kv.smembers('novus:email_list');
+        console.log(`Found ${emailsSet.length} emails in Vercel KV`);
+        
+        // For each email in the set, get the detailed entry
+        if (Array.isArray(emailsSet) && emailsSet.length > 0) {
+          // Use Promise.all to fetch all email details in parallel
+          const emailPromises = emailsSet.map(async (email) => {
+            const entryJson = await kv.get(`novus:email:${email}`);
+            if (entryJson && typeof entryJson === 'string') {
+              try {
+                return JSON.parse(entryJson) as EmailEntry;
+              } catch (parseError) {
+                console.error(`Error parsing JSON for email ${email}:`, parseError);
+                // Return a minimal entry if parsing fails
+                return {
+                  email,
+                  timestamp: new Date().toISOString()
+                };
+              }
+            }
+            // If entry not found, return minimal entry
+            return {
+              email,
+              timestamp: new Date().toISOString()
+            };
+          });
+          
+          emails = await Promise.all(emailPromises);
+        }
+      } catch (kvError) {
+        console.error('Error fetching emails from Vercel KV:', kvError);
+        
+        // Fallback to /tmp storage if KV fails
+        try {
+          // Get the data directory path
+          const dataDir = path.join('/tmp', 'data');
+          const filePath = path.join(dataDir, 'emails.json');
+
+          // Read existing emails from /tmp fallback
+          if (fs.existsSync(filePath)) {
+            try {
+              const data = fs.readFileSync(filePath, 'utf8');
+              emails = JSON.parse(data);
+              console.log(`Found ${emails.length} emails in /tmp fallback storage`);
+            } catch (parseError) {
+              console.error('Error parsing emails JSON from /tmp:', parseError);
+            }
+          } else {
+            console.log('No emails.json file found in /tmp fallback storage');
+          }
+        } catch (fsError) {
+          console.error('Error reading emails from /tmp fallback:', fsError);
+        }
+      }
     }
 
     // Return emails
